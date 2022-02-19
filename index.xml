@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>aneCrow&#39;s 杂货铺</title>
+    <link>https://blog.anecrow.work/</link>
+    <description>Recent content on aneCrow&#39;s 杂货铺</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 18 Feb 2022 14:40:01 +0800</lastBuildDate><atom:link href="https://blog.anecrow.work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>侧边菜单栏</title>
+      <link>https://blog.anecrow.work/hugo/theme_dev/%E4%BE%A7%E8%BE%B9%E8%8F%9C%E5%8D%95%E6%A0%8F/</link>
+      <pubDate>Fri, 18 Feb 2022 14:40:01 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/hugo/theme_dev/%E4%BE%A7%E8%BE%B9%E8%8F%9C%E5%8D%95%E6%A0%8F/</guid>
+      <description>&lt;p&gt;优化体验和反馈.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>引用格式美化</title>
+      <link>https://blog.anecrow.work/hugo/theme_dev/%E5%BC%95%E7%94%A8%E6%A0%BC%E5%BC%8F%E7%BE%8E%E5%8C%96/</link>
+      <pubDate>Fri, 18 Feb 2022 13:29:07 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/hugo/theme_dev/%E5%BC%95%E7%94%A8%E6%A0%BC%E5%BC%8F%E7%BE%8E%E5%8C%96/</guid>
+      <description>&lt;p&gt;使用成熟的第三方格式美化.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Header Footer</title>
+      <link>https://blog.anecrow.work/hugo/theme_dev/header_footer/</link>
+      <pubDate>Sat, 05 Feb 2022 02:51:19 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/hugo/theme_dev/header_footer/</guid>
+      <description>&lt;p&gt;页眉和页脚可以提供额外信息.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>页面布局和基本样式</title>
+      <link>https://blog.anecrow.work/hugo/theme_dev/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F/</link>
+      <pubDate>Fri, 04 Feb 2022 17:28:17 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/hugo/theme_dev/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F/</guid>
+      <description>&lt;p&gt;用简单的 &lt;em&gt;HTML+CSS&lt;/em&gt; 定制自己的主题.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>最小可用系统</title>
+      <link>https://blog.anecrow.work/hugo/theme_dev/%E6%9C%80%E5%B0%8F%E5%8F%AF%E7%94%A8%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Tue, 01 Feb 2022 03:03:46 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/hugo/theme_dev/%E6%9C%80%E5%B0%8F%E5%8F%AF%E7%94%A8%E7%B3%BB%E7%BB%9F/</guid>
+      <description>&lt;p&gt;使用基本知识构建最小可用的模板系统.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>从新建空白骨架开始</title>
+      <link>https://blog.anecrow.work/hugo/theme_dev/%E4%BB%8E%E6%96%B0%E5%BB%BA%E7%A9%BA%E7%99%BD%E9%AA%A8%E6%9E%B6%E5%BC%80%E5%A7%8B/</link>
+      <pubDate>Sat, 22 Jan 2022 18:22:39 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/hugo/theme_dev/%E4%BB%8E%E6%96%B0%E5%BB%BA%E7%A9%BA%E7%99%BD%E9%AA%A8%E6%9E%B6%E5%BC%80%E5%A7%8B/</guid>
+      <description>&lt;p&gt;新建项目, 了解基本文件结构.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>设置 VSCode</title>
+      <link>https://blog.anecrow.work/hugo/usage/%E8%AE%BE%E7%BD%AE_vscode/</link>
+      <pubDate>Sat, 22 Jan 2022 13:02:52 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/hugo/usage/%E8%AE%BE%E7%BD%AE_vscode/</guid>
+      <description>&lt;p&gt;在 &lt;em&gt;VSCode&lt;/em&gt; 上为 &lt;em&gt;Hugo项目&lt;/em&gt; 优化使用和管理体验.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>简易安装和使用 (Windows)</title>
+      <link>https://blog.anecrow.work/hugo/usage/%E7%AE%80%E6%98%93%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8_windows/</link>
+      <pubDate>Fri, 21 Jan 2022 23:45:30 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/hugo/usage/%E7%AE%80%E6%98%93%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8_windows/</guid>
+      <description>&lt;p&gt;安装 &lt;em&gt;Hugo&lt;/em&gt; 的方式有很多种&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, 推荐简易式安装, 或者称之为绿色安装.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Header Footer</title>
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/layout.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/github-markdown.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/style.css">
+</head>
+
+<body class="markdown-body">
+    <div class="flex-container">
+        <div class="side-container">
+            
+
+    
+
+
+<nav id="side-nav">
+    <a href="https://blog.anecrow.work/">
+        <h1>Home</h1>
+    </a>
+    <a href="https://blog.anecrow.work/hugo/">
+        <h3>Hugo Site</h3>
+    </a>
+    
+        
+            
+                <a href="https://blog.anecrow.work/hugo/usage/">
+                    <span class="nav-item">
+                        使用
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/usage/%E7%AE%80%E6%98%93%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8_windows/">
+                        <code class="nav-item nav-subitem">
+                            简易安装和使用 (Windows)
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/usage/%E8%AE%BE%E7%BD%AE_vscode/">
+                        <code class="nav-item nav-subitem">
+                            设置 VSCode
+                        </code>
+                    </a>
+                
+            
+        
+            
+                <a href="https://blog.anecrow.work/hugo/theme_dev/">
+                    <span class="nav-item">
+                        自定义主题
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E4%BB%8E%E6%96%B0%E5%BB%BA%E7%A9%BA%E7%99%BD%E9%AA%A8%E6%9E%B6%E5%BC%80%E5%A7%8B/">
+                        <code class="nav-item nav-subitem">
+                            从新建空白骨架开始
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E6%9C%80%E5%B0%8F%E5%8F%AF%E7%94%A8%E7%B3%BB%E7%BB%9F/">
+                        <code class="nav-item nav-subitem">
+                            最小可用系统
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F/">
+                        <code class="nav-item nav-subitem">
+                            页面布局和基本样式
+                        </code>
+                    </a>
+                
+            
+                
+                    <code class="nav-item nav-subitem nav-current">
+                        Header Footer
+                    </code>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E5%BC%95%E7%94%A8%E6%A0%BC%E5%BC%8F%E7%BE%8E%E5%8C%96/">
+                        <code class="nav-item nav-subitem">
+                            引用格式美化
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E4%BE%A7%E8%BE%B9%E8%8F%9C%E5%8D%95%E6%A0%8F/">
+                        <code class="nav-item nav-subitem">
+                            侧边菜单栏
+                        </code>
+                    </a>
+                
+            
+        
+    
+</nav>
+        </div>
+        <div id="main-container" class="flex-container">
+            <div id="content">
+                
+<header>
+    <h1>Header Footer</h1>
+    <nav class="breadcrumbnav">
+    
+    
+        
+    
+        
+    
+        
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/">
+                <code>Home</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/hugo/">
+                <code>Hugo Site</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/hugo/theme_dev/">
+                <code>自定义主题</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <code>Header Footer</code>
+    
+
+</nav>
+
+
+    <blockquote id="page-info">
+        <span><code>Date</code>: 2022/02/05 02:51:19</span>
+        <span><code>Lastmod</code>: 2022/02/19 12:37:50</span>
+        <br>
+        
+            <span><code>WordCount</code>: 471</span>
+            <span><code>ReadingTime</code>: 1min</span>
+        
+    </blockquote>
+</header>
+                <article>
+                    
+    <article>
+        <p>页眉和页脚可以提供额外信息.</p>
+<h2 id="header">Header</h2>
+<p>页眉一般用来放置当前文章相关的信息</p>
+<p>在 <code>partials/header.html</code> 中写入</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">header</span>&gt;
+    &lt;<span style="color:#5bc4bf">h1</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">h1</span>&gt;
+    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">eq</span> <span style="color:#06b6ef">.Kind</span> <span style="color:#48b685">&#34;page&#34;</span> <span style="color:#8d8687">}}</span>
+        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Date.Format</span> <span style="color:#48b685">&#34;2006/01/02 15:04:05&#34;</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">p</span>&gt;
+        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Lastmod.Format</span> <span style="color:#48b685">&#34;2006/01/02 15:04:05&#34;</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">p</span>&gt;
+        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.WordCount</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">p</span>&gt;
+        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.ReadingTime</span> <span style="color:#8d8687">}}</span>min&lt;/<span style="color:#5bc4bf">p</span>&gt;
+        &lt;<span style="color:#5bc4bf">hr</span>/&gt;
+    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+&lt;/<span style="color:#5bc4bf">header</span>&gt;
+</code></pre></div><p>就能让所有页面的 <code>header</code> 部分拥有一个标题</p>
+<p>而类型为 <code>page</code> 也就是文章页面会额外展示创建日期, 修改日期, 字数和预估阅读时间</p>
+<h3 id="面包屑导航breadcrumb-navigation">面包屑导航<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h3>
+<p>根据官方示例, 修改一个横向的版本</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">nav</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;breadcrumbnav&#34;</span>&gt;
+    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;breadcrumbnav&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;p1&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#48b685">&#34;p2&#34;</span> <span style="color:#06b6ef">.</span><span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
+&lt;/<span style="color:#5bc4bf">nav</span>&gt;
+
+<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">define</span> <span style="color:#48b685">&#34;breadcrumbnav&#34;</span> <span style="color:#8d8687">}}</span>
+    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#06b6ef">.p1.Parent</span> <span style="color:#8d8687">}}</span>
+        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;breadcrumbnav&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;p1&#34;</span> <span style="color:#06b6ef">.p1.Parent</span> <span style="color:#48b685">&#34;p2&#34;</span> <span style="color:#06b6ef">.p2</span> <span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
+    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">else</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">not</span> <span style="color:#06b6ef">.p1.IsHome</span> <span style="color:#8d8687">}}</span>
+        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;breadcrumbnav&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;p1&#34;</span> <span style="color:#06b6ef">.p1.Site.Home</span> <span style="color:#48b685">&#34;p2&#34;</span> <span style="color:#06b6ef">.p2</span> <span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
+    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+
+    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">eq</span> <span style="color:#06b6ef">.p1</span> <span style="color:#06b6ef">.p2</span> <span style="color:#8d8687">}}</span>
+        &lt;<span style="color:#5bc4bf">code</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.p1.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">code</span>&gt;
+    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">else</span> <span style="color:#8d8687">}}</span>
+        &lt;<span style="color:#5bc4bf">span</span>&gt;
+            &lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.p1.Permalink</span> <span style="color:#8d8687">}}</span><span style="color:#48b685">&#34;</span>&gt;
+                &lt;<span style="color:#5bc4bf">code</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">eq</span> <span style="color:#06b6ef">.p1.Kind</span> <span style="color:#48b685">&#34;home&#34;</span> <span style="color:#8d8687">}}</span>Home<span style="color:#8d8687">{{</span> <span style="color:#815ba4">else</span> <span style="color:#8d8687">}}{{</span> <span style="color:#06b6ef">.p1.Title</span> <span style="color:#8d8687">}}{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">code</span>&gt;
+            &lt;/<span style="color:#5bc4bf">a</span>&gt;
+        &lt;/<span style="color:#5bc4bf">span</span>&gt;
+        &lt;<span style="color:#5bc4bf">span</span>&gt;&gt;&lt;/<span style="color:#5bc4bf">span</span>&gt;
+    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+<span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</code></pre></div><p>使用 <code>{{ template }}</code> 语法实现的迭代循环</p>
+<p>在 <code>header.html</code> 中插入该 <code>partial</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">header</span>&gt;
+    &lt;<span style="color:#5bc4bf">h1</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">h1</span>&gt;
+<span style="display:block;width:100%;background-color:#cfd1c5">    <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;breadcrumb.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+</span>&lt;/<span style="color:#5bc4bf">header</span>&gt;
+</code></pre></div><h3 id="页面信息">页面信息</h3>
+<p>建立容器元素 <code>blockquote</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">$dateFormat</span> <span style="color:#5bc4bf">:=</span> <span style="color:#48b685">&#34;2006/01/02 15:04:05&#34;</span> <span style="color:#8d8687">}}</span>
+&lt;<span style="color:#5bc4bf">header</span>&gt;
+    &lt;<span style="color:#5bc4bf">h1</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">h1</span>&gt;
+    <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;breadcrumb.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+<span style="display:block;width:100%;background-color:#cfd1c5">    &lt;<span style="color:#5bc4bf">blockquote</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;page-info&#34;</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;Date&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Date.Format</span> <span style="color:#06b6ef">$dateFormat</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;Lastmod&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Lastmod.Format</span> <span style="color:#06b6ef">$dateFormat</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">br</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">eq</span> <span style="color:#06b6ef">.Kind</span> <span style="color:#48b685">&#34;page&#34;</span> <span style="color:#8d8687">}}</span>
+</span><span style="display:block;width:100%;background-color:#cfd1c5">            &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;WordCount&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.WordCount</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">            &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;ReadingTime&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.ReadingTime</span> <span style="color:#8d8687">}}</span>min&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">else</span> <span style="color:#8d8687">}}</span>
+</span><span style="display:block;width:100%;background-color:#cfd1c5">            &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;Pages&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#815ba4">len</span> <span style="color:#06b6ef">.Pages</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">            &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;Sections&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#815ba4">len</span> <span style="color:#06b6ef">.Sections</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</span><span style="display:block;width:100%;background-color:#cfd1c5">    &lt;/<span style="color:#5bc4bf">blockquote</span>&gt;
+</span>&lt;/<span style="color:#5bc4bf">header</span>&gt;
+</code></pre></div><p>设置样式</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">#<span style="color:#fec418">page-info</span> {
+    <span style="color:#815ba4">background-color</span>: <span style="color:#06b6ef">var</span>(<span style="color:#5bc4bf">--</span><span style="color:#815ba4">color</span><span style="color:#5bc4bf">-</span>neutral<span style="color:#5bc4bf">-</span>muted);
+    <span style="color:#815ba4">margin</span>: <span style="color:#f99b15">1</span><span style="color:#fec418">em</span> <span style="color:#f99b15">0</span>;
+    <span style="color:#815ba4">padding</span>: <span style="color:#f99b15">1</span><span style="color:#fec418">em</span>;
+    <span style="color:#815ba4">border-radius</span>: <span style="color:#f99b15">6</span><span style="color:#fec418">px</span>
+}
+</code></pre></div><h2 id="footer">Footer</h2>
+<p>页脚放置小站的额外信息</p>
+<h3 id="前后页面导航">前后页面导航</h3>
+<p>在 <code>partials/footer.html</code> 中写入</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">footer</span>&gt;
+    &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;flex-container&#34;</span>&gt;
+        &lt;<span style="color:#5bc4bf">div</span>&gt;
+            <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;otherPage&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;page&#34;</span> <span style="color:#06b6ef">.PrevInSection</span> <span style="color:#48b685">&#34;label&#34;</span> <span style="color:#48b685">&#34;&lt;&lt; Prev&#34;</span><span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
+        &lt;/<span style="color:#5bc4bf">div</span>&gt;
+        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
+        &lt;<span style="color:#5bc4bf">div</span>&gt;
+            <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;otherPage&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;page&#34;</span> <span style="color:#06b6ef">.NextInSection</span> <span style="color:#48b685">&#34;label&#34;</span> <span style="color:#48b685">&#34;Next &gt;&gt;&#34;</span><span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
+        &lt;/<span style="color:#5bc4bf">div</span>&gt;
+    &lt;/<span style="color:#5bc4bf">div</span>&gt;
+    &lt;<span style="color:#5bc4bf">hr</span>&gt;
+&lt;/<span style="color:#5bc4bf">footer</span>&gt;
+
+<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">define</span> <span style="color:#48b685">&#34;otherPage&#34;</span> <span style="color:#8d8687">}}</span>
+    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#06b6ef">.page</span> <span style="color:#8d8687">}}</span>
+        &lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.page.Permalink</span> <span style="color:#8d8687">}}</span><span style="color:#48b685">&#34;</span>&gt;
+            &lt;<span style="color:#5bc4bf">div</span>&gt;
+                &lt;<span style="color:#5bc4bf">h2</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.label</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">h2</span>&gt;
+                &lt;<span style="color:#5bc4bf">span</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.page.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
+            &lt;/<span style="color:#5bc4bf">div</span>&gt;
+        &lt;/<span style="color:#5bc4bf">a</span>&gt;
+        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.page.Summary</span><span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">p</span>&gt;
+    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+<span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</code></pre></div><p>再加上简单的版权信息</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">div</span>&gt;
+    &lt;<span style="color:#5bc4bf">span</span>&gt;Power by: &lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;https://gohugo.io/&#34;</span>&gt;HUGO&lt;/<span style="color:#5bc4bf">a</span>&gt;&lt;/<span style="color:#5bc4bf">span</span>&gt;
+    &lt;<span style="color:#5bc4bf">br</span>&gt;
+    &lt;<span style="color:#5bc4bf">span</span>&gt;©<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">now</span><span style="color:#06b6ef">.Year</span> <span style="color:#8d8687">}}</span> <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Site.Params.author</span><span style="color:#8d8687">}}</span> All Rights Reserved.&lt;/<span style="color:#5bc4bf">span</span>&gt;
+&lt;/<span style="color:#5bc4bf">div</span>&gt;
+</code></pre></div><section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://gohugo.io/content-management/sections/#example-breadcrumb-navigation">https://gohugo.io/content-management/sections/#example-breadcrumb-navigation</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+    </article>
+
+                </article>
+                <footer>
+    <div class="flex-container">
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/hugo/theme_dev/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F/">
+            <div>
+                <h2>&lt;&lt; Prev</h2>
+                <span>页面布局和基本样式</span>
+            </div>
+        </a>
+        <p><p>用简单的 <em>HTML+CSS</em> 定制自己的主题.</p></p>
+    
+
+        </div>
+        <div></div>
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/hugo/theme_dev/%E5%BC%95%E7%94%A8%E6%A0%BC%E5%BC%8F%E7%BE%8E%E5%8C%96/">
+            <div>
+                <h2>Next &gt;&gt;</h2>
+                <span>引用格式美化</span>
+            </div>
+        </a>
+        <p><p>使用成熟的第三方格式美化.</p></p>
+    
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <span>Power by: <a href="https://gohugo.io/">HUGO</a></span>
+        <br>
+        <span>©2022 aneCrow All Rights Reserved.</span>
+    </div>
+</footer>
+
+
+            </div>
+        </div>
+        <div class="side-container">
+            <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#header">Header</a>
+      <ul>
+        <li><a href="#面包屑导航breadcrumb-navigation">面包屑导航</a></li>
+        <li><a href="#页面信息">页面信息</a></li>
+      </ul>
+    </li>
+    <li><a href="#footer">Footer</a>
+      <ul>
+        <li><a href="#前后页面导航">前后页面导航</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+        </div>
+        <div></div>
+    </div>
+</body>
+
+</html>

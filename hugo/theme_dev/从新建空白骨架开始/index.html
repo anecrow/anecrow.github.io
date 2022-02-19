@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>从新建空白骨架开始</title>
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/layout.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/github-markdown.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/style.css">
+</head>
+
+<body class="markdown-body">
+    <div class="flex-container">
+        <div class="side-container">
+            
+
+    
+
+
+<nav id="side-nav">
+    <a href="https://blog.anecrow.work/">
+        <h1>Home</h1>
+    </a>
+    <a href="https://blog.anecrow.work/hugo/">
+        <h3>Hugo Site</h3>
+    </a>
+    
+        
+            
+                <a href="https://blog.anecrow.work/hugo/usage/">
+                    <span class="nav-item">
+                        使用
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/usage/%E7%AE%80%E6%98%93%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8_windows/">
+                        <code class="nav-item nav-subitem">
+                            简易安装和使用 (Windows)
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/usage/%E8%AE%BE%E7%BD%AE_vscode/">
+                        <code class="nav-item nav-subitem">
+                            设置 VSCode
+                        </code>
+                    </a>
+                
+            
+        
+            
+                <a href="https://blog.anecrow.work/hugo/theme_dev/">
+                    <span class="nav-item">
+                        自定义主题
+                    </span>
+                </a>
+            
+            
+                
+                    <code class="nav-item nav-subitem nav-current">
+                        从新建空白骨架开始
+                    </code>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E6%9C%80%E5%B0%8F%E5%8F%AF%E7%94%A8%E7%B3%BB%E7%BB%9F/">
+                        <code class="nav-item nav-subitem">
+                            最小可用系统
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F/">
+                        <code class="nav-item nav-subitem">
+                            页面布局和基本样式
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/header_footer/">
+                        <code class="nav-item nav-subitem">
+                            Header Footer
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E5%BC%95%E7%94%A8%E6%A0%BC%E5%BC%8F%E7%BE%8E%E5%8C%96/">
+                        <code class="nav-item nav-subitem">
+                            引用格式美化
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E4%BE%A7%E8%BE%B9%E8%8F%9C%E5%8D%95%E6%A0%8F/">
+                        <code class="nav-item nav-subitem">
+                            侧边菜单栏
+                        </code>
+                    </a>
+                
+            
+        
+    
+</nav>
+        </div>
+        <div id="main-container" class="flex-container">
+            <div id="content">
+                
+<header>
+    <h1>从新建空白骨架开始</h1>
+    <nav class="breadcrumbnav">
+    
+    
+        
+    
+        
+    
+        
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/">
+                <code>Home</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/hugo/">
+                <code>Hugo Site</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/hugo/theme_dev/">
+                <code>自定义主题</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <code>从新建空白骨架开始</code>
+    
+
+</nav>
+
+
+    <blockquote id="page-info">
+        <span><code>Date</code>: 2022/01/22 18:22:39</span>
+        <span><code>Lastmod</code>: 2022/02/11 03:50:00</span>
+        <br>
+        
+            <span><code>WordCount</code>: 769</span>
+            <span><code>ReadingTime</code>: 2min</span>
+        
+    </blockquote>
+</header>
+                <article>
+                    
+    <article>
+        <p>新建项目, 了解基本文件结构.</p>
+<h2 id="新建项目">新建项目</h2>
+<p>使用 <code>hugo new site 命令</code> 或使用 <code>VSC Tasks 命令任务: 新建站点项目</code></p>
+<p>这里使用之前新建的空白站点 <code>new_site/</code></p>
+<h3 id="目录结构directory-structure">目录结构<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h3>
+<ul>
+<li>new_site/
+<ul>
+<li>archetypes/
+<ul>
+<li>default.md</li>
+</ul>
+</li>
+<li>content/post/
+<ul>
+<li>new_post.md</li>
+</ul>
+</li>
+<li>data/</li>
+<li>layouts/</li>
+<li>public/</li>
+<li>resources/_gen/
+<ul>
+<li>assets/</li>
+<li>images/</li>
+</ul>
+</li>
+<li>static/</li>
+<li>themes/</li>
+<li>.hugo_build.lock</li>
+<li>config.toml</li>
+</ul>
+</li>
+</ul>
+<p>可以将它们按功能分为两种类型</p>
+<h4 id="文章内容文件">文章内容文件</h4>
+<p>这里存放的是与文章正文相关的文件</p>
+<ul>
+<li>content/ <code>文章页面的根路径, 主页 &lt;Home&gt;</code>
+<ul>
+<li>post/ <code>名为post的section, 内容聚合页 &lt;Section|List&gt;</code>
+<ul>
+<li>new_post.md <code>以 Markdown 语法编写的文章, 内容页 &lt;Single&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>archetypes/ <code>文章模板的根路径</code>
+<ul>
+<li>default.md <code>默认的文章模板</code></li>
+</ul>
+</li>
+</ul>
+<p><code>content</code> 内的文件直接构成了小站的主要内容<br>
+<code>archetypes</code> 内的文件则作为模板, 影响在使用 <code>hugo new</code> 命令创建文章时的初始化内容和格式</p>
+<p>推荐把 <code>archetypes/default.md</code> 的 <code>fontmatter</code> 由 <code>yaml</code> 改为 <code>toml</code>, 这样好和配置文件 <code>config.toml</code> 统一<br>
+加入关键注释 <code>&lt;!--more--&gt;</code>, <code>.Summary</code> 获取的文章概括在遇到这行的时候将截断并停止</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">+++
+title = &#34;{{ replace .Name &#39;_&#39; &#39; &#39; | title }}&#34; # FIXME: 替换无效果
+date = {{ .Date }}
+draft = true
++++
+
+概括
+<span style="color:#8d8687">&lt;!--more--&gt;</span>
+
+正文
+
+</code></pre></div><h4 id="站点构建文件">站点构建文件</h4>
+<p>这里又可以细分为</p>
+<h5 id="页面渲染类">页面渲染类</h5>
+<p>这里的模板文件控制着小站的外观展示</p>
+<ul>
+<li>layouts/ <code>自定义渲染模板的储存根路径, 在已有主题模板下自定义细调时使用</code></li>
+<li>themes/ <code>主题模板的根储存路径</code></li>
+</ul>
+<h5 id="资源类">资源类</h5>
+<ul>
+<li>data/ ``#TODO: 解释 data/</li>
+<li>resources/ ``#TODO: 解释 resources/</li>
+<li>static/ ``#TODO: 解释 static/</li>
+</ul>
+<h5 id="站点配置">站点配置</h5>
+<ul>
+<li>.hugo_build.lock <code>从v0.89.0引入的构建程序标志文件, 官方明确表示别管别碰别手贱</code><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
+<li>config.toml <code>由 Toml 语法编写的站点配置文件</code></li>
+</ul>
+<h5 id="其他">其他</h5>
+<ul>
+<li>public/ <code>默认构建输出目标文件夹, 发布时使用</code></li>
+</ul>
+<h2 id="新建主题">新建主题</h2>
+<p>使用 <code>hugo new theme 命令</code> 或使用 <code>VSC Tasks 命令任务: 在当前站点新建主题</code><br>
+输入<strong>主题名称</strong> 比如 <code>new_theme</code></p>
+<h3 id="目录结构">目录结构</h3>
+<ul>
+<li>themes/new_theme/
+<ul>
+<li>archetypes/</li>
+<li>layouts/
+<ul>
+<li>_default/ <code>站点缺省默认模板</code>
+<ul>
+<li>baseof.html <code>基础框架</code></li>
+<li>list.html <code>List页模块定义</code></li>
+<li>single.html <code>Single页模块定义</code></li>
+</ul>
+</li>
+<li>post/ <code>post目录指定模板</code>
+<ul>
+<li>single.html</li>
+</ul>
+</li>
+<li>partials/ <code>partial部件</code>
+<ul>
+<li>head.html</li>
+<li>footer.html</li>
+<li>header.html</li>
+</ul>
+</li>
+<li>404.html <code>404页面模板</code></li>
+<li>index.html <code>主页模板</code></li>
+</ul>
+</li>
+<li>static/ <code>静态资源</code>
+<ul>
+<li>css/</li>
+<li>js/</li>
+</ul>
+</li>
+<li>LICENSE <code>主题版权许可证</code></li>
+<li>theme.toml <code>主题配置文件</code></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>主题 theme 目录结构功能与站点几乎一样, 配合使用以获得灵活的渲染规则<br>
+模板优先级 <code>layouts/</code> &gt; <code>theme/*/layouts/</code></p>
+</blockquote>
+<h3 id="应用主题">应用主题</h3>
+<ul>
+<li>在站点根目录 <code>config.toml</code> 内添加 <code>theme = &quot;new_theme&quot;</code> 就可以将主题 <code>new_theme</code> 应用至站点</li>
+<li>作为测试临时使用主题时,执行命令 <code>hugo server</code> 或 <code>hugo</code> 并添加参数 <code>-t &quot;new_theme&quot;</code> 效果是一样的</li>
+</ul>
+<p>目前主题模板仅有<strong>准功能骨架</strong>, 无法渲染任何内容</p>
+<p>需要进一步定义主题的 <code>layouts</code> 样式文件</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://gohugo.io/getting-started/directory-structure/">https://gohugo.io/getting-started/directory-structure/</a> (Directory Structure)&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://github.com/gohugoio/hugo/releases/tag/v0.89.0">https://github.com/gohugoio/hugo/releases/tag/v0.89.0</a> (Hugo Releases v0.89.0)&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+    </article>
+
+                </article>
+                <footer>
+    <div class="flex-container">
+        <div>
+            
+    
+
+        </div>
+        <div></div>
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/hugo/theme_dev/%E6%9C%80%E5%B0%8F%E5%8F%AF%E7%94%A8%E7%B3%BB%E7%BB%9F/">
+            <div>
+                <h2>Next &gt;&gt;</h2>
+                <span>最小可用系统</span>
+            </div>
+        </a>
+        <p><p>使用基本知识构建最小可用的模板系统.</p></p>
+    
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <span>Power by: <a href="https://gohugo.io/">HUGO</a></span>
+        <br>
+        <span>©2022 aneCrow All Rights Reserved.</span>
+    </div>
+</footer>
+
+
+            </div>
+        </div>
+        <div class="side-container">
+            <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#新建项目">新建项目</a>
+      <ul>
+        <li><a href="#目录结构directory-structure">目录结构</a></li>
+      </ul>
+    </li>
+    <li><a href="#新建主题">新建主题</a>
+      <ul>
+        <li><a href="#目录结构">目录结构</a></li>
+        <li><a href="#应用主题">应用主题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+        </div>
+        <div></div>
+    </div>
+</body>
+
+</html>

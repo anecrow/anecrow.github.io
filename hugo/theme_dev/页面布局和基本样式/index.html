@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>页面布局和基本样式</title>
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/layout.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/github-markdown.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/style.css">
+</head>
+
+<body class="markdown-body">
+    <div class="flex-container">
+        <div class="side-container">
+            
+
+    
+
+
+<nav id="side-nav">
+    <a href="https://blog.anecrow.work/">
+        <h1>Home</h1>
+    </a>
+    <a href="https://blog.anecrow.work/hugo/">
+        <h3>Hugo Site</h3>
+    </a>
+    
+        
+            
+                <a href="https://blog.anecrow.work/hugo/usage/">
+                    <span class="nav-item">
+                        使用
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/usage/%E7%AE%80%E6%98%93%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8_windows/">
+                        <code class="nav-item nav-subitem">
+                            简易安装和使用 (Windows)
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/usage/%E8%AE%BE%E7%BD%AE_vscode/">
+                        <code class="nav-item nav-subitem">
+                            设置 VSCode
+                        </code>
+                    </a>
+                
+            
+        
+            
+                <a href="https://blog.anecrow.work/hugo/theme_dev/">
+                    <span class="nav-item">
+                        自定义主题
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E4%BB%8E%E6%96%B0%E5%BB%BA%E7%A9%BA%E7%99%BD%E9%AA%A8%E6%9E%B6%E5%BC%80%E5%A7%8B/">
+                        <code class="nav-item nav-subitem">
+                            从新建空白骨架开始
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E6%9C%80%E5%B0%8F%E5%8F%AF%E7%94%A8%E7%B3%BB%E7%BB%9F/">
+                        <code class="nav-item nav-subitem">
+                            最小可用系统
+                        </code>
+                    </a>
+                
+            
+                
+                    <code class="nav-item nav-subitem nav-current">
+                        页面布局和基本样式
+                    </code>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/header_footer/">
+                        <code class="nav-item nav-subitem">
+                            Header Footer
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E5%BC%95%E7%94%A8%E6%A0%BC%E5%BC%8F%E7%BE%8E%E5%8C%96/">
+                        <code class="nav-item nav-subitem">
+                            引用格式美化
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E4%BE%A7%E8%BE%B9%E8%8F%9C%E5%8D%95%E6%A0%8F/">
+                        <code class="nav-item nav-subitem">
+                            侧边菜单栏
+                        </code>
+                    </a>
+                
+            
+        
+    
+</nav>
+        </div>
+        <div id="main-container" class="flex-container">
+            <div id="content">
+                
+<header>
+    <h1>页面布局和基本样式</h1>
+    <nav class="breadcrumbnav">
+    
+    
+        
+    
+        
+    
+        
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/">
+                <code>Home</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/hugo/">
+                <code>Hugo Site</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/hugo/theme_dev/">
+                <code>自定义主题</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <code>页面布局和基本样式</code>
+    
+
+</nav>
+
+
+    <blockquote id="page-info">
+        <span><code>Date</code>: 2022/02/04 17:28:17</span>
+        <span><code>Lastmod</code>: 2022/02/18 13:17:47</span>
+        <br>
+        
+            <span><code>WordCount</code>: 1267</span>
+            <span><code>ReadingTime</code>: 3min</span>
+        
+    </blockquote>
+</header>
+                <article>
+                    
+    <article>
+        <p>用简单的 <em>HTML+CSS</em> 定制自己的主题.</p>
+<h2 id="草稿">草稿</h2>
+<p>在上一章制作的最小系统仅仅可以说是能用<br>
+显然不太符合现在的阅读习惯, 我们需要重新规划区域</p>
+<p>首先预计一下自己需要的功能结构和基本的样式</p>
+<ul>
+<li>只需要一个主体承载文章和内容信息, 提高阅读专注性
+<ul>
+<li>容器居中, 文字行不要太长</li>
+<li>header放置标题和前后文章等其他信息</li>
+<li>中间放置主要内容</li>
+<li>footer放置许可证和作者信息</li>
+</ul>
+</li>
+<li>左侧栏主导航
+<ul>
+<li>展示当前路径的页面导航</li>
+</ul>
+</li>
+<li>右侧栏TOC(如果有)
+<ul>
+<li>展示当前文章跳转</li>
+<li>悬浮在右下</li>
+</ul>
+</li>
+</ul>
+<h2 id="flex布局系统flex布局的基本概念">Flex布局系统<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h2>
+<blockquote>
+<p><em>IE浏览器</em> 对 <code>Flex布局</code> 的支持有限, 但说真的在这个年代与其考虑古董浏览器兼容性问题, 不如劝这些用户早点换个正常人应该用的东西</p>
+</blockquote>
+<p><code>Flex</code> 是一种弹性自适应尺寸的系统, 可以指定元素成为容器<br>
+容器会控制下属的直接子元素的尺寸和布局</p>
+<p>在主题的 <code>static/css/</code> 文件夹中 <strong>新建CSS样式文件</strong> <code>layout.css</code><br>
+所有影响页面版式的控制项都放在这里</p>
+<blockquote>
+<p>在 <code>baseof.html</code> 定义中这部分由 <code>partials/head.html</code> 实现</p>
+</blockquote>
+<p><code>head.html</code> <strong>添加</strong>引用, 全局应用同样的页面版式</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">head</span>&gt;
+    &lt;<span style="color:#5bc4bf">title</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">title</span>&gt;
+<span style="display:block;width:100%;background-color:#cfd1c5">    &lt;<span style="color:#5bc4bf">link</span> <span style="color:#06b6ef">rel</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;stylesheet&#34;</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Site.BaseURL</span> <span style="color:#8d8687">}}</span><span style="color:#48b685">css/layout.css&#34;</span>&gt;
+</span>&lt;/<span style="color:#5bc4bf">head</span>&gt;
+</code></pre></div><blockquote>
+<p>语句 <code>{{ .Site.BaseURL }}</code> 在部署时会被替换为小站的根目录, 如 <code>http://localhost:1313/</code><br>
+而 <code>static</code> 内的资源会原封不动地挂载在根目录下</p>
+</blockquote>
+<p>设置 <code>flex系统</code> 之前对根元素做一下初始化, <strong>编辑</strong> <code>layout.css</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#5bc4bf">html</span><span style="color:#5bc4bf">,</span>
+<span style="color:#5bc4bf">body</span> {
+    <span style="color:#815ba4">display</span>: <span style="color:#815ba4">inline-block</span>;
+    <span style="color:#815ba4">width</span>: <span style="color:#f99b15">100</span><span style="color:#fec418">%</span>;
+    <span style="color:#815ba4">height</span>: <span style="color:#f99b15">100</span><span style="color:#fec418">%</span>;
+    <span style="color:#815ba4">margin</span>: <span style="color:#f99b15">0</span>;
+    <span style="color:#815ba4">padding</span>: <span style="color:#f99b15">0</span>;
+}
+
+<span style="color:#5bc4bf">pre</span> {
+    <span style="color:#815ba4">overflow-x</span>: <span style="color:#815ba4">auto</span>;
+}
+</code></pre></div><ul>
+<li><code>html</code> <code>body</code>
+<ul>
+<li><code>display: inline-block</code>
+<ul>
+<li>设为行内块级元素, 防止奇怪的间隙和边界</li>
+</ul>
+</li>
+<li><code>width, height: 100%</code>
+<ul>
+<li>将根元素撑开至整个页面</li>
+</ul>
+</li>
+<li><code>margin, padding: 0</code>
+<ul>
+<li>防止奇怪的间隙和边界</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>pre</code>
+<ul>
+<li><code>overflow-x: auto</code>
+<ul>
+<li>默认样式下 <code>pre</code> 元素会尽可能撑开横向尺寸, 导致弹性布局出现不可预料的状况</li>
+<li>设为 <code>auto</code> 避免元素溢出, 对显示不全的部分提供横向滑块</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>响应式布局的第一步, 初始化根元素的宽高为整个窗口</p>
+</blockquote>
+<p>然后建立相关的 <code>flex</code> <strong>类选择器</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#fec418">flex-container</span> {
+    <span style="color:#815ba4">display</span>: <span style="color:#815ba4">flex</span>;
+    <span style="color:#815ba4">justify-content</span>: <span style="color:#815ba4">center</span>;
+}
+
+.<span style="color:#fec418">flex-container</span><span style="color:#5bc4bf">&gt;*</span> {
+    <span style="color:#815ba4">flex-grow</span>: <span style="color:#f99b15">1</span>;
+    <span style="color:#815ba4">min-width</span>: <span style="color:#f99b15">0</span>;
+}
+</code></pre></div><blockquote>
+<p>对于 <code>flex容器</code> , 通过特殊的 <code>css选择器</code> 可以选择对应的 <code>flex子元素</code> 进行样式设置<br>
+只需要指定对应的容器, 就能免去手动指定 <code>flex-item</code> 的麻烦</p>
+</blockquote>
+<ul>
+<li><code>.flex-container</code> 选择主容器
+<ul>
+<li><code>display: flex</code>
+<ul>
+<li>设置元素为弹性布局容器</li>
+</ul>
+</li>
+<li><code>justify-content: center</code>
+<ul>
+<li>子元素沿主轴居中排列</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>.flex-container&gt;*</code> 选择子元素
+<ul>
+<li><code>flex-grow: 1</code>
+<ul>
+<li>设置子元素尺寸增长比例, 默认为 <code>0</code>, 设为 <code>1</code> 时非空子元素会更加主动地增长尺寸</li>
+<li>对稳定布局有一定好处</li>
+</ul>
+</li>
+<li><code>min-width: 0</code>
+<ul>
+<li><code>flex</code> 下子元素该项默认为 <code>auto</code>会主动将容器撑开导致内容元素溢出</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>另外使用 <code>.flex-container&gt;*:not(:is(:first-child, :last-child))</code> 选择器可以只影响除了头和尾的中间子元素</p>
+</blockquote>
+<p>接着<strong>编辑</strong> <code>baseof.html</code> 建立根布局</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8d8687">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#5bc4bf">html</span>&gt;
+<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;head.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+
+&lt;<span style="color:#5bc4bf">body</span>&gt;
+<span style="display:block;width:100%;background-color:#cfd1c5">    &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;flex-container&#34;</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;main-container&#34;</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;flex-container&#34;</span>&gt;
+</span>            &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;content&#34;</span>&gt;
+                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;header.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">block</span> <span style="color:#48b685">&#34;main&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;footer.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+            &lt;/<span style="color:#5bc4bf">div</span>&gt;
+<span style="display:block;width:100%;background-color:#cfd1c5">        &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">    &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span>&lt;/<span style="color:#5bc4bf">body</span>&gt;
+
+&lt;/<span style="color:#5bc4bf">html</span>&gt;
+</code></pre></div><blockquote>
+<p>两边的空元素 <code>&lt;div&gt;</code> <strong>不是必要的</strong><br>
+它们会在空间允许时展开, 空间有限时压缩为零宽度<br>
+以此获得一种动态 <code>margin</code> 的效果, 让自适应元素看起来更顺滑</p>
+</blockquote>
+<p>中间不为空的内容元素会无限制伸展而影响设计布局, 还需要对它指定最大尺寸 <code>max-width</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">#<span style="color:#fec418">main-container</span> {
+    <span style="color:#815ba4">max-width</span>: <span style="color:#f99b15">768</span><span style="color:#fec418">px</span>;
+}
+#<span style="color:#fec418">content</span> {
+    <span style="color:#815ba4">max-width</span>: <span style="color:#f99b15">640</span><span style="color:#fec418">px</span>;
+}
+</code></pre></div><p><code>main-container</code> 内部的 <code>content</code> 同样需要居中, 指定为 <code>flex-container</code> 容器类就行</p>
+<h2 id="添加侧边导航栏">添加侧边导航栏</h2>
+<p>在 <code>main-container</code> 两边<strong>建立容器</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">body</span>&gt;
+    &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;flex-container&#34;</span>&gt;
+        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
+<span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;side-container&#34;</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">            <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;side_nav.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span>        &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;main-container&#34;</span>&gt;
+            &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;content&#34;</span>&gt;
+                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;header.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">block</span> <span style="color:#48b685">&#34;main&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;footer.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+            &lt;/<span style="color:#5bc4bf">div</span>&gt;
+        &lt;/<span style="color:#5bc4bf">div</span>&gt;
+<span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;side-container&#34;</span>&gt;
+</span><span style="display:block;width:100%;background-color:#cfd1c5">            <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;side_toc.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span>        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
+    &lt;/<span style="color:#5bc4bf">div</span>&gt;
+&lt;/<span style="color:#5bc4bf">body</span>&gt;
+</code></pre></div><p>别忘了限制宽度</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#fec418">side-container</span> {
+    <span style="color:#815ba4">max-width</span>: <span style="color:#f99b15">192</span><span style="color:#fec418">px</span>;
+}
+</code></pre></div><p>在 <code>layouts/partials/</code> 中<strong>新建文件</strong> <code>side_nav.html</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">nav</span>&gt;
+    &lt;<span style="color:#5bc4bf">h1</span>&gt;&lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span><span style="color:#06b6ef">.Site.BaseURL</span><span style="color:#8d8687">}}</span><span style="color:#48b685">&#34;</span>&gt;Home&lt;/<span style="color:#5bc4bf">a</span>&gt;&lt;/<span style="color:#5bc4bf">h1</span>&gt;
+    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">range</span> <span style="color:#06b6ef">.CurrentSection.Pages.Reverse</span> <span style="color:#8d8687">}}</span>
+    &lt;<span style="color:#5bc4bf">div</span>&gt;
+        &lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span><span style="color:#06b6ef">.Permalink</span><span style="color:#8d8687">}}</span><span style="color:#48b685">&#34;</span>&gt;<span style="color:#8d8687">{{</span><span style="color:#06b6ef">.Title</span><span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">a</span>&gt;
+    &lt;/<span style="color:#5bc4bf">div</span>&gt;
+    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+&lt;/<span style="color:#5bc4bf">nav</span>&gt;
+</code></pre></div><p>使用 <code>range</code> 语句迭代 <code>.CurrentSection.Pages</code> 得到属于当前 <code>section</code> 的页面列表<br>
+由于 <code>.Pages</code> 返回的列表默认使用 <code>Date</code> 从新到旧排列
+加上反序关键词 <code>.CurrentSection.Pages.Reverse</code> 从旧到新进行迭代</p>
+<p>同样的, <strong>新建文件</strong> <code>side_toc.html</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">aside</span>&gt;
+    <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.TableOfContents</span> <span style="color:#8d8687">}}</span>
+&lt;/<span style="color:#5bc4bf">aside</span>&gt;
+</code></pre></div><p>将会生成一个以正文内子标题为名的目录列表, 详情看 <a href="https://gohugo.io/content-management/toc/">Table of Contents</a></p>
+<p>至此小站的总体布局算是有了雏形, 之后就是细化的工作了</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox</a> (flex 布局的基本概念)&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+    </article>
+
+                </article>
+                <footer>
+    <div class="flex-container">
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/hugo/theme_dev/%E6%9C%80%E5%B0%8F%E5%8F%AF%E7%94%A8%E7%B3%BB%E7%BB%9F/">
+            <div>
+                <h2>&lt;&lt; Prev</h2>
+                <span>最小可用系统</span>
+            </div>
+        </a>
+        <p><p>使用基本知识构建最小可用的模板系统.</p></p>
+    
+
+        </div>
+        <div></div>
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/hugo/theme_dev/header_footer/">
+            <div>
+                <h2>Next &gt;&gt;</h2>
+                <span>Header Footer</span>
+            </div>
+        </a>
+        <p><p>页眉和页脚可以提供额外信息.</p></p>
+    
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <span>Power by: <a href="https://gohugo.io/">HUGO</a></span>
+        <br>
+        <span>©2022 aneCrow All Rights Reserved.</span>
+    </div>
+</footer>
+
+
+            </div>
+        </div>
+        <div class="side-container">
+            <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#草稿">草稿</a></li>
+    <li><a href="#flex布局系统flex布局的基本概念">Flex布局系统</a></li>
+    <li><a href="#添加侧边导航栏">添加侧边导航栏</a></li>
+  </ul>
+</nav>
+</aside>
+        </div>
+        <div></div>
+    </div>
+</body>
+
+</html>

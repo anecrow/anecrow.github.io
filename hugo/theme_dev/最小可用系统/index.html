@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>最小可用系统</title>
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/layout.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/github-markdown.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/style.css">
+</head>
+
+<body class="markdown-body">
+    <div class="flex-container">
+        <div class="side-container">
+            
+
+    
+
+
+<nav id="side-nav">
+    <a href="https://blog.anecrow.work/">
+        <h1>Home</h1>
+    </a>
+    <a href="https://blog.anecrow.work/hugo/">
+        <h3>Hugo Site</h3>
+    </a>
+    
+        
+            
+                <a href="https://blog.anecrow.work/hugo/usage/">
+                    <span class="nav-item">
+                        使用
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/usage/%E7%AE%80%E6%98%93%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8_windows/">
+                        <code class="nav-item nav-subitem">
+                            简易安装和使用 (Windows)
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/usage/%E8%AE%BE%E7%BD%AE_vscode/">
+                        <code class="nav-item nav-subitem">
+                            设置 VSCode
+                        </code>
+                    </a>
+                
+            
+        
+            
+                <a href="https://blog.anecrow.work/hugo/theme_dev/">
+                    <span class="nav-item">
+                        自定义主题
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E4%BB%8E%E6%96%B0%E5%BB%BA%E7%A9%BA%E7%99%BD%E9%AA%A8%E6%9E%B6%E5%BC%80%E5%A7%8B/">
+                        <code class="nav-item nav-subitem">
+                            从新建空白骨架开始
+                        </code>
+                    </a>
+                
+            
+                
+                    <code class="nav-item nav-subitem nav-current">
+                        最小可用系统
+                    </code>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F/">
+                        <code class="nav-item nav-subitem">
+                            页面布局和基本样式
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/header_footer/">
+                        <code class="nav-item nav-subitem">
+                            Header Footer
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E5%BC%95%E7%94%A8%E6%A0%BC%E5%BC%8F%E7%BE%8E%E5%8C%96/">
+                        <code class="nav-item nav-subitem">
+                            引用格式美化
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/%E4%BE%A7%E8%BE%B9%E8%8F%9C%E5%8D%95%E6%A0%8F/">
+                        <code class="nav-item nav-subitem">
+                            侧边菜单栏
+                        </code>
+                    </a>
+                
+            
+        
+    
+</nav>
+        </div>
+        <div id="main-container" class="flex-container">
+            <div id="content">
+                
+<header>
+    <h1>最小可用系统</h1>
+    <nav class="breadcrumbnav">
+    
+    
+        
+    
+        
+    
+        
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/">
+                <code>Home</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/hugo/">
+                <code>Hugo Site</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/hugo/theme_dev/">
+                <code>自定义主题</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <code>最小可用系统</code>
+    
+
+</nav>
+
+
+    <blockquote id="page-info">
+        <span><code>Date</code>: 2022/02/01 03:03:46</span>
+        <span><code>Lastmod</code>: 2022/02/12 09:43:59</span>
+        <br>
+        
+            <span><code>WordCount</code>: 1553</span>
+            <span><code>ReadingTime</code>: 4min</span>
+        
+    </blockquote>
+</header>
+                <article>
+                    
+    <article>
+        <p>使用基本知识构建最小可用的模板系统.</p>
+<h2 id="通用外壳模板-baseofbase">通用外壳模板 Baseof<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h2>
+<p>将通用的结构抽象成公共的基础模板作为外壳.</p>
+<p><code>layouts/</code> 下的 <code>*baseof.html</code> 可以看作是一种预留可更改组件的外壳<br>
+各页面通用的 <code>&lt;doctype&gt; &lt;html&gt; &lt;head&gt;</code> 等固有标签都可以预先设定<br>
+之后在各个页面仅需要对预留的 <code>block</code> 区域进行定义替换</p>
+<p>新建主题时在 <code>_default/</code> 下默认生成了一个写好的基础骨架 <code>baseof.html</code> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8d8687">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#5bc4bf">html</span>&gt;
+    <span style="color:#8d8687">{{-</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;head.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">-}}</span>
+    &lt;<span style="color:#5bc4bf">body</span>&gt;
+        <span style="color:#8d8687">{{-</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;header.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">-}}</span>
+        &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;content&#34;</span>&gt;
+            <span style="color:#8d8687">{{-</span> <span style="color:#06b6ef">block</span> <span style="color:#48b685">&#34;main&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}{{-</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+        &lt;/<span style="color:#5bc4bf">div</span>&gt;
+        <span style="color:#8d8687">{{-</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;footer.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">-}}</span>
+    &lt;/<span style="color:#5bc4bf">body</span>&gt;
+&lt;/<span style="color:#5bc4bf">html</span>&gt;
+</code></pre></div><p>结构很经典, 看起来暂时没有需要改动的地方</p>
+<ul>
+<li><code>partial</code> 语句可以认为是一种变动不大的固有小组件, 即插即用
+<ul>
+<li>语法为 <code>{{ partial &quot;&lt;name&gt;.html&quot; }}</code>, <code>&lt;name&gt;.html</code> 则对应了 <code>layouts/partrials/</code> 目录下对应名称的html组件<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
+<li><code>partial</code> 后跟 <code>.</code> 则意为传递当前页面上下文, 有的小组件需要使用, 比如 <code>head.html</code> 中需要获得当前页面的 <code>title</code> 值来设置页面标题<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></li>
+<li>两边的 <code>-</code> 会让模板处理时清除两侧空白行<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>
+<ul>
+<li>用在这只会将最后生成的代码缩进弄得一团糟, 但没人需要维护它所以没有关系</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>block</code> 语句开头到 <code>end</code> 语句结束, 定义了一块可替换的区域
+<ul>
+<li>语法为 <code>{{ block &quot;&lt;name&gt;&quot; }}{{ end }}</code>, <code>&lt;name&gt;</code> 是块名</li>
+<li><code>block</code> 后跟 <code>.</code> 传递上下文, 语句中间允许有内容且包含在传递值中</li>
+<li>在对应 <code>template</code> 页使用 <code>{{ define &quot;name&quot; }}{{ end }}</code> 定义同块名的区域</li>
+</ul>
+</li>
+</ul>
+<h3 id="小组件-partialpartial">小组件 Partial<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></h3>
+<p><code>partial</code> 可以认为是一种变动不大的固有小组件, 即插即用</p>
+<p>简单使用 <code>partial</code> 组件的功能来对 <code>&lt;head&gt;</code> 部分进行定义
+修改 <code>layouts/partrials/</code> 目录下的 <code>head.html</code> 文件</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#5bc4bf">head</span>&gt;
+    &lt;<span style="color:#5bc4bf">title</span>&gt;{{ .Title }}&lt;/<span style="color:#5bc4bf">title</span>&gt;
+&lt;/<span style="color:#5bc4bf">head</span>&gt;
+</code></pre></div><p>意为使用 <code>{{ .Title }}</code> 语句获取当前页面的 <code>title</code> 属性来填充 <code>&lt;title&gt;</code> 标签, 以改变标签页所显示的文字</p>
+<p>不同的页面拥有不同的 <code>title</code> 属性值, 比如:</p>
+<ul>
+<li>首页显示的是根目录 <code>config.toml</code> 中定义的 <code>title</code> 值
+<ul>
+<li>这里是 <code>My New Hugo Site</code></li>
+</ul>
+</li>
+<li>而聚合页面显示的是 <code>section</code> 名的复数形式
+<ul>
+<li>比如有个目录 <code>content/post/</code> 地址为 <code>localhost:1313/post/</code> 那么它的标题则为 <code>Posts</code></li>
+</ul>
+</li>
+<li>文章页的标题则由文章 <code>frontmatter</code> 中的 <code>title</code> 值所定义</li>
+</ul>
+<blockquote>
+<p>任何页面有对应的 <code>frontmatter</code> 时都会直接使用该 <code>title</code> 属性</p>
+</blockquote>
+<p>同样可以在 <code>header.html</code> 和 <code>footer.html</code> 中定义对应内容: <a href="../Header_Footer_Style/">Header Footer Style</a></p>
+<h3 id="页面模板-template">页面模板 Template</h3>
+<p>页面模板套用遵循 <a href="https://gohugo.io/templates/lookup-order/">Lookup Order</a> 规则</p>
+<p><em>hugo</em> 首先会将页面分为几种<strong>主要类型</strong>: <code>Kind</code><br>
+确定页面类型后寻找类型对应的<strong>模板文件</strong>: <code>Template</code><br>
+而找到模板文件之后按照内容*决定是否继续寻找对应的<strong>壳模板文件</strong> <code>Baseof</code></p>
+<p><strong>为了能在同一个 <code>baseof</code> 壳模板基础上让不同页面模板分别填充 <code>block</code> 内容块, 对应类型的模板页必须只有对 <code>block</code> 的实现, html内容不能写在 <code>define</code> 块外</strong></p>
+<blockquote>
+<p>官方也有对该现象的说明: <a href="https://gohugo.io/templates/base/#override-the-base-template">Override the Base Template</a></p>
+</blockquote>
+<p>情况显然有些复杂, 简单举例:</p>
+<blockquote>
+<p>假设存在 <code>_defualt/baseof.html</code> 且有着 <code>{{ block &quot;main&quot; }}</code> 预定义语句</p>
+</blockquote>
+<ol>
+<li>缺失对应类型模板文件 (比如访问首页, 在 <code>layouts/</code> 中却没有定义 <code>index.html</code> 或 <code>list.html</code>)
+<ul>
+<li><strong>无法渲染</strong>, 控制台输出 <code>WARN</code> 报错: <code>found no layout file for &quot;HTML&quot; for kind &quot;home&quot;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.</code></li>
+</ul>
+</li>
+<li>存在对应类型模板文件, 但html内容写在 <code>define</code> 块外
+<ul>
+<li>使用本模板进行全部渲染, 但会<strong>忽略</strong>对应的 <code>baseof</code> 壳模板</li>
+<li>
+<blockquote>
+<p>内容为空的模板文件也属于这个情况</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>存在对应类型模板文件, 仅对对应 <code>baseof</code> 壳模板中预留的 <code>block</code> 进行实现
+<ul>
+<li><strong>壳模板应用正常, 本模板应用正常</strong></li>
+</ul>
+</li>
+</ol>
+<p>所以为了让前面所做的工作正常运作我们需要对 <code>layouts/_default/</code> 下的 <code>list.html</code> 和 <code>single.html</code> 添加 <code>block main</code> 相应实现</p>
+<p>简单做个空定义就行</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#06b6ef">define</span> <span style="color:#48b685">&#34;main&#34;</span> }}
+    
+{{ <span style="color:#06b6ef">end</span> }}
+</code></pre></div><blockquote>
+<p>不打算使用独特首页模板的话可以删除 <code>layouts/index.html</code></p>
+</blockquote>
+<p>运行后就能看到对应页面的标题</p>
+<h2 id="聚合页面-listlist">聚合页面 List<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></h2>
+<p>在外壳模板的基础上定义 <code>List页</code></p>
+<p>主页, section页, tags页 都是聚合页面, 它们的样式应用模板最底层的指向为 <code>_default/list.html</code><sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></p>
+<p><code>List页</code> 一般作为导航页, 容纳对应目录的下属页面</p>
+<p>参照官方示例改过来用:</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">define</span> <span style="color:#48b685">&#34;main&#34;</span> <span style="color:#8d8687">}}</span>
+    &lt;<span style="color:#5bc4bf">ol</span>&gt;
+        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">range</span> <span style="color:#06b6ef">.Pages</span> <span style="color:#8d8687">}}</span>
+            &lt;<span style="color:#5bc4bf">li</span>&gt;
+                &lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span><span style="color:#06b6ef">.Permalink</span><span style="color:#8d8687">}}</span><span style="color:#48b685">&#34;</span>&gt;<span style="color:#8d8687">{{</span><span style="color:#06b6ef">.Title</span><span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">a</span>&gt;
+                &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Summary</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">p</span>&gt;
+            &lt;/<span style="color:#5bc4bf">li</span>&gt;
+        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+    &lt;/<span style="color:#5bc4bf">ol</span>&gt;
+<span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</code></pre></div><ul>
+<li>语句块 <code>{{ range $array }}{{ end }}</code> 提供了迭代方法, 每次迭代都会将语句中的内容添加进正文<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>
+<ul>
+<li>语句块内部的 <code>.</code> 指向会被重定向至迭代中的当前项</li>
+<li><code>.Pages</code> 获取的子项默认排序方式 <code>Weight &gt; Date &gt; LinkTitle &gt; FilePath</code><sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup></li>
+</ul>
+</li>
+<li><code>{{ .Permalink }}</code> 绝对链接<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup></li>
+<li><code>{{ .Title }}</code> 页面标题<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup></li>
+<li><code>{{ .Summary }}</code> 内容摘要<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup>
+<ul>
+<li>默认自动从文章头截取70个单词的内容</li>
+<li>要正确截取 <code>CJK</code> 语言字词, 需要在配置文件中设置 <code>hasCJKLanguage = true</code></li>
+<li>手动控制截取停止位置, 只需要在正文中插入标签 <code>&lt;!--more--&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="内容页面-singlesingle">内容页面 Single<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup></h2>
+<p>文章页模板调用规则: <a href="https://gohugo.io/templates/lookup-order/#examples-layout-lookup-for-regular-pages">Regular Pages</a></p>
+<p>修改 <code>single.html</code> , 基本提供正文就行</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">define</span> <span style="color:#48b685">&#34;main&#34;</span> <span style="color:#8d8687">}}</span>
+    &lt;<span style="color:#5bc4bf">h1</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">h1</span>&gt;
+    <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Content</span> <span style="color:#8d8687">}}</span>
+<span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</code></pre></div><p>这样就完成了最小可用的站点功能, 运行站点可以浏览所有文章</p>
+<p><a href="http://localhost:1313/">查看主页</a></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://gohugo.io/templates/base/">https://gohugo.io/templates/base/</a> (Base Templates and Blocks)&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://gohugo.io/templates/introduction/#partial">https://gohugo.io/templates/introduction/#partial</a> (Introduction to Hugo Templating#Partial)&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://gohugo.io/templates/introduction/#the-dot">https://gohugo.io/templates/introduction/#the-dot</a> (Introduction to Hugo Templating#Context (aka “the dot”))&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p><a href="https://gohugo.io/templates/introduction/#whitespace">https://gohugo.io/templates/introduction/#whitespace</a> (Introduction to Hugo Templating#Whitespace)&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><a href="https://gohugo.io/templates/partials/">https://gohugo.io/templates/partials/</a> (Partial Templates)&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p><a href="https://gohugo.io/templates/lists/">https://gohugo.io/templates/lists/</a> (Lists of Content in Hugo)&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p><a href="https://gohugo.io/templates/lookup-order/#hugo-layouts-lookup-rules">https://gohugo.io/templates/lookup-order/#hugo-layouts-lookup-rules</a> (Hugo Layouts Lookup Rules)&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p><a href="https://gohugo.io/templates/introduction/#iteration">https://gohugo.io/templates/introduction/#iteration</a> (Iteration)&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9" role="doc-endnote">
+<p><a href="https://gohugo.io/templates/lists/#order-content">https://gohugo.io/templates/lists/#order-content</a> (Order Content)&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10" role="doc-endnote">
+<p><a href="https://gohugo.io/variables/page/">https://gohugo.io/variables/page/</a> (Page Variables)&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:11" role="doc-endnote">
+<p><a href="https://gohugo.io/content-management/summaries/#summary-selection-order">https://gohugo.io/content-management/summaries/#summary-selection-order</a> (Content Summaries)&#160;<a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:12" role="doc-endnote">
+<p><a href="https://gohugo.io/templates/single-page-templates/">https://gohugo.io/templates/single-page-templates/</a> (Single Page Templates)&#160;<a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+    </article>
+
+                </article>
+                <footer>
+    <div class="flex-container">
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/hugo/theme_dev/%E4%BB%8E%E6%96%B0%E5%BB%BA%E7%A9%BA%E7%99%BD%E9%AA%A8%E6%9E%B6%E5%BC%80%E5%A7%8B/">
+            <div>
+                <h2>&lt;&lt; Prev</h2>
+                <span>从新建空白骨架开始</span>
+            </div>
+        </a>
+        <p><p>新建项目, 了解基本文件结构.</p></p>
+    
+
+        </div>
+        <div></div>
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/hugo/theme_dev/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F/">
+            <div>
+                <h2>Next &gt;&gt;</h2>
+                <span>页面布局和基本样式</span>
+            </div>
+        </a>
+        <p><p>用简单的 <em>HTML+CSS</em> 定制自己的主题.</p></p>
+    
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <span>Power by: <a href="https://gohugo.io/">HUGO</a></span>
+        <br>
+        <span>©2022 aneCrow All Rights Reserved.</span>
+    </div>
+</footer>
+
+
+            </div>
+        </div>
+        <div class="side-container">
+            <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#通用外壳模板-baseofbase">通用外壳模板 Baseof</a>
+      <ul>
+        <li><a href="#小组件-partialpartial">小组件 Partial</a></li>
+        <li><a href="#页面模板-template">页面模板 Template</a></li>
+      </ul>
+    </li>
+    <li><a href="#聚合页面-listlist">聚合页面 List</a></li>
+    <li><a href="#内容页面-singlesingle">内容页面 Single</a></li>
+  </ul>
+</nav>
+</aside>
+        </div>
+        <div></div>
+    </div>
+</body>
+
+</html>

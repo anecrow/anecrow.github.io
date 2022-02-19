@@ -1,0 +1,107 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"hugo": "${workspaceFolder}\\hugo",
+	},
+	"tasks": {
+    "version": "2.0.0",
+    "problemMatcher": [],
+    "options": {
+      "cwd": "${fileWorkspaceFolder}"
+    },
+    "tasks": [
+      {
+        "label": "新建站点项目",
+        "type": "shell",
+        "command": "${config:hugo} new site ${input:newSiteName}",
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+      },
+      {
+        "label": "新建站点项目并加入工作区",
+        "type": "shell",
+        "command": "echo TODO", // TODO: 新建站点项目并加入工作区
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+      },
+      {
+        "label": "运行当前站点",
+        "type": "shell",
+        "command": "${config:hugo} server ${input:serverFlags}",
+      },
+      {
+        "label": "构建当前站点",
+        "type": "shell",
+        "command": "${config:hugo} ${input:serverFlags}",
+      },
+      {
+        "label": "在当前站点新建主题",
+        "type": "shell",
+        "command": "${config:hugo} new theme ${input:newThemeName}",
+      },
+      {
+        "label": "在当前站点新建页面",
+        "type": "shell",
+        "command": "${config:hugo} new ${input:sectionName}\\${input:newPageName}.md",
+      },
+      {
+        "label": "在当前位置新建页面",
+        "type": "shell",
+        "command": "echo TODO", // TODO: 在当前位置新建页面
+      },
+      {
+        "label": "在当前位置新建Section",
+        "type": "shell",
+        "command": "echo TODO", // TODO: 在当前位置新建Section
+      },
+      {
+        "label": "在当前位置新建Leaf",
+        "type": "shell",
+        "command": "echo TODO", // TODO: 在当前位置新建Leaf
+      },
+    ],
+    "inputs": [
+      {
+        "type": "promptString",
+        "id": "newSiteName",
+        "description": "输入新建站点名称",
+        "default": "new_site"
+      },
+      {
+        "type": "promptString",
+        "id": "serverFlags",
+        "description": "命令参数",
+        "default": "-D"
+      },
+      {
+        "type": "promptString",
+        "id": "buildFlags",
+        "description": "命令参数"
+      },
+      {
+        "type": "promptString",
+        "id": "sectionName",
+        "description": "section路径",
+        "default": "post"
+      },
+      {
+        "type": "promptString",
+        "id": "newPageName",
+        "description": "页面标题",
+        "default": "new_post"
+      },
+      {
+        "type": "promptString",
+        "id": "newThemeName",
+        "description": "输入新建主题名称",
+        "default": "new_theme"
+      },
+    ]
+  }
+}

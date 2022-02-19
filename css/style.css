@@ -1,0 +1,89 @@
+/* github-markdown fix */
+@media (prefers-color-scheme: dark) {
+    .markdown-body {
+        --color-fg-default: hsla(210, 17%, 82%, 0.85);
+        --color-canvas-default: #24282d;
+        --color-border-default: #383f47;
+        --color-border-muted: #383f47;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .markdown-body {
+        --color-fg-default: hsla(213, 13%, 16%, 0.85);
+    }
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+    color: var(--color-fg-default) !important;
+    background-color: var(--color-canvas-subtle) !important;
+}
+
+.markdown-body pre span[style*="background-color:#cfd1c5"] {
+    background-color: var(--color-border-default) !important;
+}
+
+.markdown-body table tr {
+    border-top: 0;
+}
+
+/* nav */
+.side-container h1,
+header h1,
+footer h2 {
+    margin-bottom: 0 !important;
+}
+
+.side-container h1,
+.side-container h3,
+.nav-item {
+    padding-left: var(--gap-unit) !important;
+}
+
+.side-container h3 {
+    margin: 0;
+}
+
+.nav-item {
+    display: block;
+    margin: 2px 0 !important;
+    padding-top: 0.6em !important;
+    padding-bottom: 0.4em !important;
+}
+
+.side-container a:hover,
+.breadcrumbnav a:hover {
+    text-decoration: none !important;
+}
+
+.side-container h1:hover,
+.nav-item:not(.nav-current):hover {
+    font-weight: bold;
+    color: var(--color-accent-emphasis);
+}
+
+#TableOfContents {
+    position: fixed;
+    bottom: 0;
+}
+
+#TableOfContents>ul {
+    padding-left: var(--gap-unit);
+}
+
+#side-nav {
+    position: sticky;
+    top: 0;
+}
+
+#page-info {
+    background-color: var(--color-neutral-muted);
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 6px
+}
+
+footer .flex-container>*:is(:first-child, :last-child) {
+    flex-basis: 40%;
+}
