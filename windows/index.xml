@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on aneCrow&#39;s 杂货铺</title>
+    <link>https://blog.anecrow.work/windows/</link>
+    <description>Recent content in Windows on aneCrow&#39;s 杂货铺</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 20 Feb 2022 15:30:53 +0800</lastBuildDate><atom:link href="https://blog.anecrow.work/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hyper-V</title>
+      <link>https://blog.anecrow.work/windows/hyper-v/</link>
+      <pubDate>Thu, 24 Feb 2022 21:57:39 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/windows/hyper-v/</guid>
+      <description>&lt;p&gt;微软自带的虚拟机平台.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>程序沙箱 Sandbox</title>
+      <link>https://blog.anecrow.work/windows/sandbox/</link>
+      <pubDate>Sun, 20 Feb 2022 15:30:20 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/windows/sandbox/</guid>
+      <description>&lt;p&gt;用于隔离程序的安全环境.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

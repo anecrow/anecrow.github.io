@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>程序沙箱 Sandbox</title>
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/layout.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/github-markdown.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/style.css">
+</head>
+
+<body class="markdown-body">
+    <div class="flex-container">
+        <div class="side-container">
+            
+
+    
+
+
+<nav id="side-nav">
+    <a href="https://blog.anecrow.work/">
+        <h1>Home</h1>
+    </a>
+    <a href="https://blog.anecrow.work/">
+        <h3>aneCrow&#39;s 杂货铺</h3>
+    </a>
+    
+        
+            
+                <a href="https://blog.anecrow.work/hugo/">
+                    <span class="nav-item">
+                        Hugo Site
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/usage/">
+                        <code class="nav-item nav-subitem">
+                            使用
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/">
+                        <code class="nav-item nav-subitem">
+                            自定义主题
+                        </code>
+                    </a>
+                
+            
+        
+            
+                <a href="https://blog.anecrow.work/windows/">
+                    <span class="nav-item">
+                        Windows
+                    </span>
+                </a>
+            
+            
+                
+                    <code class="nav-item nav-subitem nav-current">
+                        程序沙箱 Sandbox
+                    </code>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/windows/hyper-v/">
+                        <code class="nav-item nav-subitem">
+                            Hyper-V
+                        </code>
+                    </a>
+                
+            
+        
+            
+                <a href="https://blog.anecrow.work/minecraft/">
+                    <span class="nav-item">
+                        Minecraft
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/minecraft/server/">
+                        <code class="nav-item nav-subitem">
+                            Server
+                        </code>
+                    </a>
+                
+            
+        
+    
+</nav>
+        </div>
+        <div id="main-container" class="flex-container">
+            <div id="content">
+                
+<header>
+    <h1>程序沙箱 Sandbox</h1>
+    <nav class="breadcrumbnav">
+    
+    
+        
+    
+        
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/">
+                <code>Home</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/windows/">
+                <code>Windows</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <code>程序沙箱 Sandbox</code>
+    
+
+</nav>
+
+
+    <blockquote id="page-info">
+        <span><code>Date</code>: 2022/02/20 15:30:20</span>
+        <span><code>Lastmod</code>: 2022/02/28 23:52:14</span>
+        <br>
+        
+            <span><code>WordCount</code>: 3861</span>
+            <span><code>ReadingTime</code>: 8min</span>
+        
+    </blockquote>
+</header>
+                <article>
+                    
+    <article>
+        <p>用于隔离程序的安全环境.</p>
+<p>想要运行 <em>不确定安全性</em> 的软件或者让某些程序 <em>实现多开</em></p>
+<blockquote>
+<p>还有某些在勉强额能用和毒瘤之间反复横跳的玩意</p>
+</blockquote>
+<p>尝试一下市面能用的现成解决方式<br>
+同时也关注各方案的难易程度, 包括: 部署 维护 使用感</p>
+<p>方向不外乎: <code>新买一台</code> &gt; <code>虚拟化硬件</code> &gt; <code>虚拟化容器</code><br>
+花销也是由高到低</p>
+<blockquote>
+<p>文档较长, 善用右侧栏的TOC快速导航</p>
+</blockquote>
+<hr>
+<h2 id="hyper-v">Hyper-V</h2>
+<blockquote>
+<p>新买一台还是没必要的, 使用虚拟化技术模拟一台就好</p>
+</blockquote>
+<p>就从最容易理解的虚拟机开始<br>
+简单说就是在系统内套嵌运行了另一个系统</p>
+<p><strong>具体配置虚拟机的操作移到了这里</strong>: <a href="../hyper-v">Hyper-V</a></p>
+<p>虽然操作复杂性和系统开销相对其他解决方式高了一些<br>
+但也带来了最稳定且最灵活的使用体验</p>
+<p>物理机能做到的事基本上虚拟机也做得到<br>
+配合 <code>检查点</code> 功能, 还能让同一台虚拟机在不同环境中切换<br>
+让不同程序都能拥有相互隔离且干净的运行环境</p>
+<p>缺点在于使用类似远程桌面的独立窗口进行操作<br>
+使用感比较割裂, 对本机桌面有不小侵占</p>
+<p><img src="https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/about/media/hypervnesting.png" alt="Hyper-V"></p>
+<p>好在解决方式也是存在的</p>
+<ul>
+<li>
+<p>利用本机的 <code>多桌面</code> 功能<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>进行管理</p>
+<blockquote>
+<p>旧称为 <code>虚拟桌面</code><br>
+在新桌面下对连接窗口使用 <code>全屏模式</code> 以获得<strong>完整的虚拟机桌面操作体验</strong></p>
+</blockquote>
+</li>
+<li>
+<p>或使用 <code>RemoteApp</code> 对程序进行 <code>窗口融合</code></p>
+<blockquote>
+<p><strong>看起来就像是在本机运行一样!</strong><br>
+<code>窗口融合</code> 对于云应用程序来说简直是无敌搭配</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="多桌面">多桌面</h3>
+<p>在任务栏上点击 <code>任务视图</code> 或者使用快捷键 <code>Win</code> + <code>Tab</code> 呼出视图<br>
+<img src="https://support.content.office.net/en-us/media/a39f4b36-1c57-497a-bc17-7875d5270cac.jpg" alt="多个桌面"></p>
+<blockquote>
+<p><code>Win</code> + <code>Ctrl</code> + <code>D</code> 快速创建并切换到新桌面<br>
+<code>Win</code> + <code>Ctrl</code> + <code>F4</code> 快速关闭当前桌面<br>
+<code>Win</code> + <code>Ctrl</code> + <code>←</code> <code>→</code> 快速切换到相邻桌面</p>
+</blockquote>
+<p>在新桌面中使用 <code>Hyper-V 管理器</code> 进行操作</p>
+<blockquote>
+<p>你也可以在 <code>任务视图</code> 中<br>
+<strong>右键</strong>对应程序窗口 &gt; <strong>移动至</strong> &gt; 其他桌面或为它<strong>新建桌面</strong></p>
+</blockquote>
+<p>还可以将整个桌面作为虚拟机操作窗口<br>
+虚拟机连接窗口中点击 <code>查看</code> &gt; <code>全屏模式</code></p>
+<blockquote>
+<p>但处于虚拟机页面时 <code>win</code> 快捷键不会被作用于本机</p>
+</blockquote>
+<h3 id="remoteapp-tool">RemoteApp Tool</h3>
+<p><code>RemoteApp</code> 意为 <code>远程应用</code><br>
+使在远程主机上运行的程序看起来就像在本地运行的其他程序一样<br>
+没有多余的远程桌面窗口, 就像两个桌面 <em>融合</em> 了</p>
+<p><code>RemoteApp</code> 是 <code>RDP服务</code> 的拓展<br>
+所以我们首先要保证远程主机上的 <code>远程桌面服务</code> 处于可用状态</p>
+<ul>
+<li><code>系统</code> &gt; <code>远程桌面</code>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 启用远程桌面</li>
+</ul>
+</li>
+<li><code>账户</code>
+<ul>
+<li><code>添加</code> 登录密码
+<blockquote>
+<p><em>远程桌面</em> 不允许登录密码为空的账户<br>
+懒得输入 <code>密码提示</code> 可以使用一个空格代替</p>
+</blockquote>
+</li>
+<li>怕忘记密码的话可以 <code>更新安全问题</code></li>
+</ul>
+</li>
+</ul>
+<p>其次保证远程主机的系统支持 <code>RemoteApp</code> 组件<br>
+然而个人系统如 <code>Pro(专业版)</code> 是不能直接支持的</p>
+<blockquote>
+<p><code>Home(家庭版)</code> 连<code>RDP服务</code>都没有</p>
+</blockquote>
+<p>感谢 <code>kimmknight</code> 的 <a href="https://github.com/kimmknight/remoteapptool">RemoteApp Tool</a> 项目<br>
+让 <code>RemoteApp</code> 在 <code>Pro(专业版)</code> 下得到了支持<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<blockquote>
+<p>家庭版真的不行!</p>
+<p>虚拟机系统优先推荐使用新的大版本 <code>Windows</code>, 比如 <code>Windows 11</code><br>
+某些软件的最新版在旧版系统中连接<code>RemoteApp</code>使用会出现奇怪的黑条</p>
+</blockquote>
+<p><strong>下载</strong>最新发布版本 <a href="https://github.com/kimmknight/remoteapptool/releases">RemoteApp.Tool.&lt;version&gt;.msi</a><br>
+<strong>粘贴</strong>至虚拟机中<strong>运行安装</strong><br>
+然后<strong>打开</strong> <code>RemoteApp Tool</code><br>
+<img src="https://github.com/kimmknight/remoteapptool/wiki/images/tutorial-create/open-remoteapp-tool-and-create-a-remoteapp--host-.png" alt="Open RemoteApp"></p>
+<p><strong>点击</strong><code>+</code>后<strong>选择</strong>需要连接程序的<code>.exe</code>执行文件并<strong>确定</strong><br>
+<img src="https://github.com/kimmknight/remoteapptool/wiki/images/tutorial-create/create-client-connection-file--host-.png" alt="create RDP file"></p>
+<p><strong>选择</strong>已加入的程序项, <strong>点击</strong> <code>Create Client Connection...</code><br>
+设置选项保持默认, <strong>点击</strong> <code>Create...</code> 并找地方<strong>保存</strong>生成的 <code>.rdp</code> 文件</p>
+<blockquote>
+<p>对于本机作为客户端, 虚拟机提供远程服务的情况下使用默认选项就足够了</p>
+</blockquote>
+<p><strong>复制</strong>这个<code>.rdp</code>文件<strong>粘贴</strong>至本机任何地方并<strong>运行</strong><br>
+<strong>忽略</strong>风险提示然后使用虚拟机上的用户名和密码进行<strong>连接</strong></p>
+<p>这时对应程序应该就能在本机使用远程服务打开了</p>
+<blockquote>
+<p>已知影响体验的地方:</p>
+<ul>
+<li>远程打开<code>Edge</code>前不能在虚拟机中打开过, 反之亦然
+<ul>
+<li>需要结束进程才能重置这个现象</li>
+</ul>
+</li>
+<li>必须使用远程桌面安装有的输入法
+<ul>
+<li>同时右下角会出现额外的输入法语言栏</li>
+<li>一般情况下可以使用 <code>shift</code> 切换中英输入状态, 使用 <code>shift</code>+<code>Alt</code> 切换输入法</li>
+</ul>
+</li>
+<li>某些自作聪明给GUI使用非标准且花里胡哨界面效果负优化的有可能导致渲染错误<br>
+包括且不限于:
+<ul>
+<li>奇怪的黑块</li>
+<li>不正确的尺寸</li>
+<li>溢出剪裁</li>
+<li>交互失效</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="raweb可选">RAWeb(可选)</h3>
+<p>这是 <code>RemoteApp Tool</code> 作者的另一个项目 <a href="https://github.com/kimmknight/raweb">RAWeb</a><br>
+旨在使用 <code>IIS</code> 和 <code>自签名证书</code> 通过 <code>RemoteApp 和桌面连接</code> 服务来自动推送远程服务器上的 <code>.rdp</code> 文件部署至客户端的开始菜单中</p>
+<p>具体实现过程比较高阶, 不在此赘述<br>
+参考步骤:</p>
+<ul>
+<li><a href="https://github.com/kimmknight/raweb/wiki/Setup-RAWeb-Web-Interface">Setup RAWeb Web Interface</a>
+<ul>
+<li>架设 <code>基础网页服务</code></li>
+</ul>
+</li>
+<li><a href="https://github.com/kimmknight/raweb/wiki/Setup-RAWeb-Webfeed-with-a-Self-Signed-Certificate">Setup RAWeb Webfeed with a Self Signed Certificate</a>
+<ul>
+<li>使用 <code>自签名证书</code> 部署 <code>Webfeed</code> 推送</li>
+</ul>
+</li>
+<li>(可选) <a href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-server/remote/custom-server-authentication-certificate-for-tls">强制 Windows 7 中的远程桌面服务对 TLS 使用自定义服务器身份验证证书</a>
+<ul>
+<li>让RDP服务使用该证书, 避免连接时的警告信息</li>
+</ul>
+</li>
+</ul>
+<p>一些Tips:</p>
+<ul>
+<li>修改 <code>Default.asp</code> 内的 <code>pngname</code> 部分使用 <code>icon/</code> 下的 <code>.ico</code><br>
+生成 <code>.rdp</code> 时将 <code>icon</code> 文件放入对应位置即可同时应用网页内和开始菜单内的图标</li>
+<li><code>RemoteApp Tool</code> 选择的程序名不允许有中文, 会导致 <code>ASP服务</code> 的路径对象出错进而使 <code>RemoteApp 和桌面连接</code> 连接失败</li>
+</ul>
+<hr>
+<h2 id="windows-sandbox">Windows Sandbox</h2>
+<p>按照官网描述可以认为这是一种 <em>临时且轻型的虚拟机</em><br>
+<em>Sandbox</em> 会使用本机必要的系统文件作为镜像开启 <em>Hyper-V虚拟机</em> 并链接它, 注销退出后销毁所有文件</p>
+<blockquote>
+<p>并建立沙盒专用环境, 使用全新用户凭据登录操作, 就像<strong>全新的操作系统</strong>一样<br>
+不会对本机用户资料有接触</p>
+</blockquote>
+<p>使用需求:</p>
+<ul>
+<li>Win10: 专业版 企业版 教育版build18305<br>
+Win11<br>
+(家庭版不行)</li>
+<li>64位架构</li>
+<li>处理器最低双核, 推荐四核以上</li>
+<li>内存最低4GB, 推荐8GB以上</li>
+<li>硬盘可用空间最低1GB, 推荐SSD</li>
+<li>BIOS开启虚拟化</li>
+</ul>
+<h3 id="安装">安装</h3>
+<p>参照官方安装步骤 <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview#installation">Installation</a></p>
+<p>首先需要在 <strong>BIOS开启虚拟化</strong></p>
+<p>打开沙盒功能<br>
+<strong>开始菜单</strong> &gt; <strong>设置</strong> &gt; <strong>应用</strong> &gt; <strong>可选功能</strong> &gt; <strong>更多 Windows 功能</strong></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <strong>Windows 沙盒</strong></li>
+</ul>
+<p><strong>重启</strong>后就安装好了</p>
+<h3 id="使用">使用</h3>
+<p>在开始菜单运行 <code>Windows Sandbox</code> 会启动一个全新的临时虚拟机<br>
+可以直接在本机复制安装程序, 然后在沙盒窗口中粘贴来简单地传输文件<br>
+关闭沙盒会销毁其中的所有改动和文件</p>
+<blockquote>
+<p>有个广泛的bug, 会得到一个非当前主机系统语言的虚拟机镜像, 比如中文用户开出的沙盒是英文系统<br>
+而切换系统语言需要注销用户进行应用, 但沙盒注销后直接就销毁了, 所以其实是无法更改的<br>
+修复方式不明, 有把主机系统语言改掉再改回来的, 有重装 Sandbox 的, 还有重装系统的<br>
+官方修复这个bug前, 只能 <em>也不是不能用</em> 了</p>
+</blockquote>
+<p>虽然 <code>Sanbox</code> 的特性决定了它在某些程序只需要一次性执行的场景非常有效<br>
+但这样的用途毕竟有些狭窄, 使用某些方式将部分文件持久化, 能让沙盒的功用大大增加</p>
+<h3 id="配置文件">配置文件</h3>
+<p>使用配置文件对沙盒进行<strong>初始化</strong></p>
+<p>就拿 <code>TIM</code> 和 <code>微信pc版</code> 作为例子, 准备需要的文件
+<strong>新建</strong>文件结构</p>
+<ul>
+<li><code>sandbox/</code> <strong>(注意不是上边 <code>Sandboxie</code> 的储存路径 <code>Sanbox/</code>)</strong>
+<ul>
+<li><code>tencent.wsb</code></li>
+<li><code>tencent/</code>
+<ul>
+<li><code>install/</code>
+<ul>
+<li><code>install.cmd</code></li>
+</ul>
+</li>
+<li><code>Tencent_Roaming/</code></li>
+<li><code>Tencent_Files/</code></li>
+<li><code>WeChat_Files/</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>大概功能:</p>
+<ul>
+<li><code>tencent.wsb</code>
+<ul>
+<li>Windows Sandbox 配置文件</li>
+</ul>
+</li>
+<li><code>tencent/</code>
+<ul>
+<li>安装程序和需要保留的程序数据文件</li>
+</ul>
+</li>
+<li><code>Tencent_Roaming/</code>
+<ul>
+<li>储存配置文件</li>
+</ul>
+</li>
+<li><code>Tencent_Files/</code>
+<ul>
+<li>储存 QQ/TIM 用户数据文件</li>
+</ul>
+</li>
+<li><code>WeChat_Files/</code>
+<ul>
+<li>储存 微信 用户数据文件</li>
+</ul>
+</li>
+</ul>
+<p>使用 <code>XML</code> 格式编写 <code>tencent.wsb</code><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>假设主文件夹位置 <code>D:\sandbox\</code>
+使用 <code>&lt;MappedFolder&gt;</code> 标签定义主机文件夹挂载至虚拟机的位置
+使用 <code>&lt;Command&gt;</code> 标签定义启动时执行的命令, 这里使用批处理命令安装程序</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#5bc4bf">&lt;Configuration&gt;</span>
+    <span style="color:#5bc4bf">&lt;MappedFolders&gt;</span>
+        <span style="color:#5bc4bf">&lt;MappedFolder&gt;</span>
+          <span style="color:#5bc4bf">&lt;HostFolder&gt;</span>D:\sandbox\Tencent\install<span style="color:#5bc4bf">&lt;/HostFolder&gt;</span>
+          <span style="color:#5bc4bf">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\Desktop\install<span style="color:#5bc4bf">&lt;/SandboxFolder&gt;</span>
+          <span style="color:#5bc4bf">&lt;ReadOnly&gt;</span>true<span style="color:#5bc4bf">&lt;/ReadOnly&gt;</span>
+        <span style="color:#5bc4bf">&lt;/MappedFolder&gt;</span>
+        <span style="color:#5bc4bf">&lt;MappedFolder&gt;</span>
+          <span style="color:#5bc4bf">&lt;HostFolder&gt;</span>D:\sandbox\Tencent\Tencent_Roaming<span style="color:#5bc4bf">&lt;/HostFolder&gt;</span>
+          <span style="color:#5bc4bf">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\AppData\Roaming\Tencent<span style="color:#5bc4bf">&lt;/SandboxFolder&gt;</span>
+        <span style="color:#5bc4bf">&lt;/MappedFolder&gt;</span>
+        <span style="color:#5bc4bf">&lt;MappedFolder&gt;</span>
+          <span style="color:#5bc4bf">&lt;HostFolder&gt;</span>D:\sandbox\Tencent\Tencent_Files<span style="color:#5bc4bf">&lt;/HostFolder&gt;</span>
+          <span style="color:#5bc4bf">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\Documents\Tencent Files<span style="color:#5bc4bf">&lt;/SandboxFolder&gt;</span>
+        <span style="color:#5bc4bf">&lt;/MappedFolder&gt;</span>
+        <span style="color:#5bc4bf">&lt;MappedFolder&gt;</span>
+          <span style="color:#5bc4bf">&lt;HostFolder&gt;</span>D:\sandbox\Tencent\WeChat_Files<span style="color:#5bc4bf">&lt;/HostFolder&gt;</span>
+          <span style="color:#5bc4bf">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\Documents\WeChat Files<span style="color:#5bc4bf">&lt;/SandboxFolder&gt;</span>
+        <span style="color:#5bc4bf">&lt;/MappedFolder&gt;</span>
+    <span style="color:#5bc4bf">&lt;/MappedFolders&gt;</span>
+    <span style="color:#5bc4bf">&lt;LogonCommand&gt;</span>
+        <span style="color:#5bc4bf">&lt;Command&gt;</span>&#34;C:\Users\WDAGUtilityAccount\Desktop\install\install.cmd&#34;<span style="color:#5bc4bf">&lt;/Command&gt;</span>
+    <span style="color:#5bc4bf">&lt;/LogonCommand&gt;</span>
+<span style="color:#5bc4bf">&lt;/Configuration&gt;</span>
+</code></pre></div><blockquote>
+<p>必须使用 <strong>绝对路径</strong><br>
+虚拟机用户名必然是 <strong>WDAGUtilityAccount</strong></p>
+</blockquote>
+<p>在 <code>install/</code> 下准备安装文件</p>
+<ul>
+<li><code>TIM.exe</code></li>
+<li><code>WeChatSetup.exe</code></li>
+</ul>
+<p>修改 <code>install/install.cmd</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">C:\Users\WDAGUtilityAccount\Desktop\install\WeChatSetup.exe<span style="color:#8d8687"> /S</span>
+
+C:\Users\WDAGUtilityAccount\Desktop\install\TIM.exe<span style="color:#8d8687"> /s</span>
+</code></pre></div><p><code>/s</code> 表示静默执行, 所以程序会安装至默认目录</p>
+<p>这样就准备完成了, 可以直接双击写好的沙盒配置文件 <code>tencent.wsb</code><br>
+快捷启动并初始化沙盒实例<br>
+需要等一会安装好后桌面上就会出现快捷方式</p>
+<blockquote>
+<p>因为挂载了本机文件夹到沙盒中充当软件的数据储存位置, 在沙盒销毁后资料不会丢失<br>
+就是每次都要重新安装软件比较浪费时间<br>
+不能设置沙盒中系统的默认语言导致需要指定安装中文包之后才有输入法用</p>
+</blockquote>
+<hr>
+<h2 id="docker-for-windows">Docker for Windows</h2>
+<p><code>Docker</code> 是有 <code>Windows模式</code> 的, 可以使用 <code>Windows镜像</code> 运行容器<br>
+其实用来当程序沙盒非常好<br>
+<code>Windows Server Core</code> 有完整的 <code>.NET</code> 执行环境<br>
+<code>Windwos Server</code> 有完整的图形功能</p>
+<p>问题是 <code>Docker</code> 容器内并不支持 <code>RDP</code> (似乎在某一时间被砍掉了)<br>
+可以查到虽然 <code>远程控制功能</code> 是开启的, 却不存在对 <code>3389</code> 端口的侦听</p>
+<p>所以这玩意还是更适合 <code>TCP/UDP</code> 伺服类应用</p>
+<blockquote>
+<p>与本文方向不符</p>
+</blockquote>
+<p>就<strong>放弃了</strong></p>
+<hr>
+<h2 id="sandboxie">Sandboxie</h2>
+<p>这是一个老派知名的软件模拟沙盒 <a href="https://sandboxie-plus.com/">Sandboxie</a>, 让程序在模拟出来的环境内运行</p>
+<p>开发者在 <code>2019-09-10</code> 对软件进行了免费开源<br>
+而在 <code>2020-06-01</code> 发布了新版 <code>Sandboxie-Plus</code></p>
+<p>可以从 <a href="https://sandboxie-plus.com/downloads/">下载页</a> 或 <a href="https://github.com/sandboxie-plus/Sandboxie/releases">Github Releases</a> 下载对应安装包</p>
+<blockquote>
+<p><code>Classic版</code> 就是所谓的旧版UI<br>
+<code>Plus版</code> 有最新的功能和现代化重置的UI</p>
+</blockquote>
+<p><strong>下载</strong>并<strong>安装</strong>后<strong>打开</strong><br>
+可以看到虽然重做了界面, 但明显还是遗留了很多旧派的感觉<br>
+操作上也是一脉相通的, 不多赘述</p>
+<p>在 <code>Sandboxie程序</code> 界面的列表<strong>空白处右键</strong> &gt; <strong>新建沙盒</strong> &gt; <strong>输入名称后确认</strong></p>
+<blockquote>
+<p>不同 <code>沙盒类型预设</code> 具体有什么差别我也没研究过<br>
+反正非捐赠用户能用的两种模式只有一些设置项的区别</p>
+</blockquote>
+<h3 id="安装至沙盒">安装至沙盒</h3>
+<p>建立好容器后就能往里安装那些对你隐私不太规矩的软件了<br>
+<strong>拖动exe安装文件</strong> 到 <code>Sandboxie</code> 窗口上<br>
+<strong>在此沙盒内运行</strong> 的列表中 <strong>选择刚建立的容器</strong> 并 <strong>确认</strong><br>
+然后<strong>正常安装</strong>, 但完成后暂时不运行, 在 <code>Sandboxie</code> <strong>右键</strong> &gt; <strong>终止所有程序</strong></p>
+<p>安装完成后可以检查本机对应路径是不存在的<br>
+可以进入沙盒储存路径 <code>Sandbox/</code> (取决于你在安装时把它放哪了)<br>
+<code>Sandbox/&lt;box name&gt;/driver/</code> 下就是沙盒程序的内部储存</p>
+<blockquote>
+<p>安装时目标路径其实是本机路径的模拟, 经过 <code>Sandboxie</code> 的欺骗, 程序实际操作路径为容器内部路径<br>
+所以直接用默认路径时一般会安装在 <code>Sandbox/&lt;box name&gt;/driver/C/Program Files (x86)/</code> 下<br>
+同样的程序在储存用户数据时会在 <code>Sandbox/&lt;box name&gt;/driver/C/Users/&lt;user name&gt;/Documents/</code> 下</p>
+<p><strong>注意 Sandboxie 并没有使用全新的沙箱环境, 而是对内部程序的操作重定向</strong><br>
+有的软件安装时会检查是否有已安装项, 本机已有安装有可能导致沙箱内安装异常<br>
+<strong>在安装时最好先卸载本机上对应应用</strong></p>
+</blockquote>
+<h3 id="快捷方式">快捷方式</h3>
+<p>为了方便我们还需要制作程序快捷方式<br>
+<strong>右键</strong>沙盒 &gt; <strong>浏览内容</strong> 会打开容器内文件管理窗口<br>
+找到<strong>安装目录</strong>并<strong>右键程序exe</strong> &gt; <strong>创建快捷方式</strong> 并 <strong>保存</strong></p>
+<blockquote>
+<p>大部分软件会默认在桌面建立快捷方式<br>
+对应容器内部路径为 <code>你当前的用户名</code>/<code>public</code>/<code>Desktop</code>/<code>*.lnk</code><br>
+右键这里的快捷方式来创建对应的快捷方式虽然比较方便, 但却没有图标, 还是得手动指定</p>
+</blockquote>
+<p><strong>双击</strong>这个快捷方式就能使用沙盒来运行应用</p>
+<h3 id="问题修复">问题修复</h3>
+<p>特别的, 关于 <code>QQProtect.exe</code> 进程驻留而不会自动关闭的问题</p>
+<p><strong>双击沙盒容器</strong> 打开设置, 进入 <strong>停止行为</strong> 选项卡<br>
+点击 <strong>添加引导程序</strong> 在下拉栏中选择 <strong>QQ.exe</strong>/<strong>TIM.exe</strong><br>
+点击 <strong>添加驻留程序</strong> 在下拉栏中选择 <strong>QQProtect.exe</strong></p>
+<blockquote>
+<p>如果出现程序无法运行的情况<br>
+进入 <strong>常规选项</strong> &gt; <strong>管理员权限</strong> 选项卡</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <strong>撤销管理员和 Power User 用户组的权限</strong></li>
+<li><input checked="" disabled="" type="checkbox"> <strong>使应用程序认为自己已被提权运行</strong></li>
+</ul>
+</blockquote>
+<h3 id="访问控制">访问控制</h3>
+<p>由于 <code>Sandboxie</code> 只是虚拟容器<br>
+内部程序依然需要访问一些通用的 <em>系统dll</em>, 默认是允许读写容器外资源的<br>
+这就留下了一些隐患</p>
+<p>进入 <strong>资源访问</strong> &gt; <strong>资源访问权限策略</strong> 选项卡</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 隐私模式</li>
+</ul>
+<p>但这个选项免费用户不能完全使用(只能试用5分装)<br>
+需要手动在 <strong>资源访问权限规则</strong> 写入你希望阻止的目录访问权限</p>
+<p>这样操作毕竟过于繁琐, 也有很多一般人意想不到的文件记录着敏感信息, 无法完全兼顾<br>
+不想氪金又希望堵住这个漏洞, 可以考虑使用 <a href="https://www.huorong.cn/person5.html">火绒</a></p>
+<p>打开 <strong>防护中心</strong> &gt; <strong>高级防护</strong></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <strong>自定义防护</strong></li>
+</ul>
+<p>获取现成的规则 <a href="https://github.com/tutugreen/Huorong-Rules">Huorong-Rules</a> JSON 文件</p>
+<ul>
+<li>在 <strong>自定义规则</strong> 中导入 <code>*-custom.json</code> 文件</li>
+<li>在 <strong>自动处理</strong> 中导入 <code>*-auto.json</code> 文件</li>
+</ul>
+<blockquote>
+<p>主机中的防火墙程序都能检测行为, 所以 <code>Sandboxie</code> 的隔离等级似乎并不那么理想</p>
+</blockquote>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://support.microsoft.com/zh-cn/windows/%E5%A4%9A%E4%B8%AA%E6%A1%8C%E9%9D%A2windows-36f52e38-5b4a-557b-2ff9-e1a60c976434#WindowsVersion=Windows_11">https://support.microsoft.com/zh-cn/windows/%E5%A4%9A%E4%B8%AA%E6%A1%8C%E9%9D%A2windows-36f52e38-5b4a-557b-2ff9-e1a60c976434#WindowsVersion=Windows_11</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://github.com/kimmknight/remoteapptool/wiki/Windows-Compatibility">https://github.com/kimmknight/remoteapptool/wiki/Windows-Compatibility</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-sandbox/windows-sandbox-configure-using-wsb-file#keywords-values-and-limits">https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-sandbox/windows-sandbox-configure-using-wsb-file#keywords-values-and-limits</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+    </article>
+
+                </article>
+                <footer>
+    <div class="flex-container">
+        <div>
+            
+    
+
+        </div>
+        <div></div>
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/windows/hyper-v/">
+            <div>
+                <h2>Next &gt;&gt;</h2>
+                <span>Hyper-V</span>
+            </div>
+        </a>
+        <p><p>微软自带的虚拟机平台.</p></p>
+    
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <span>Power by: <a href="https://gohugo.io/">HUGO</a></span>
+        <br>
+        <span>©2022 aneCrow All Rights Reserved.</span>
+    </div>
+</footer>
+
+
+            </div>
+        </div>
+        <div class="side-container">
+            <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hyper-v">Hyper-V</a>
+      <ul>
+        <li><a href="#多桌面">多桌面</a></li>
+        <li><a href="#remoteapp-tool">RemoteApp Tool</a></li>
+        <li><a href="#raweb可选">RAWeb(可选)</a></li>
+      </ul>
+    </li>
+    <li><a href="#windows-sandbox">Windows Sandbox</a>
+      <ul>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#使用">使用</a></li>
+        <li><a href="#配置文件">配置文件</a></li>
+      </ul>
+    </li>
+    <li><a href="#docker-for-windows">Docker for Windows</a></li>
+    <li><a href="#sandboxie">Sandboxie</a>
+      <ul>
+        <li><a href="#安装至沙盒">安装至沙盒</a></li>
+        <li><a href="#快捷方式">快捷方式</a></li>
+        <li><a href="#问题修复">问题修复</a></li>
+        <li><a href="#访问控制">访问控制</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+        </div>
+        <div></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hyper-V</title>
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/layout.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/github-markdown.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/style.css">
+</head>
+
+<body class="markdown-body">
+    <div class="flex-container">
+        <div class="side-container">
+            
+
+    
+
+
+<nav id="side-nav">
+    <a href="https://blog.anecrow.work/">
+        <h1>Home</h1>
+    </a>
+    <a href="https://blog.anecrow.work/">
+        <h3>aneCrow&#39;s 杂货铺</h3>
+    </a>
+    
+        
+            
+                <a href="https://blog.anecrow.work/hugo/">
+                    <span class="nav-item">
+                        Hugo Site
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/usage/">
+                        <code class="nav-item nav-subitem">
+                            使用
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/hugo/theme_dev/">
+                        <code class="nav-item nav-subitem">
+                            自定义主题
+                        </code>
+                    </a>
+                
+            
+        
+            
+                <a href="https://blog.anecrow.work/windows/">
+                    <span class="nav-item">
+                        Windows
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/windows/sandbox/">
+                        <code class="nav-item nav-subitem">
+                            程序沙箱 Sandbox
+                        </code>
+                    </a>
+                
+            
+                
+                    <code class="nav-item nav-subitem nav-current">
+                        Hyper-V
+                    </code>
+                
+            
+        
+            
+                <a href="https://blog.anecrow.work/minecraft/">
+                    <span class="nav-item">
+                        Minecraft
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/minecraft/server/">
+                        <code class="nav-item nav-subitem">
+                            Server
+                        </code>
+                    </a>
+                
+            
+        
+    
+</nav>
+        </div>
+        <div id="main-container" class="flex-container">
+            <div id="content">
+                
+<header>
+    <h1>Hyper-V</h1>
+    <nav class="breadcrumbnav">
+    
+    
+        
+    
+        
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/">
+                <code>Home</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/windows/">
+                <code>Windows</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <code>Hyper-V</code>
+    
+
+</nav>
+
+
+    <blockquote id="page-info">
+        <span><code>Date</code>: 2022/02/24 21:57:39</span>
+        <span><code>Lastmod</code>: 2022/02/28 14:50:07</span>
+        <br>
+        
+            <span><code>WordCount</code>: 2825</span>
+            <span><code>ReadingTime</code>: 6min</span>
+        
+    </blockquote>
+</header>
+                <article>
+                    
+    <article>
+        <p>微软自带的虚拟机平台.</p>
+<p><strong><em>Win10/11</em> 家庭版不支持此功能</strong></p>
+<blockquote>
+<p>从 <em>Win10专业版</em> 开始内置 <strong>Hyper-V</strong> 功能, <em>家庭版</em> 用户可以<a href="https://support.microsoft.com/zh-cn/windows/%E5%8D%87%E7%BA%A7%E5%88%B0-windows-10-%E4%B8%93%E4%B8%9A%E7%89%88-71ecc746-0f81-a4c0-bd4b-0db8559e0796">升级</a>至 <em>专业版</em></p>
+</blockquote>
+<h2 id="启用功能安装hyper-v">启用功能<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h2>
+<p>启用之前首先要 <strong>进入BIOS</strong> &gt; <strong>开启 CPU虚拟化</strong></p>
+<blockquote>
+<p>不同主板提供的选项和位置有一定差异</p>
+</blockquote>
+<p><strong>保存后重启</strong>进入系统<br>
+<strong>开始菜单</strong>搜索栏<strong>输入</strong> <code>Windows Feature</code> &gt; <code>启用或关闭 Windows 功能</code></p>
+<blockquote>
+<p><em>Win10/11</em> 的选项位置也有略微差别, 这里直接用开始菜单的搜索功能打开</p>
+</blockquote>
+<p><img src="https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/media/enable_role_upd.png" alt="Windows Feature"></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Hyper-V</li>
+</ul>
+<p><strong>注意</strong>必须是全部开启的<code>√</code>, 而不是部分开启的<code>-</code></p>
+<blockquote>
+<p>需要同时勾选 <code>Hyper-V 管理工具</code> 和 <code>Hyper-V 平台</code></p>
+</blockquote>
+<p>跟随提示再次<strong>重新启动</strong><br>
+就能在开始菜单中看到 <code>Hyper-V 管理器</code></p>
+<p><strong>打开</strong> <code>Hyper-V 管理器</code> 等待连接至服务<br>
+成功时左侧栏会出现本机名称</p>
+<h2 id="安装镜像">安装镜像</h2>
+<p>创建虚拟机前需要获得 <code>系统安装镜像 ISO/VHDX</code></p>
+<p>简单给常见版本列一下最低硬件标准</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th style="text-align:center">CPU cores</th>
+<th style="text-align:center">RAM<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></th>
+<th>HDD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows11 <code>x64</code></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4<code>GB</code></td>
+<td>64<code>GB</code></td>
+</tr>
+<tr>
+<td>Windows10 <code>x64</code></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2<code>GB</code></td>
+<td>32<code>GB</code></td>
+</tr>
+<tr>
+<td>Windows10 <code>x86</code></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1<code>GB</code></td>
+<td>16<code>GB</code></td>
+</tr>
+<tr>
+<td>Windows8.1 <code>x64</code></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2<code>GB</code></td>
+<td>20<code>GB</code></td>
+</tr>
+<tr>
+<td>Windows8.1 <code>x86</code></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1<code>GB</code></td>
+<td>16<code>GB</code></td>
+</tr>
+</tbody>
+</table>
+<p>然后看看 <code>Windows Pro(专业版)</code> 安装完成和更新补丁之后硬盘占用量</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th style="text-align:right">Install</th>
+<th style="text-align:right">Updated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows11 Pro <code>x64</code></td>
+<td style="text-align:right">10.5<code>GB</code></td>
+<td style="text-align:right">16.6<code>GB</code></td>
+</tr>
+<tr>
+<td>Windows10 Pro <code>x64</code></td>
+<td style="text-align:right">11.1<code>GB</code></td>
+<td style="text-align:right">16.5<code>GB</code></td>
+</tr>
+<tr>
+<td>Windows10 Pro <code>x86</code></td>
+<td style="text-align:right">8.03<code>GB</code></td>
+<td style="text-align:right">12.1<code>GB</code></td>
+</tr>
+<tr>
+<td>Windows8.1 Pro <code>x64</code></td>
+<td style="text-align:right">8.41<code>GB</code></td>
+<td style="text-align:right">16.6<code>GB</code></td>
+</tr>
+<tr>
+<td>Windows8.1 Pro <code>x86</code></td>
+<td style="text-align:right">7.03<code>GB</code></td>
+<td style="text-align:right">12.6<code>GB</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>其他版本自行摸索</p>
+</blockquote>
+<p>显然 <code>Win8.1 x86</code> 虽然起始消耗最小, 但更新完补丁之后互相基本没差多少<br>
+如果追求节俭, 可以尝试关闭 <code>自动更新</code> 功能, 只在本地用的话基本可以无视不更新带来的风险</p>
+<p>不如选择用 <code>win10 x86</code>, 毕竟基本就是内核套了个壳<br>
+主要是作为过渡版本, 现在看来外观和操作上毕竟有些陈旧<br>
+不考虑使用 <code>Win8</code> (不推荐)</p>
+<blockquote>
+<p>除了特殊用途, 不会有人指望 <code>Win7</code> 还能日常使用吧<br>
+这还不如去玩树莓派</p>
+</blockquote>
+<h3 id="获取-windows-10-iso">获取 <a href="https://www.microsoft.com/zh-cn/software-download/windows10">Windows 10 ISO</a></h3>
+<p><em>Win10 ISO镜像</em> 需要使用 <code>MediaCreationTool*.exe</code> <em>媒体创建工具</em> 进行获取<br>
+下载页中点击 <strong>立即下载工具</strong> 启动下载</p>
+<blockquote>
+<p>当前版本为 <code>21H2</code></p>
+</blockquote>
+<p>更多详细信息可以查看<a href="https://www.microsoft.com/zh-cn/software-download/windows10">此页面</a>下方的<br>
+<code>使用该工具创建安装介质（USB 闪存驱动器、DVD 或 ISO 文件），以在其他电脑上安装 Windows 10（单击可显示详细或简要信息）</code></p>
+<p>简述 <em>媒体创建工具</em> 使用方式:<br>
+<strong>为另一台电脑创建安装介质</strong> &gt; 版本: <strong>Windows 10</strong> &gt; <strong>ISO 文件</strong> &gt; 选择保存位置</p>
+<blockquote>
+<p>版本选择时构架选 <code>两者</code> 会同时包含 <code>x64</code> 和 <code>x86</code>, 镜像文件大小约 <code>8GB</code></p>
+<p><strong>Windows 10 家庭中文版</strong> 为特供版本, 只含无法修改系统语言的家庭版<br>
+其他和标准的家庭版没有区别<br>
+<strong>注意</strong>: <em>家庭版</em> 并不支持 <code>RDP服务</code> 也就是 <code>远程桌面控制功能</code></p>
+</blockquote>
+<h3 id="获取-windows-11-iso">获取 <a href="https://www.microsoft.com/zh-cn/software-download/windows11">Windows 11 ISO</a></h3>
+<p>使用对应 <em>媒体创建工具</em> 进行获取 <em>Win11 ISO镜像</em> 的方式和 <em>Win10</em> 是相同的</p>
+<p>额外的, <a href="https://www.microsoft.com/zh-cn/software-download/windows11">此页面</a>下方直接提供了 <strong>ISO 文件</strong> 下载<br>
+<code>下载 Windows 11 磁盘映像 (ISO)</code></p>
+<h2 id="创建虚拟机">创建虚拟机</h2>
+<p>在 <code>Hyper-V管理器</code> 右侧栏点击 <strong>新建</strong> &gt; <strong>虚拟机</strong><br>
+基本按照向导做就行</p>
+<p>有些地方需要注意:</p>
+<ul>
+<li><code>虚拟机代数</code>
+<ul>
+<li>如果安装 <code>x86</code> 系统必须使用 <code>第一代</code></li>
+</ul>
+</li>
+<li><code>启动内存</code>
+<ul>
+<li>安装时内存用量比常规使用要高<br>
+推荐取系统最低需求的<code>2倍</code>在安装时会更流畅</li>
+</ul>
+</li>
+<li><code>配置网络</code>
+<ul>
+<li><code>未连接</code>
+<ul>
+<li>暂时留空, 避免进入时就启动更新影响初始化操作</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>连接虚拟硬盘</code>
+<ul>
+<li><code>创建虚拟硬盘</code>
+<ul>
+<li>动态扩展虚拟硬盘的大小只意味着上限大小, 初始大小只有 <code>4MB</code>, 随着使用而动态增大</li>
+<li><strong>两代的引导方式是不同的, 不能直接交换使用系统盘</strong></li>
+</ul>
+</li>
+<li><code>安装选项</code>
+<ul>
+<li><code>从可启动的 CD/DVD-ROM 安装操作系统</code>
+<ul>
+<li><code>映像文件</code> 选择刚才下载的 <code>Windows ISO文件</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>完成</strong>后, <strong>右键</strong>刚新建的虚拟机 &gt; <strong>设置</strong></p>
+<p>补充一些设置项:</p>
+<ul>
+<li><code>BIOS</code>
+<ul>
+<li>如果出现 <code>Start PXE over IPv4</code> 而无法正常引导, 多半是启动顺序问题</li>
+<li><code>网络适配器</code> 调到硬盘和DVD之下就好了</li>
+</ul>
+</li>
+<li><code>安全</code>
+<ul>
+<li><code>Win10/11</code> 支持 <code>安全启动</code> 选项
+<ul>
+<li><code>第二代虚拟机</code> 安装 <code>Win8 x64</code> 时不要打开这个选项</li>
+</ul>
+</li>
+<li><code>Win11</code> 必须打开 <code>加密支持</code> &gt; <code>启用受信的平台模块</code></li>
+<li>
+<blockquote>
+<p><code>第一代虚拟机</code> 不支持以上两个选项</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><code>内存</code>
+<ul>
+<li><code>动态内存</code> 可以在低活跃度时释放空闲的内存空间
+<ul>
+<li>密集部署虚拟机时比较有用</li>
+<li>安装时出现 <strong>windows找不到microsoft软件许可条款</strong><br>
+关闭 <code>动态内存</code> 并指定虚拟机内存在 <code>4GB</code> 以上</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>检查点</code>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <code>启用检查点</code> 允许对系统当前状态做存档</li>
+<li><input disabled="" type="checkbox"> <code>生产检查点</code></li>
+<li><input checked="" disabled="" type="checkbox"> <code>标准检查点</code></li>
+<li><input disabled="" type="checkbox"> <code>使用自动检查点</code> 手动控制建立检查点以免对储存空间造成额外压力</li>
+</ul>
+</li>
+<li><code>自动启动操作</code>
+<ul>
+<li><code>自动启动</code> 结束虚拟机服务或宿主机关机时忘记关闭虚拟机时, 下次启动会自动恢复虚拟机状态</li>
+<li><code>始终自动启动此虚拟机</code> 开机跟随启动</li>
+</ul>
+</li>
+</ul>
+<p>完成后<strong>双击虚拟机</strong>打开连接窗口 &gt; 点击<strong>启动</strong></p>
+<blockquote>
+<p><code>DVD驱动器</code> 在开机时要求 <strong>按下任意键</strong> 进入引导<br>
+错过按键时机的话可以点击窗口左上角 <code>工具栏</code> &gt; <code>Ctrl+Alt+Delete</code> 重启再试一次</p>
+</blockquote>
+<h2 id="安装-windows">安装 Windows</h2>
+<p>进入引导后就是正常的 <em>Windows</em> 装机流程了, 没啥好说的<br>
+<img src="https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/media/osdeploy_upd.png" alt="安装 Windows" title="安装 Windows"></p>
+<blockquote>
+<p>建立用户时可以只输入 <code>用户名</code> 并留空 <code>密码</code>, 进入系统后再补充密码<br>
+跳过啰嗦的 <code>安全问题</code> 设置</p>
+<p><code>Win8</code> 安装需要输入<strong>序列号</strong>才可以继续安装(随便搜一个)<br>
+无网络时转入新建本地账户流程, 而不是登录 <em>Microsoft 联机账户</em></p>
+</blockquote>
+<p>一路安装完成至进入桌面, 在开始菜单打开<strong>设置</strong></p>
+<ul>
+<li><code>系统</code> &gt; <code>远程桌面</code>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 启用远程桌面
+<ul>
+<li>启用后虚拟机就可以切换至 <code>增强会话模式</code>
+<blockquote>
+<p>某些版本是默认开启的<br>
+使用默认项之后想再次修改需要关闭模式并重新启用</p>
+</blockquote>
+</li>
+<li>允许直接复制粘贴文件和共享驱动器<br>
+<img src="https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/user-guide/media/esm-default-view.png" alt="增强会话模式" title="增强会话模式">
+<img src="https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/user-guide/media/esm-drives-usb.png" alt="共享驱动器" title="共享驱动器"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="使用">使用</h2>
+<p>虚拟机别忘了 <code>关机</code><br>
+当然也可以使用 <code>保存</code> 将虚拟机冻结, 下次启动时系统会恢复当时状态, 类似物理机的 <code>休眠</code> 功能</p>
+<h3 id="网络">网络</h3>
+<p>如果虚拟机内运行的程序需要网络<br>
+点击连接窗口左上角 <code>文件</code> &gt; <code>设置</code><br>
+虚拟机设置 <code>硬件</code> &gt; <code>网络适配器</code> &gt; <code>虚拟交换机</code><br>
+从 <code>未连接</code> 改成 <code>Default Switch</code><br>
+点击 <strong>确认</strong> 或 <strong>应用</strong> 就能立即生效, 不需要关机</p>
+<h3 id="检查点">检查点</h3>
+<p><code>检查点</code> 功能对于测试或者一机多用的时候非常有用<br>
+在连接窗口中 <code>操作</code> &gt; <code>检查点</code> 会立即对当前系统进行快照存档</p>
+<blockquote>
+<p>弹出的窗口只是方便让你重命名刚生成的检查点<br>
+并不是点击 <code>是</code> 之后才会创建</p>
+<p>在 <code>Hyper-V 管理器</code> 右侧栏对应虚拟机名称下的部分中点击 <code>检查点</code> 也是一样的<br>
+但不会有重命名窗口</p>
+</blockquote>
+<p>在 <code>Hyper-V 管理器</code> 中间的 <code>检查点</code> 栏可以进行管理操作<br>
+可以看到检查点存档是以树形结构连接的</p>
+<p>绿色三角指向当前虚拟机状态所在<br>
+右键点击 <code>应用</code> 会将虚拟机读取至检查点储存的状态<br>
+弹出的警告栏选择 <code>创建检查点并应用</code> 可以将当前虚拟机状态<strong>存档成新检查点</strong>后再切换<br>
+而选择 <code>应用</code> 会直接进行切换而<strong>丢失当前未保存的数据</strong></p>
+<blockquote>
+<p>每一个检查点都可以单独保存<code>虚拟机设置</code><br>
+这对使用检查点功能切换安装不同应用的应用时非常好用</p>
+<blockquote>
+<p>比如对安装了轻型应用的情况分配较少内存和cpu<br>
+或给不同应用挂载相应磁盘或网络等虚拟硬件</p>
+</blockquote>
+<p>可以一键切换虚拟机的配置和系统状态</p>
+<p><strong>注意</strong> 你不能对已存在的检查点修改 <code>虚拟机设置</code><br>
+而时在保存设置后建立 <code>检查点</code><br>
+同样的你不能修改某一检查点的数据而期望让后续节点获得相同修改</p>
+<blockquote>
+<p>就像你不能修改某个早期的游戏存档而对后续的所有存档造成影响一样<br>
+你只能读取某个存档并以此开始游戏, 它只是个静态的状态节点, 而不是游戏本身</p>
+</blockquote>
+<p>重点: <strong>检查点只是对系统状态的静态快照, 树形结构只是表明了前后关系, 不是从属关系</strong></p>
+</blockquote>
+<p><code>检查点</code> 功能虽然强力, 相对的过多的检查点会产生大量的硬盘储存<br>
+所以最好在建立检查点前做好规划<br>
+对有着相同操作的分支做一个共同的前置数据检查点, 不要在不同分支里重复安装同一个大型程序和数据</p>
+<h3 id="windows-update">Windows Update</h3>
+<p>如何关闭 <code>Windows 自动更新</code> 的方法(<strong>可选,有风险</strong>)</p>
+<blockquote>
+<p>来源网络, 未验证具体可行性<br>
+有说法是似乎自动更新是没办法完全关闭的<br>
+过段时间再看看效果</p>
+</blockquote>
+<ul>
+<li><strong>注意关闭更新是为了</strong>:
+<ul>
+<li>使虚拟机内的环境相对统一</li>
+<li>避免磁盘空间浪费</li>
+</ul>
+</li>
+</ul>
+<p><strong>所以</strong>: 关闭更新后不要访问和执行任何<strong>未知来源未知安全性</strong>的链接和程序<br>
+不要将虚拟机直接暴露于网络, 并让它保持在本机的<strong>有限使用</strong></p>
+<p><code>Win</code> + <code>R</code> <strong>运行</strong> <code>gpedit.msc</code>组策略</p>
+<blockquote>
+<p><code>Home家庭版</code> 没有组策略编辑器功能</p>
+</blockquote>
+<p><code>计算机配置</code> &gt; <code>管理模板</code> &gt; <code>Windows 组件</code> &gt; <code>Windows 更新</code> &gt; <code>管理最终用户体验</code><br>
+<strong>配置</strong> <code>配置自动更新</code> 为 <strong>已禁用</strong></p>
+<blockquote>
+<p>&ldquo;如果将此策略的状态设置为“已禁用”，则必须手动下载并安装 Windows 更新中可用的任何更新。&rdquo;</p>
+<p>策略路径为 <code>Win11版</code>, 其他版本略有不同</p>
+</blockquote>
+<p>这时可以到这里确认配置是否成功<br>
+<code>开始菜单</code> &gt; <code>配置</code> &gt; <code>Windows 更新</code> &gt; <code>高级选项</code> &gt; <code>其他选项</code> &gt; <code>配置的更新策略</code><br>
+可以看到</p>
+<blockquote>
+<p>禁用自动更新
+源: 管理员
+类型: 组策略</p>
+<p>(还有两项相关的策略)</p>
+</blockquote>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v">https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://docs.microsoft.com/en-us/windows/win32/memory/memory-limits-for-windows-releases">https://docs.microsoft.com/en-us/windows/win32/memory/memory-limits-for-windows-releases</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+    </article>
+
+                </article>
+                <footer>
+    <div class="flex-container">
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/windows/sandbox/">
+            <div>
+                <h2>&lt;&lt; Prev</h2>
+                <span>程序沙箱 Sandbox</span>
+            </div>
+        </a>
+        <p><p>用于隔离程序的安全环境.</p></p>
+    
+
+        </div>
+        <div></div>
+        <div>
+            
+    
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <span>Power by: <a href="https://gohugo.io/">HUGO</a></span>
+        <br>
+        <span>©2022 aneCrow All Rights Reserved.</span>
+    </div>
+</footer>
+
+
+            </div>
+        </div>
+        <div class="side-container">
+            <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#启用功能安装hyper-v">启用功能</a></li>
+    <li><a href="#安装镜像">安装镜像</a>
+      <ul>
+        <li><a href="#获取-windows-10-iso">获取 <a href="https://www.microsoft.com/zh-cn/software-download/windows10">Windows 10 ISO</a></a></li>
+        <li><a href="#获取-windows-11-iso">获取 <a href="https://www.microsoft.com/zh-cn/software-download/windows11">Windows 11 ISO</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#创建虚拟机">创建虚拟机</a></li>
+    <li><a href="#安装-windows">安装 Windows</a></li>
+    <li><a href="#使用">使用</a>
+      <ul>
+        <li><a href="#网络">网络</a></li>
+        <li><a href="#检查点">检查点</a></li>
+        <li><a href="#windows-update">Windows Update</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+        </div>
+        <div></div>
+    </div>
+</body>
+
+</html>
