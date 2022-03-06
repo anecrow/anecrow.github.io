@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>工厂模型替换件</title>
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/layout.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/github-markdown.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/style.css">
+</head>
+
+<body class="markdown-body">
+    <div class="flex-container">
+        <div class="side-container">
+            
+
+    
+
+
+<nav id="side-nav">
+    <a href="https://blog.anecrow.work/">
+        <h1>Home</h1>
+    </a>
+    <a href="https://blog.anecrow.work/games/">
+        <h3>Games</h3>
+    </a>
+    
+        
+            
+                <a href="https://blog.anecrow.work/games/shenzhen_io/">
+                    <span class="nav-item">
+                        Shenzhen I/O
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/security-camera/">
+                        <code class="nav-item nav-subitem">
+                            (模拟)安全摄像头
+                        </code>
+                    </a>
+                
+            
+                
+                    <code class="nav-item nav-subitem nav-current">
+                        工厂模型替换件
+                    </code>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/pulse-generator/">
+                        <code class="nav-item nav-subitem">
+                            脉冲发生器
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/animated-sign/">
+                        <code class="nav-item nav-subitem">
+                            发光标识
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/scorekeeper/">
+                        <code class="nav-item nav-subitem">
+                            海量男爵
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/amplifier/">
+                        <code class="nav-item nav-subitem">
+                            垃圾音频装置
+                        </code>
+                    </a>
+                
+            
+        
+    
+</nav>
+        </div>
+        <div id="main-container" class="flex-container">
+            <div id="content">
+                
+<header>
+    <h1>工厂模型替换件</h1>
+    <nav class="breadcrumbnav">
+    
+    
+        
+    
+        
+    
+        
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/">
+                <code>Home</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/games/">
+                <code>Games</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/games/shenzhen_io/">
+                <code>Shenzhen I/O</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <code>工厂模型替换件</code>
+    
+
+</nav>
+
+
+    <blockquote id="page-info">
+        <span><code>Date</code>: 2022/03/06 22:16:57</span>
+        <span><code>Lastmod</code>: 2022/03/07 02:53:50</span>
+        <br>
+        
+            <span><code>WordCount</code>: 166</span>
+            <span><code>ReadingTime</code>: 1min</span>
+        
+    </blockquote>
+</header>
+                <article>
+                    
+    <article>
+        <p>控制信号放大器</p>
+<h2 id="资讯">资讯</h2>
+<p><img src="Snipaste_2022-03-07_02-53-20.jpg" alt="verification tab"></p>
+<ul>
+<li><em>控制输入</em>是连接工厂设备的简单输入。</li>
+<li><em>控制输出</em>是连接工厂设备的简单输出。</li>
+<li>将<em>控制输入</em>的信号值乘以 2 后，复制到<em>控制输出</em>。</li>
+</ul>
+<h2 id="解法">解法</h2>
+<h3 id="01">01</h3>
+<p><img src="Snipaste_2022-03-06_22-21-44.jpg" alt="01"></p>
+<ul>
+<li><code>产品成本</code>: <strong>3</strong>*</li>
+<li><code>电量消耗</code>: <strong>240</strong></li>
+<li><code>代码行数</code>: <strong>4</strong></li>
+</ul>
+<h3 id="02">02</h3>
+<p>只读存储器<code>200P-14</code><br>
+<img src="Snipaste_2022-03-06_22-25-31.jpg" alt="02a">
+<img src="Snipaste_2022-03-06_22-39-27.jpg" alt="02b"></p>
+<p>虽然说是倍增, 但其实只有<code>25</code>和<code>50</code>两种值<br>
+分别使用<code>14</code>取余得<code>11</code>和<code>8</code>, 就是存储器地址溢出后的对应位置</p>
+<ul>
+<li><code>产品成本</code>: <strong>5</strong></li>
+<li><code>电量消耗</code>: <strong>180</strong>*</li>
+<li><code>代码行数</code>: <strong>3</strong>*</li>
+</ul>
+    </article>
+
+                </article>
+                <footer>
+    <div class="flex-container">
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/games/shenzhen_io/security-camera/">
+            <div>
+                <h2>&lt;&lt; Prev</h2>
+                <span>(模拟)安全摄像头</span>
+            </div>
+        </a>
+        <p><p>入门关卡: 模拟安全摄像头</p></p>
+    
+
+        </div>
+        <div></div>
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/games/shenzhen_io/pulse-generator/">
+            <div>
+                <h2>Next &gt;&gt;</h2>
+                <span>脉冲发生器</span>
+            </div>
+        </a>
+        <p><p>诊断脉冲发生器</p></p>
+    
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <span>Power by: <a href="https://gohugo.io/">HUGO</a></span>
+        <br>
+        <span>©2022 aneCrow All Rights Reserved.</span>
+    </div>
+</footer>
+
+
+            </div>
+        </div>
+        <div class="side-container">
+            <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#资讯">资讯</a></li>
+    <li><a href="#解法">解法</a>
+      <ul>
+        <li><a href="#01">01</a></li>
+        <li><a href="#02">02</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+        </div>
+        <div></div>
+    </div>
+</body>
+
+</html>

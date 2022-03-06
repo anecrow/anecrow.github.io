@@ -89,6 +89,23 @@
                 
             
         
+            
+                <a href="https://blog.anecrow.work/games/">
+                    <span class="nav-item">
+                        Games
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/">
+                        <code class="nav-item nav-subitem">
+                            Shenzhen I/O
+                        </code>
+                    </a>
+                
+            
+        
     
 </nav>
         </div>
@@ -136,10 +153,10 @@
 
     <blockquote id="page-info">
         <span><code>Date</code>: 2022/02/20 15:30:20</span>
-        <span><code>Lastmod</code>: 2022/02/28 23:52:14</span>
+        <span><code>Lastmod</code>: 2022/03/01 14:14:55</span>
         <br>
         
-            <span><code>WordCount</code>: 3861</span>
+            <span><code>WordCount</code>: 3954</span>
             <span><code>ReadingTime</code>: 8min</span>
         
     </blockquote>
@@ -208,7 +225,13 @@
 <p>还可以将整个桌面作为虚拟机操作窗口<br>
 虚拟机连接窗口中点击 <code>查看</code> &gt; <code>全屏模式</code></p>
 <blockquote>
-<p>但处于虚拟机页面时 <code>win</code> 快捷键不会被作用于本机</p>
+<p>但处于虚拟机页面时 <code>win</code> 快捷键不会被作用于本机<br>
+在 <code>Hyper-V 管理器</code> 中选中本机, 右侧栏点击 <code>Hyper-V 设置</code> &gt; <code>用户</code> &gt; <code>键盘</code><br>
+选择:</p>
+<ul>
+<li><input disabled="" type="checkbox"> <code>在物理计算机上使用</code></li>
+</ul>
+<p>虚拟机将不会处理 <code>Win键</code> 相关快捷键</p>
 </blockquote>
 <h3 id="remoteapp-tool">RemoteApp Tool</h3>
 <p><code>RemoteApp</code> 意为 <code>远程应用</code><br>
@@ -265,7 +288,12 @@
 <ul>
 <li>远程打开<code>Edge</code>前不能在虚拟机中打开过, 反之亦然
 <ul>
-<li>需要结束进程才能重置这个现象</li>
+<li>因为进程并未主动关闭, 需要结束进程才能重置这个现象</li>
+<li>进入 <code>Edge</code> &gt; <code>设置</code> &gt; <code>系统</code> &gt; 取消选项:
+<ul>
+<li><input disabled="" type="checkbox"> <code>关闭 Microsoft Edge 后继续运行后台应用</code></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>必须使用远程桌面安装有的输入法

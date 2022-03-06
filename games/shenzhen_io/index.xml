@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shenzhen I/O on aneCrow&#39;s 杂货铺</title>
+    <link>https://blog.anecrow.work/games/shenzhen_io/</link>
+    <description>Recent content in Shenzhen I/O on aneCrow&#39;s 杂货铺</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 06 Mar 2022 19:23:39 +0800</lastBuildDate><atom:link href="https://blog.anecrow.work/games/shenzhen_io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>垃圾音频装置</title>
+      <link>https://blog.anecrow.work/games/shenzhen_io/amplifier/</link>
+      <pubDate>Mon, 07 Mar 2022 03:13:12 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/games/shenzhen_io/amplifier/</guid>
+      <description>&lt;p&gt;调谐最优化引擎&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>海量男爵</title>
+      <link>https://blog.anecrow.work/games/shenzhen_io/scorekeeper/</link>
+      <pubDate>Mon, 07 Mar 2022 02:00:06 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/games/shenzhen_io/scorekeeper/</guid>
+      <description>&lt;p&gt;饮酒游戏积分器&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>发光标识</title>
+      <link>https://blog.anecrow.work/games/shenzhen_io/animated-sign/</link>
+      <pubDate>Mon, 07 Mar 2022 01:04:26 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/games/shenzhen_io/animated-sign/</guid>
+      <description>&lt;p&gt;动画 ESPORTS 标志&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>脉冲发生器</title>
+      <link>https://blog.anecrow.work/games/shenzhen_io/pulse-generator/</link>
+      <pubDate>Sun, 06 Mar 2022 22:43:02 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/games/shenzhen_io/pulse-generator/</guid>
+      <description>&lt;p&gt;诊断脉冲发生器&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>工厂模型替换件</title>
+      <link>https://blog.anecrow.work/games/shenzhen_io/delay-module/</link>
+      <pubDate>Sun, 06 Mar 2022 22:16:57 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/games/shenzhen_io/delay-module/</guid>
+      <description>&lt;p&gt;控制信号放大器&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>(模拟)安全摄像头</title>
+      <link>https://blog.anecrow.work/games/shenzhen_io/security-camera/</link>
+      <pubDate>Sun, 06 Mar 2022 20:08:58 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/games/shenzhen_io/security-camera/</guid>
+      <description>&lt;p&gt;入门关卡: 模拟安全摄像头&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
