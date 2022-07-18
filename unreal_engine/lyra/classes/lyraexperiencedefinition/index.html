@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LyraExperienceDefinition</title>
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/layout.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/github-markdown.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/style.css">
+</head>
+
+<body class="markdown-body">
+    <div class="flex-container">
+        <div class="side-container">
+            
+
+    
+
+
+<nav id="side-nav">
+    <a href="https://blog.anecrow.work/">
+        <h1>Home</h1>
+    </a>
+    <a href="https://blog.anecrow.work/unreal_engine/lyra/">
+        <h3>Lyra框架</h3>
+    </a>
+    
+        
+            
+                <a href="https://blog.anecrow.work/unreal_engine/lyra/classes/">
+                    <span class="nav-item">
+                        类参考目录
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/unreal_engine/lyra/classes/lyrauserfacingexperiencedefinition/">
+                        <code class="nav-item nav-subitem">
+                            LyraUserFacingExperienceDefinition
+                        </code>
+                    </a>
+                
+            
+                
+                    <code class="nav-item nav-subitem nav-current">
+                        LyraExperienceDefinition
+                    </code>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/unreal_engine/lyra/classes/lyrapawndata/">
+                        <code class="nav-item nav-subitem">
+                            LyraPawnData
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/unreal_engine/lyra/classes/lyracontrollercomponent_characterparts/">
+                        <code class="nav-item nav-subitem">
+                            LyraControllerComponent_CharacterParts
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/unreal_engine/lyra/classes/gamefeaturedata/">
+                        <code class="nav-item nav-subitem">
+                            GameFeatureData
+                        </code>
+                    </a>
+                
+            
+        
+            
+                <a href="https://blog.anecrow.work/unreal_engine/lyra/resouce_manage/">
+                    <span class="nav-item">
+                        资源管理
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/unreal_engine/lyra/resouce_manage/new_gamefeatuer/">
+                        <code class="nav-item nav-subitem">
+                            新建项目层级
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/unreal_engine/lyra/resouce_manage/asset_scan/">
+                        <code class="nav-item nav-subitem">
+                            资产扫描
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/unreal_engine/lyra/resouce_manage/actions/">
+                        <code class="nav-item nav-subitem">
+                            自动注入
+                        </code>
+                    </a>
+                
+            
+        
+            
+                <a href="https://blog.anecrow.work/unreal_engine/lyra/maps/">
+                    <span class="nav-item">
+                        关卡设计
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/unreal_engine/lyra/maps/new_map/">
+                        <code class="nav-item nav-subitem">
+                            新建关卡
+                        </code>
+                    </a>
+                
+            
+        
+            
+                <a href="https://blog.anecrow.work/unreal_engine/lyra/pawns/">
+                    <span class="nav-item">
+                        Pawns
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/unreal_engine/lyra/pawns/character_parts/">
+                        <code class="nav-item nav-subitem">
+                            角色配饰
+                        </code>
+                    </a>
+                
+            
+        
+    
+</nav>
+        </div>
+        <div id="main-container" class="flex-container">
+            <div id="content">
+                
+<header>
+    <h1>LyraExperienceDefinition</h1>
+    <nav class="breadcrumbnav">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/">
+                <code>Home</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/unreal_engine/">
+                <code>Unreal Engine</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/unreal_engine/lyra/">
+                <code>Lyra框架</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/unreal_engine/lyra/classes/">
+                <code>类参考目录</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <code>LyraExperienceDefinition</code>
+    
+
+</nav>
+
+
+    <blockquote id="page-info">
+        <span><code>Date</code>: 2022/06/09 07:31:56</span>
+        <span><code>Lastmod</code>: 2022/07/18 11:38:23</span>
+        <br>
+        
+            <span><code>WordCount</code>: 585</span>
+            <span><code>ReadingTime</code>: 2min</span>
+        
+    </blockquote>
+</header>
+                <article>
+                    
+    <article>
+        <p>游戏性配置定义类.</p>
+<p>与 <code>LyraUserFacingExperienceDefinition</code> 类似<br>
+这是 <em>Lyra框架</em> 对原生 <em>Gamemode</em> 对象的包装拓展</p>
+<p>相对于地图配置类, 这个游戏性配置类的参数更加通用化<br>
+或者说抽象化, 导致了理解上会比较模糊</p>
+<p><a href="#%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0">配置参数</a>:</p>
+<ul>
+<li><strong>Gameplay</strong>
+<ul>
+<li><code>Game Features to Enable</code> <a href="#game-features-to-enable">开启功能</a>
+<ul>
+<li>暂时略过</li>
+</ul>
+</li>
+<li><code>Default Pawn Data</code> <a href="#default-pawn-data">默认Pawn配置</a>
+<ul>
+<li>资产槽类型: <code>LyraPawnData</code></li>
+<li>将会依照这个目标信息载入角色</li>
+</ul>
+</li>
+<li><code>Action Sets</code> <a href="#action-sets">Action Sets</a>
+<ul>
+<li>暂时略过</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>操作</strong>
+<ul>
+<li><code>Actions</code> <a href="#actions">Actions</a>
+<ul>
+<li>暂时略过</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>显然相对于上一章的 地图配置类 而言肉眼可见的抽象<br>
+这个配置文件作为框架中的高阶统合管理类而设计</p>
+<h2 id="找到方向">找到方向</h2>
+<p>我们需要一个切入点</p>
+<p>从直觉来看, 绝大部分游戏性是作用于游戏角色的, 所以可以从对应的 Pawn类 入手<br>
+而 Lyra框架 不出意外对 Pawn类 又进行了一次配置包装</p>
+<p>也就是本处配置中的 <code>Default Pawn Data</code> 参数: <a href="#default-pawn-data">默认Pawn配置</a></p>
+<p>可以发现 <code>LyraPawnData</code> 中的参数 <em>Pawn Class</em> 目标(通常是一个 <code>LyraCharacter</code>)<br>
+实现了大部分功能并且挂满了各种功能性模块的 <code>LyraCharater</code><br>
+却没有对骨骼网格体进行具体实现, 而是挂了一个空的网格体 <code>SKM_Manny_Invis</code></p>
+<p>这是由于在原生UE中 <code>Character</code> 或 <code>Pawn</code> 类在实现的时候很多功能难以重用<br>
+导致每个新资产都需要复制粘贴参数和重新写一次功能</p>
+<p>而Lyra对这个流程做出了改变</p>
+<h3 id="添加角色">添加角色</h3>
+<p>回到游戏性配置 <code>LyraExperienceDefinition</code> 找到配置:</p>
+<ul>
+<li>操作
+<ul>
+<li>Actions
+<ul>
+<li>Components
+<ul>
+<li>B_PickRandomCharacter</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>来源路径: <code>Content/Characters/Cosmetics/B_PickRandomCharacter</code></p>
+<p>可以看到关键逻辑是一个继承自父类的函数 <code>AddCharacterPart</code><br>
+这也是Lyra框架对于角色系统设计的核心组件: <a href="../lyracontrollercomponent_characterparts">站内文章: LyraControllerComponent_CharacterParts</a></p>
+<p>不仅是角色装饰, 甚至是角色模型本身, 都可以作为一个 <strong>Part</strong> 进行添加</p>
+<h2 id="配置参数">配置参数</h2>
+<ul>
+<li><strong>Gameplay</strong>
+<ul>
+<li><a href="#game-features-to-enable">Game Features to Enable</a></li>
+<li><a href="#default-pawn-data">Default Pawn Data</a></li>
+<li><a href="#action-sets">Action Sets</a></li>
+</ul>
+</li>
+<li><strong>操作</strong>
+<ul>
+<li><a href="#actions">Actions</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="game-features-to-enable">Game Features to Enable</h3>
+<h3 id="default-pawn-data">Default Pawn Data</h3>
+<ul>
+<li>资产槽类型: <code>LyraPawnData</code></li>
+<li>将会依照这个目标信息载入角色</li>
+</ul>
+<p><a href="../lyrapawndata">站内文章: LyraPawnData</a></p>
+<h3 id="action-sets">Action Sets</h3>
+<h3 id="actions">Actions</h3>
+    </article>
+
+                </article>
+                <footer>
+    <div class="flex-container">
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/unreal_engine/lyra/classes/lyrauserfacingexperiencedefinition/">
+            <div>
+                <h2>&lt;&lt; Prev</h2>
+                <span>LyraUserFacingExperienceDefinition</span>
+            </div>
+        </a>
+        <p><p>关卡配置定义类.</p></p>
+    
+
+        </div>
+        <div></div>
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/unreal_engine/lyra/classes/lyrapawndata/">
+            <div>
+                <h2>Next &gt;&gt;</h2>
+                <span>LyraPawnData</span>
+            </div>
+        </a>
+        <p><p>角色信息定义类.</p></p>
+    
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <small><small><strong style="margin: -4px 0;">©2022 aneCrow All Rights Reserved.</strong></small></small>
+        <br/>
+        <span class="footnotes" style="padding-bottom: var(--gap-unit)">Power by: <a href="https://gohugo.io/">HUGO</a> | Support <strong>Light</strong>&<strong>Dark</strong> Style</span>
+    </div>
+</footer>
+
+
+            </div>
+        </div>
+        <div class="side-container">
+            <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#找到方向">找到方向</a>
+      <ul>
+        <li><a href="#添加角色">添加角色</a></li>
+      </ul>
+    </li>
+    <li><a href="#配置参数">配置参数</a>
+      <ul>
+        <li><a href="#game-features-to-enable">Game Features to Enable</a></li>
+        <li><a href="#default-pawn-data">Default Pawn Data</a></li>
+        <li><a href="#action-sets">Action Sets</a></li>
+        <li><a href="#actions">Actions</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+        </div>
+        <div></div>
+    </div>
+</body>
+
+</html>

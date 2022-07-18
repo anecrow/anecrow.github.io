@@ -179,109 +179,109 @@
 <h2 id="header">Header</h2>
 <p>页眉一般用来放置当前文章相关的信息</p>
 <p>在 <code>partials/header.html</code> 中写入</p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">header</span>&gt;
-    &lt;<span style="color:#5bc4bf">h1</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">h1</span>&gt;
-    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">eq</span> <span style="color:#06b6ef">.Kind</span> <span style="color:#48b685">&#34;page&#34;</span> <span style="color:#8d8687">}}</span>
-        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Date.Format</span> <span style="color:#48b685">&#34;2006/01/02 15:04:05&#34;</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">p</span>&gt;
-        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Lastmod.Format</span> <span style="color:#48b685">&#34;2006/01/02 15:04:05&#34;</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">p</span>&gt;
-        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.WordCount</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">p</span>&gt;
-        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.ReadingTime</span> <span style="color:#8d8687">}}</span>min&lt;/<span style="color:#5bc4bf">p</span>&gt;
-        &lt;<span style="color:#5bc4bf">hr</span>/&gt;
-    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
-&lt;/<span style="color:#5bc4bf">header</span>&gt;
-</code></pre></div><p>就能让所有页面的 <code>header</code> 部分拥有一个标题</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">header</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#5bc4bf">h1</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">eq</span> <span style="color:#06b6ef">.Kind</span> <span style="color:#48b685">&#34;page&#34;</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Date.Format</span> <span style="color:#48b685">&#34;2006/01/02 15:04:05&#34;</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">p</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Lastmod.Format</span> <span style="color:#48b685">&#34;2006/01/02 15:04:05&#34;</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">p</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.WordCount</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">p</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.ReadingTime</span> <span style="color:#8d8687">}}</span>min&lt;/<span style="color:#5bc4bf">p</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">hr</span>/&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#5bc4bf">header</span>&gt;
+</span></span></code></pre></div><p>就能让所有页面的 <code>header</code> 部分拥有一个标题</p>
 <p>而类型为 <code>page</code> 也就是文章页面会额外展示创建日期, 修改日期, 字数和预估阅读时间</p>
 <h3 id="面包屑导航breadcrumb-navigation">面包屑导航<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h3>
 <p>根据官方示例, 修改一个横向的版本</p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">nav</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;breadcrumbnav&#34;</span>&gt;
-    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;breadcrumbnav&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;p1&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#48b685">&#34;p2&#34;</span> <span style="color:#06b6ef">.</span><span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
-&lt;/<span style="color:#5bc4bf">nav</span>&gt;
-
-<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">define</span> <span style="color:#48b685">&#34;breadcrumbnav&#34;</span> <span style="color:#8d8687">}}</span>
-    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#06b6ef">.p1.Parent</span> <span style="color:#8d8687">}}</span>
-        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;breadcrumbnav&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;p1&#34;</span> <span style="color:#06b6ef">.p1.Parent</span> <span style="color:#48b685">&#34;p2&#34;</span> <span style="color:#06b6ef">.p2</span> <span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
-    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">else</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">not</span> <span style="color:#06b6ef">.p1.IsHome</span> <span style="color:#8d8687">}}</span>
-        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;breadcrumbnav&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;p1&#34;</span> <span style="color:#06b6ef">.p1.Site.Home</span> <span style="color:#48b685">&#34;p2&#34;</span> <span style="color:#06b6ef">.p2</span> <span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
-    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
-
-    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">eq</span> <span style="color:#06b6ef">.p1</span> <span style="color:#06b6ef">.p2</span> <span style="color:#8d8687">}}</span>
-        &lt;<span style="color:#5bc4bf">code</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.p1.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">code</span>&gt;
-    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">else</span> <span style="color:#8d8687">}}</span>
-        &lt;<span style="color:#5bc4bf">span</span>&gt;
-            &lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.p1.Permalink</span> <span style="color:#8d8687">}}</span><span style="color:#48b685">&#34;</span>&gt;
-                &lt;<span style="color:#5bc4bf">code</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">eq</span> <span style="color:#06b6ef">.p1.Kind</span> <span style="color:#48b685">&#34;home&#34;</span> <span style="color:#8d8687">}}</span>Home<span style="color:#8d8687">{{</span> <span style="color:#815ba4">else</span> <span style="color:#8d8687">}}{{</span> <span style="color:#06b6ef">.p1.Title</span> <span style="color:#8d8687">}}{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">code</span>&gt;
-            &lt;/<span style="color:#5bc4bf">a</span>&gt;
-        &lt;/<span style="color:#5bc4bf">span</span>&gt;
-        &lt;<span style="color:#5bc4bf">span</span>&gt;&gt;&lt;/<span style="color:#5bc4bf">span</span>&gt;
-    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
-<span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
-</code></pre></div><p>使用 <code>{{ template }}</code> 语法实现的迭代循环</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">nav</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;breadcrumbnav&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;breadcrumbnav&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;p1&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#48b685">&#34;p2&#34;</span> <span style="color:#06b6ef">.</span><span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#5bc4bf">nav</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">define</span> <span style="color:#48b685">&#34;breadcrumbnav&#34;</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#06b6ef">.p1.Parent</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;breadcrumbnav&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;p1&#34;</span> <span style="color:#06b6ef">.p1.Parent</span> <span style="color:#48b685">&#34;p2&#34;</span> <span style="color:#06b6ef">.p2</span> <span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">else</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">not</span> <span style="color:#06b6ef">.p1.IsHome</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;breadcrumbnav&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;p1&#34;</span> <span style="color:#06b6ef">.p1.Site.Home</span> <span style="color:#48b685">&#34;p2&#34;</span> <span style="color:#06b6ef">.p2</span> <span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">eq</span> <span style="color:#06b6ef">.p1</span> <span style="color:#06b6ef">.p2</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">code</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.p1.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">code</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">else</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">span</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.p1.Permalink</span> <span style="color:#8d8687">}}</span><span style="color:#48b685">&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#5bc4bf">code</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">eq</span> <span style="color:#06b6ef">.p1.Kind</span> <span style="color:#48b685">&#34;home&#34;</span> <span style="color:#8d8687">}}</span>Home<span style="color:#8d8687">{{</span> <span style="color:#815ba4">else</span> <span style="color:#8d8687">}}{{</span> <span style="color:#06b6ef">.p1.Title</span> <span style="color:#8d8687">}}{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">code</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#5bc4bf">a</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">span</span>&gt;&gt;&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</span></span></code></pre></div><p>使用 <code>{{ template }}</code> 语法实现的迭代循环</p>
 <p>在 <code>header.html</code> 中插入该 <code>partial</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">header</span>&gt;
-    &lt;<span style="color:#5bc4bf">h1</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">h1</span>&gt;
-<span style="display:block;width:100%;background-color:#cfd1c5">    <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;breadcrumb.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
-</span>&lt;/<span style="color:#5bc4bf">header</span>&gt;
-</code></pre></div><h3 id="页面信息">页面信息</h3>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">header</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#5bc4bf">h1</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">h1</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;breadcrumb.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#5bc4bf">header</span>&gt;
+</span></span></code></pre></div><h3 id="页面信息">页面信息</h3>
 <p>建立容器元素 <code>blockquote</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">$dateFormat</span> <span style="color:#5bc4bf">:=</span> <span style="color:#48b685">&#34;2006/01/02 15:04:05&#34;</span> <span style="color:#8d8687">}}</span>
-&lt;<span style="color:#5bc4bf">header</span>&gt;
-    &lt;<span style="color:#5bc4bf">h1</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">h1</span>&gt;
-    <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;breadcrumb.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
-<span style="display:block;width:100%;background-color:#cfd1c5">    &lt;<span style="color:#5bc4bf">blockquote</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;page-info&#34;</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;Date&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Date.Format</span> <span style="color:#06b6ef">$dateFormat</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;Lastmod&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Lastmod.Format</span> <span style="color:#06b6ef">$dateFormat</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">br</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">eq</span> <span style="color:#06b6ef">.Kind</span> <span style="color:#48b685">&#34;page&#34;</span> <span style="color:#8d8687">}}</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">            &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;WordCount&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.WordCount</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">            &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;ReadingTime&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.ReadingTime</span> <span style="color:#8d8687">}}</span>min&lt;/<span style="color:#5bc4bf">span</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">else</span> <span style="color:#8d8687">}}</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">            &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;Pages&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#815ba4">len</span> <span style="color:#06b6ef">.Pages</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">            &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;Sections&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#815ba4">len</span> <span style="color:#06b6ef">.Sections</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">    &lt;/<span style="color:#5bc4bf">blockquote</span>&gt;
-</span>&lt;/<span style="color:#5bc4bf">header</span>&gt;
-</code></pre></div><p>设置样式</p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">#<span style="color:#fec418">page-info</span> {
-    <span style="color:#815ba4">background-color</span>: <span style="color:#06b6ef">var</span>(<span style="color:#5bc4bf">--</span><span style="color:#815ba4">color</span><span style="color:#5bc4bf">-</span>neutral<span style="color:#5bc4bf">-</span>muted);
-    <span style="color:#815ba4">margin</span>: <span style="color:#f99b15">1</span><span style="color:#fec418">em</span> <span style="color:#f99b15">0</span>;
-    <span style="color:#815ba4">padding</span>: <span style="color:#f99b15">1</span><span style="color:#fec418">em</span>;
-    <span style="color:#815ba4">border-radius</span>: <span style="color:#f99b15">6</span><span style="color:#fec418">px</span>
-}
-</code></pre></div><h2 id="footer">Footer</h2>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">$dateFormat</span> <span style="color:#5bc4bf">:=</span> <span style="color:#48b685">&#34;2006/01/02 15:04:05&#34;</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">header</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#5bc4bf">h1</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;breadcrumb.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    &lt;<span style="color:#5bc4bf">blockquote</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;page-info&#34;</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;Date&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Date.Format</span> <span style="color:#06b6ef">$dateFormat</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;Lastmod&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Lastmod.Format</span> <span style="color:#06b6ef">$dateFormat</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        &lt;<span style="color:#5bc4bf">br</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#815ba4">eq</span> <span style="color:#06b6ef">.Kind</span> <span style="color:#48b685">&#34;page&#34;</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>            &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;WordCount&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.WordCount</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>            &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;ReadingTime&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.ReadingTime</span> <span style="color:#8d8687">}}</span>min&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">else</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>            &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;Pages&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#815ba4">len</span> <span style="color:#06b6ef">.Pages</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>            &lt;<span style="color:#5bc4bf">span</span>&gt;&lt;<span style="color:#5bc4bf">code</span>&gt;Sections&lt;/<span style="color:#5bc4bf">code</span>&gt;: <span style="color:#8d8687">{{</span> <span style="color:#815ba4">len</span> <span style="color:#06b6ef">.Sections</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    &lt;/<span style="color:#5bc4bf">blockquote</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#5bc4bf">header</span>&gt;
+</span></span></code></pre></div><p>设置样式</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#<span style="color:#fec418">page-info</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">background-color</span>: <span style="color:#06b6ef">var</span>(<span style="color:#5bc4bf">--</span><span style="color:#815ba4">color</span><span style="color:#5bc4bf">-</span>neutral<span style="color:#5bc4bf">-</span>muted);
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">margin</span>: <span style="color:#f99b15">1</span><span style="color:#fec418">em</span> <span style="color:#f99b15">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">padding</span>: <span style="color:#f99b15">1</span><span style="color:#fec418">em</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">border-radius</span>: <span style="color:#f99b15">6</span><span style="color:#fec418">px</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="footer">Footer</h2>
 <p>页脚放置小站的额外信息</p>
 <h3 id="前后页面导航">前后页面导航</h3>
 <p>在 <code>partials/footer.html</code> 中写入</p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">footer</span>&gt;
-    &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;flex-container&#34;</span>&gt;
-        &lt;<span style="color:#5bc4bf">div</span>&gt;
-            <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;otherPage&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;page&#34;</span> <span style="color:#06b6ef">.PrevInSection</span> <span style="color:#48b685">&#34;label&#34;</span> <span style="color:#48b685">&#34;&lt;&lt; Prev&#34;</span><span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
-        &lt;/<span style="color:#5bc4bf">div</span>&gt;
-        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
-        &lt;<span style="color:#5bc4bf">div</span>&gt;
-            <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;otherPage&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;page&#34;</span> <span style="color:#06b6ef">.NextInSection</span> <span style="color:#48b685">&#34;label&#34;</span> <span style="color:#48b685">&#34;Next &gt;&gt;&#34;</span><span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
-        &lt;/<span style="color:#5bc4bf">div</span>&gt;
-    &lt;/<span style="color:#5bc4bf">div</span>&gt;
-    &lt;<span style="color:#5bc4bf">hr</span>&gt;
-&lt;/<span style="color:#5bc4bf">footer</span>&gt;
-
-<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">define</span> <span style="color:#48b685">&#34;otherPage&#34;</span> <span style="color:#8d8687">}}</span>
-    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#06b6ef">.page</span> <span style="color:#8d8687">}}</span>
-        &lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.page.Permalink</span> <span style="color:#8d8687">}}</span><span style="color:#48b685">&#34;</span>&gt;
-            &lt;<span style="color:#5bc4bf">div</span>&gt;
-                &lt;<span style="color:#5bc4bf">h2</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.label</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">h2</span>&gt;
-                &lt;<span style="color:#5bc4bf">span</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.page.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
-            &lt;/<span style="color:#5bc4bf">div</span>&gt;
-        &lt;/<span style="color:#5bc4bf">a</span>&gt;
-        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.page.Summary</span><span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">p</span>&gt;
-    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
-<span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
-</code></pre></div><p>再加上简单的版权信息</p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">div</span>&gt;
-    &lt;<span style="color:#5bc4bf">span</span>&gt;Power by: &lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;https://gohugo.io/&#34;</span>&gt;HUGO&lt;/<span style="color:#5bc4bf">a</span>&gt;&lt;/<span style="color:#5bc4bf">span</span>&gt;
-    &lt;<span style="color:#5bc4bf">br</span>&gt;
-    &lt;<span style="color:#5bc4bf">span</span>&gt;©<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">now</span><span style="color:#06b6ef">.Year</span> <span style="color:#8d8687">}}</span> <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Site.Params.author</span><span style="color:#8d8687">}}</span> All Rights Reserved.&lt;/<span style="color:#5bc4bf">span</span>&gt;
-&lt;/<span style="color:#5bc4bf">div</span>&gt;
-</code></pre></div><section class="footnotes" role="doc-endnotes">
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">footer</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;flex-container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>            <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;otherPage&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;page&#34;</span> <span style="color:#06b6ef">.PrevInSection</span> <span style="color:#48b685">&#34;label&#34;</span> <span style="color:#48b685">&#34;&lt;&lt; Prev&#34;</span><span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>            <span style="color:#8d8687">{{</span> <span style="color:#815ba4">template</span> <span style="color:#48b685">&#34;otherPage&#34;</span> <span style="color:#5bc4bf">(</span><span style="color:#06b6ef">dict</span> <span style="color:#48b685">&#34;page&#34;</span> <span style="color:#06b6ef">.NextInSection</span> <span style="color:#48b685">&#34;label&#34;</span> <span style="color:#48b685">&#34;Next &gt;&gt;&#34;</span><span style="color:#5bc4bf">)</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#5bc4bf">hr</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#5bc4bf">footer</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">define</span> <span style="color:#48b685">&#34;otherPage&#34;</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">if</span> <span style="color:#06b6ef">.page</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.page.Permalink</span> <span style="color:#8d8687">}}</span><span style="color:#48b685">&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#5bc4bf">h2</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.label</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">h2</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#5bc4bf">span</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.page.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#5bc4bf">a</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">p</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.page.Summary</span><span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">p</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</span></span></code></pre></div><p>再加上简单的版权信息</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#5bc4bf">span</span>&gt;Power by: &lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;https://gohugo.io/&#34;</span>&gt;HUGO&lt;/<span style="color:#5bc4bf">a</span>&gt;&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#5bc4bf">br</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#5bc4bf">span</span>&gt;©<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">now</span><span style="color:#06b6ef">.Year</span> <span style="color:#8d8687">}}</span> <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Site.Params.author</span><span style="color:#8d8687">}}</span> All Rights Reserved.&lt;/<span style="color:#5bc4bf">span</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span></code></pre></div><section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
@@ -324,9 +324,9 @@
     </div>
     <hr>
     <div>
-        <span>Power by: <a href="https://gohugo.io/">HUGO</a></span>
-        <br>
-        <span>©2022 aneCrow All Rights Reserved.</span>
+        <small><small><strong style="margin: -4px 0;">©2022 aneCrow All Rights Reserved.</strong></small></small>
+        <br/>
+        <span class="footnotes" style="padding-bottom: var(--gap-unit)">Power by: <a href="https://gohugo.io/">HUGO</a> | Support <strong>Light</strong>&<strong>Dark</strong> Style</span>
     </div>
 </footer>
 

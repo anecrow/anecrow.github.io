@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>从哪里开始</title>
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/layout.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/github-markdown.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/style.css">
+</head>
+
+<body class="markdown-body">
+    <div class="flex-container">
+        <div class="side-container">
+            
+
+    
+
+
+<nav id="side-nav">
+    <a href="https://blog.anecrow.work/">
+        <h1>Home</h1>
+    </a>
+    <a href="https://blog.anecrow.work/unreal_engine/">
+        <h3>Unreal Engine</h3>
+    </a>
+    
+        
+            
+                <a href="https://blog.anecrow.work/unreal_engine/usage/">
+                    <span class="nav-item">
+                        使用
+                    </span>
+                </a>
+            
+            
+                
+                    <code class="nav-item nav-subitem nav-current">
+                        从哪里开始
+                    </code>
+                
+            
+        
+            
+                <a href="https://blog.anecrow.work/unreal_engine/lyra/">
+                    <span class="nav-item">
+                        Lyra框架
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/unreal_engine/lyra/classes/">
+                        <code class="nav-item nav-subitem">
+                            类参考目录
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/unreal_engine/lyra/resouce_manage/">
+                        <code class="nav-item nav-subitem">
+                            资源管理
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/unreal_engine/lyra/maps/">
+                        <code class="nav-item nav-subitem">
+                            关卡设计
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/unreal_engine/lyra/pawns/">
+                        <code class="nav-item nav-subitem">
+                            Pawns
+                        </code>
+                    </a>
+                
+            
+        
+    
+</nav>
+        </div>
+        <div id="main-container" class="flex-container">
+            <div id="content">
+                
+<header>
+    <h1>从哪里开始</h1>
+    <nav class="breadcrumbnav">
+    
+    
+        
+    
+        
+    
+        
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/">
+                <code>Home</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/unreal_engine/">
+                <code>Unreal Engine</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/unreal_engine/usage/">
+                <code>使用</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <code>从哪里开始</code>
+    
+
+</nav>
+
+
+    <blockquote id="page-info">
+        <span><code>Date</code>: 2022/05/24 15:55:34</span>
+        <span><code>Lastmod</code>: 2022/05/26 01:42:04</span>
+        <br>
+        
+            <span><code>WordCount</code>: 1337</span>
+            <span><code>ReadingTime</code>: 3min</span>
+        
+    </blockquote>
+</header>
+                <article>
+                    
+    <article>
+        <p>进行游戏所需要接触的基本流程认识.</p>
+<blockquote>
+<p>继续使用上一步 <a href="../">快速入门</a> 建立的 <em>第三人称模板</em> 工程</p>
+</blockquote>
+<h2 id="关卡地图">关卡/地图</h2>
+<p><em>UE</em> 中<em>关卡</em>称为 <code>Map</code>, 作为游戏直观的实际入口<br>
+<a href="https://docs.unrealengine.com/5.0/zh-CN/working-with-levels-in-unreal-engine/">官方文档: 使用关卡</a></p>
+<p>避免模板中默认的关卡影响入门认知, 我们需要创建一个空白关卡<br>
+<strong>文件</strong> -&gt; <strong>新建关卡</strong> -&gt; <strong>Basic</strong></p>
+<p><img src="Snipaste_2022-05-24_16-04-33.jpg" alt="NewMap"><br>
+建立一个拥有基础场景和光照的关卡 <code>Basic</code></p>
+<p>同样的, 点击 <strong>运行关卡</strong><br>
+虽然我们并没有对地图和角色进行任何设置<br>
+却会生成一个与 <em>模板关卡</em> 一样的可控制角色</p>
+<p>相关功能由模板项目预先在配置文件中设定好的值所控制</p>
+<blockquote>
+<p>在修改配置之前需要保存这个临时关卡<br>
+<strong>文件</strong> -&gt;  <strong>保存当前关卡</strong></p>
+</blockquote>
+<h2 id="项目设置">项目设置</h2>
+<blockquote>
+<p><em>项目设置</em> 作为当前工程的 <em>全局设置</em> 而存在</p>
+</blockquote>
+<p><a href="https://docs.unrealengine.com/5.0/zh-CN/project-settings-in-unreal-engine/">官方文档: 项目设置</a></p>
+<p>打开当前项目的配置页面<br>
+<strong>编辑</strong> -&gt; <strong>项目设置</strong></p>
+<blockquote>
+<p>这里储存着整个项目所需的绝大部分基础配置和数据<br>
+供项目下的所有关卡使用</p>
+</blockquote>
+<p>项目设置中涉及到游戏初始化的部分:<br>
+<strong>项目</strong> -&gt; <strong>地图和游戏模式</strong></p>
+<ul>
+<li><strong>默认模式</strong>
+<ul>
+<li><strong>默认游戏模式</strong> <code>Global Default Game Mode</code>
+<ul>
+<li>关卡中没有特别指定时使用的默认模式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>默认地图</strong>
+<ul>
+<li><strong>编辑器开始地图</strong> <code>Editor Startup Map</code>
+<ul>
+<li>作用于编辑器, 决定项目在打开时编辑器加载的关卡
+<blockquote>
+<p>设置为正在开发的关卡就比较方便</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><strong>游戏默认地图</strong> <code>Game Default Map</code>
+<ul>
+<li>作用于游戏, 暂时不用管</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>可以看到在这个模板工程中 <em>默认游戏模式</em> 指定的是 <code>BP_ThirdPersonGameMode</code></p>
+<blockquote>
+<p><code>BP_ThirdPersonGameMode</code> 是工程模板中提供的游戏模式<br>
+指定了带控制逻辑的角色对象</p>
+</blockquote>
+<p>这里将 <strong>默认游戏模式</strong> 重新指定为 <code>Gamemode</code></p>
+<blockquote>
+<p><code>Gamemode</code> 为引擎预定义的一个仅有默认值的简易游戏模式</p>
+</blockquote>
+<p>这时再 <strong>运行关卡</strong><br>
+就不会生成可操作角色, 而是与编辑器中一样是一个飘着的观察者视角</p>
+<h2 id="世界场景设置">世界场景设置</h2>
+<blockquote>
+<p><em>世界场景设置</em> 作为当前关卡的 <em>本地设置</em> 而存在<br>
+在关卡设置中, 可以覆盖或重载某些项目设置以创造独特的关卡</p>
+</blockquote>
+<p><a href="https://docs.unrealengine.com/5.0/zh-CN/world-settings-in-unreal-engine/">官方文档: 世界场景设置</a></p>
+<p>呼出该面板<br>
+<strong>窗口</strong> -&gt; <strong>世界场景设置</strong></p>
+<p>面板中同样有个配置:</p>
+<ul>
+<li><strong>游戏模式</strong>
+<ul>
+<li><strong>游戏模式重载</strong> <code>Default Game Mode</code>
+<ul>
+<li>默认值为 <code>None</code>
+<blockquote>
+<p>设置后会覆盖 <em>项目设置</em> 中的 <em>默认游戏模式</em></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>将 <strong>游戏模式重载</strong> 再指定为 <code>BP_ThirdPersonGameMode</code><br>
+<strong>运行关卡</strong> 时会再次生成可操作角色</p>
+<h2 id="pawn">Pawn</h2>
+<p>此时 <em>游戏模式</em> 中的 <em>默认Pawn类</em> 决定了玩家以哪个 <em>角色</em> 进行游戏</p>
+<ul>
+<li><strong>选中的游戏模式</strong>
+<ul>
+<li><strong>默认Pawn类</strong> <code>Default Pawn Class</code>
+<ul>
+<li>此时值为 <code>BP_ThirdPersonCharacter</code>
+<blockquote>
+<p>这是一个 <em>角色蓝图</em><br>
+蓝图中包含一个配置好动画的人形骨骼<br>
+一个摄影机和一个负责检测碰撞的胶囊体<br>
+同时还有对按键操作与输入事件的处理逻辑</p>
+<blockquote>
+<p>角色的绝大部分功能在这里装配</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>既然找到了游戏中玩家实际会操作的对象, 我们也可以不通过 <em>游戏模式</em> 来获得可操作 <em>角色</em><br>
+在 <strong>游戏模式重载</strong> 处点击 <strong>重设</strong> 将值设为 <code>None</code><br>
+从 <strong>内容浏览器</strong> 中将 <code>BP_ThirdPersonCharacter</code> 拖进场景中 <strong>放置</strong><br>
+点击这个被拖进来的对象, 在 <strong>细节</strong> 栏选择 <strong>通用</strong> 过滤标签<br>
+然后找到</p>
+<ul>
+<li><strong>Pawn</strong>
+<ul>
+<li><strong>自动控制玩家</strong> <code>Auto Possess Player</code>
+<ul>
+<li>默认值为 <code>已禁用</code>
+<blockquote>
+<p>在这里可以手动指定该 <em>Pawn</em> 所分配至的玩家位置</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>设置 <strong>自动控制玩家</strong> 为 <code>玩家0</code><br>
+<strong>运行关卡</strong> 时就会以它为操作对象</p>
+<h2 id="游戏就这么开始">游戏就这么开始</h2>
+<p>从表层且简化的角度来认识, UE的游戏启动顺序大概是这样的:</p>
+<ol>
+<li>读取 <strong>项目设置</strong>
+<ul>
+<li>创建游戏实例 <code>GameInstance</code></li>
+<li>获得关卡对象</li>
+</ul>
+</li>
+<li>读取 <strong>世界场景设置</strong>
+<ul>
+<li>创建关卡并加载容器内的 <em>Actor</em></li>
+<li>获得游戏模式对象 <code>GameMode</code></li>
+</ul>
+</li>
+<li>读取 <strong>游戏模式</strong> 与其下属的 <strong>功能类*</strong>
+<ul>
+<li>
+<blockquote>
+<p><code>GameMode</code> 的默认功能类:</p>
+<ul>
+<li><code>PlayerController</code></li>
+<li><code>DefaultPawn</code></li>
+<li><code>SpectatorPawn</code></li>
+<li><code>HUD</code></li>
+<li><code>GameState</code></li>
+<li><code>PlayerState</code></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><strong>加入玩家</strong>
+<ul>
+<li>给玩家分配控制器 <code>PlayerController</code></li>
+<li>控制器类获取可供操控的 <em>Pawn</em> <code>DefaultPawn</code>
+<ul>
+<li>如果是旁观者则分配 <code>SpectatorPawn</code></li>
+</ul>
+</li>
+<li>加载 <em>HUD</em> <code>HUD</code></li>
+</ul>
+</li>
+<li><strong>进行游戏</strong>
+<ul>
+<li><code>GameMode</code> 控制整个关卡的逻辑, 作为玩法层级存在
+<ul>
+<li>游戏数据 <code>GameState</code> 管理着当前关卡的相关数据</li>
+</ul>
+</li>
+<li>玩家通过 <code>PlayerController</code> 控制所属的 <code>Pawn</code> 进行游戏
+<ul>
+<li>玩家数据 <code>PlayerState</code> 管理着当前玩家的相关数据</li>
+</ul>
+</li>
+<li>
+<blockquote>
+<p>同一个游戏内, 每个玩家拥有专属的 <code>PlayerController</code><br>
+控制器同一时间只能操作一个 <code>Pawn</code><br>
+<code>Pawn</code> 有可能死亡或重生<br>
+控制器也可以临时切换当前控制的 <code>Pawn</code>, 比如驾驶载具</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><strong>结束游戏</strong>
+<ul>
+<li>当达到条件*时, 游戏结束, 销毁相关对象</li>
+<li>
+<blockquote>
+<p>可能的条件:</p>
+<ul>
+<li>触发胜利/失败</li>
+<li>切换关卡</li>
+<li>退出游戏</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+    </article>
+
+                </article>
+                <footer>
+    <div class="flex-container">
+        <div>
+            
+    
+
+        </div>
+        <div></div>
+        <div>
+            
+    
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <small><small><strong style="margin: -4px 0;">©2022 aneCrow All Rights Reserved.</strong></small></small>
+        <br/>
+        <span class="footnotes" style="padding-bottom: var(--gap-unit)">Power by: <a href="https://gohugo.io/">HUGO</a> | Support <strong>Light</strong>&<strong>Dark</strong> Style</span>
+    </div>
+</footer>
+
+
+            </div>
+        </div>
+        <div class="side-container">
+            <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#关卡地图">关卡/地图</a></li>
+    <li><a href="#项目设置">项目设置</a></li>
+    <li><a href="#世界场景设置">世界场景设置</a></li>
+    <li><a href="#pawn">Pawn</a></li>
+    <li><a href="#游戏就这么开始">游戏就这么开始</a></li>
+  </ul>
+</nav>
+</aside>
+        </div>
+        <div></div>
+    </div>
+</body>
+
+</html>

@@ -254,133 +254,132 @@
 选择 <strong>Others 运行任意外部命令的示例</strong><br>
 将会<strong>自动打开</strong> <code>workspace.code-workspace</code> 文件</p>
 <p>此时会自动在工作区配置文件内生成 <code>tasks</code> 示例配置:</p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#5bc4bf">&#34;folders&#34;</span>: [
-    {
-      <span style="color:#5bc4bf">&#34;path&#34;</span>: <span style="color:#48b685">&#34;.&#34;</span>
-    }
-  ],
-  <span style="color:#5bc4bf">&#34;settings&#34;</span>: {},
-<span style="display:block;width:100%;background-color:#cfd1c5">  <span style="color:#5bc4bf">&#34;tasks&#34;</span>: {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">    <span style="color:#5bc4bf">&#34;version&#34;</span>: <span style="color:#48b685">&#34;2.0.0&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">    <span style="color:#5bc4bf">&#34;tasks&#34;</span>: [
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;echo&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;echo Hello&#34;</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      }
-</span><span style="display:block;width:100%;background-color:#cfd1c5">    ]
-</span><span style="display:block;width:100%;background-color:#cfd1c5">  }
-</span>}
-</code></pre></div><p>将 <em>Hugo核心路径</em> 设置为变量 <code>${workspaceFolder}\\hugo</code>, <strong>添加</strong>进 <code>settings</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#5bc4bf">&#34;settings&#34;</span>: {
-<span style="display:block;width:100%;background-color:#cfd1c5">    <span style="color:#5bc4bf">&#34;hugo&#34;</span>: <span style="color:#48b685">&#34;${workspaceFolder}\\hugo&#34;</span>,
-</span>  }
-}
-</code></pre></div><p>将常用 Hugo命令 编写为 Task<br>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#5bc4bf">&#34;folders&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#5bc4bf">&#34;path&#34;</span>: <span style="color:#48b685">&#34;.&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#5bc4bf">&#34;settings&#34;</span>: {},
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>  <span style="color:#5bc4bf">&#34;tasks&#34;</span>: {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    <span style="color:#5bc4bf">&#34;version&#34;</span>: <span style="color:#48b685">&#34;2.0.0&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    <span style="color:#5bc4bf">&#34;tasks&#34;</span>: [
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;echo&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;echo Hello&#34;</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      }
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    ]
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>将 <em>Hugo核心路径</em> 设置为变量 <code>${workspaceFolder}\\hugo</code>, <strong>添加</strong>进 <code>settings</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#5bc4bf">&#34;settings&#34;</span>: {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    <span style="color:#5bc4bf">&#34;hugo&#34;</span>: <span style="color:#48b685">&#34;${workspaceFolder}\\hugo&#34;</span>,
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>将常用 Hugo命令 编写为 Task<br>
 <strong>修改</strong> <code>tasks</code> 如下:</p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#5bc4bf">&#34;tasks&#34;</span>: {
-    <span style="color:#5bc4bf">&#34;version&#34;</span>: <span style="color:#48b685">&#34;2.0.0&#34;</span>,
-<span style="display:block;width:100%;background-color:#cfd1c5">    <span style="color:#5bc4bf">&#34;problemMatcher&#34;</span>: [],
-</span><span style="display:block;width:100%;background-color:#cfd1c5">    <span style="color:#5bc4bf">&#34;options&#34;</span>: {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      <span style="color:#5bc4bf">&#34;cwd&#34;</span>: <span style="color:#48b685">&#34;${fileWorkspaceFolder}&#34;</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">    },
-</span>    <span style="color:#5bc4bf">&#34;tasks&#34;</span>: [
-<span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;新建站点项目&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;${config:hugo} new site ${input:newSiteName}&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;options&#34;</span>: {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">          <span style="color:#5bc4bf">&#34;cwd&#34;</span>: <span style="color:#48b685">&#34;${workspaceFolder}&#34;</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;新建站点项目并加入工作区&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;echo TODO&#34;</span>, <span style="color:#8d8687">// TODO: 新建站点项目并加入工作区
-</span></span><span style="display:block;width:100%;background-color:#cfd1c5"><span style="color:#8d8687"></span>        <span style="color:#5bc4bf">&#34;options&#34;</span>: {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">          <span style="color:#5bc4bf">&#34;cwd&#34;</span>: <span style="color:#48b685">&#34;${workspaceFolder}&#34;</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;运行当前站点&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;${config:hugo} server ${input:serverFlags}&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;构建当前站点&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;${config:hugo} ${input:serverFlags}&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;在当前站点新建主题&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;${config:hugo} new theme ${input:newThemeName}&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;在当前站点新建页面&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;${config:hugo} new ${input:sectionName}\\${input:newPageName}.md&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;在当前位置新建页面&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;echo TODO&#34;</span>, <span style="color:#8d8687">// TODO: 在当前位置新建页面
-</span></span><span style="display:block;width:100%;background-color:#cfd1c5"><span style="color:#8d8687"></span>      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;在当前位置新建Section&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;echo TODO&#34;</span>, <span style="color:#8d8687">// TODO: 在当前位置新建Section
-</span></span><span style="display:block;width:100%;background-color:#cfd1c5"><span style="color:#8d8687"></span>      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;在当前位置新建Leaf&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;echo TODO&#34;</span>, <span style="color:#8d8687">// TODO: 在当前位置新建Leaf
-</span></span><span style="display:block;width:100%;background-color:#cfd1c5"><span style="color:#8d8687"></span>      },
-</span>    ],
-<span style="display:block;width:100%;background-color:#cfd1c5">    <span style="color:#5bc4bf">&#34;inputs&#34;</span>: [
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;promptString&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;id&#34;</span>: <span style="color:#48b685">&#34;newSiteName&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;description&#34;</span>: <span style="color:#48b685">&#34;输入新建站点名称&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;default&#34;</span>: <span style="color:#48b685">&#34;new_site&#34;</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;promptString&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;id&#34;</span>: <span style="color:#48b685">&#34;serverFlags&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;description&#34;</span>: <span style="color:#48b685">&#34;命令参数&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;default&#34;</span>: <span style="color:#48b685">&#34;-D&#34;</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;promptString&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;id&#34;</span>: <span style="color:#48b685">&#34;buildFlags&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;description&#34;</span>: <span style="color:#48b685">&#34;命令参数&#34;</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;promptString&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;id&#34;</span>: <span style="color:#48b685">&#34;sectionName&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;description&#34;</span>: <span style="color:#48b685">&#34;section路径&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;default&#34;</span>: <span style="color:#48b685">&#34;post&#34;</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;promptString&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;id&#34;</span>: <span style="color:#48b685">&#34;newPageName&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;description&#34;</span>: <span style="color:#48b685">&#34;页面标题&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;default&#34;</span>: <span style="color:#48b685">&#34;new_post&#34;</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      {
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;promptString&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;id&#34;</span>: <span style="color:#48b685">&#34;newThemeName&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;description&#34;</span>: <span style="color:#48b685">&#34;输入新建主题名称&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        <span style="color:#5bc4bf">&#34;default&#34;</span>: <span style="color:#48b685">&#34;new_theme&#34;</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">      },
-</span><span style="display:block;width:100%;background-color:#cfd1c5">    ]
-</span>  }
-}
-
-</code></pre></div><h3 id="执行">执行</h3>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#5bc4bf">&#34;tasks&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#5bc4bf">&#34;version&#34;</span>: <span style="color:#48b685">&#34;2.0.0&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    <span style="color:#5bc4bf">&#34;problemMatcher&#34;</span>: [],
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    <span style="color:#5bc4bf">&#34;options&#34;</span>: {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      <span style="color:#5bc4bf">&#34;cwd&#34;</span>: <span style="color:#48b685">&#34;${fileWorkspaceFolder}&#34;</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#5bc4bf">&#34;tasks&#34;</span>: [
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;新建站点项目&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;${config:hugo} new site ${input:newSiteName}&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;options&#34;</span>: {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>          <span style="color:#5bc4bf">&#34;cwd&#34;</span>: <span style="color:#48b685">&#34;${workspaceFolder}&#34;</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;新建站点项目并加入工作区&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;echo TODO&#34;</span>, <span style="color:#8d8687">// TODO: 新建站点项目并加入工作区
+</span></span></span><span style="display:flex; background-color:#cfd1c5"><span><span style="color:#8d8687"></span>        <span style="color:#5bc4bf">&#34;options&#34;</span>: {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>          <span style="color:#5bc4bf">&#34;cwd&#34;</span>: <span style="color:#48b685">&#34;${workspaceFolder}&#34;</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;运行当前站点&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;${config:hugo} server ${input:serverFlags}&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;构建当前站点&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;${config:hugo} ${input:serverFlags}&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;在当前站点新建主题&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;${config:hugo} new theme ${input:newThemeName}&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;在当前站点新建页面&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;${config:hugo} new ${input:sectionName}\\${input:newPageName}.md&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;在当前位置新建页面&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;echo TODO&#34;</span>, <span style="color:#8d8687">// TODO: 在当前位置新建页面
+</span></span></span><span style="display:flex; background-color:#cfd1c5"><span><span style="color:#8d8687"></span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;在当前位置新建Section&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;echo TODO&#34;</span>, <span style="color:#8d8687">// TODO: 在当前位置新建Section
+</span></span></span><span style="display:flex; background-color:#cfd1c5"><span><span style="color:#8d8687"></span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;label&#34;</span>: <span style="color:#48b685">&#34;在当前位置新建Leaf&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;shell&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;command&#34;</span>: <span style="color:#48b685">&#34;echo TODO&#34;</span>, <span style="color:#8d8687">// TODO: 在当前位置新建Leaf
+</span></span></span><span style="display:flex; background-color:#cfd1c5"><span><span style="color:#8d8687"></span>      },
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    <span style="color:#5bc4bf">&#34;inputs&#34;</span>: [
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;promptString&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;id&#34;</span>: <span style="color:#48b685">&#34;newSiteName&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;description&#34;</span>: <span style="color:#48b685">&#34;输入新建站点名称&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;default&#34;</span>: <span style="color:#48b685">&#34;new_site&#34;</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;promptString&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;id&#34;</span>: <span style="color:#48b685">&#34;serverFlags&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;description&#34;</span>: <span style="color:#48b685">&#34;命令参数&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;default&#34;</span>: <span style="color:#48b685">&#34;-D&#34;</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;promptString&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;id&#34;</span>: <span style="color:#48b685">&#34;buildFlags&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;description&#34;</span>: <span style="color:#48b685">&#34;命令参数&#34;</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;promptString&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;id&#34;</span>: <span style="color:#48b685">&#34;sectionName&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;description&#34;</span>: <span style="color:#48b685">&#34;section路径&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;default&#34;</span>: <span style="color:#48b685">&#34;post&#34;</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;promptString&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;id&#34;</span>: <span style="color:#48b685">&#34;newPageName&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;description&#34;</span>: <span style="color:#48b685">&#34;页面标题&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;default&#34;</span>: <span style="color:#48b685">&#34;new_post&#34;</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      {
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;type&#34;</span>: <span style="color:#48b685">&#34;promptString&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;id&#34;</span>: <span style="color:#48b685">&#34;newThemeName&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;description&#34;</span>: <span style="color:#48b685">&#34;输入新建主题名称&#34;</span>,
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        <span style="color:#5bc4bf">&#34;default&#34;</span>: <span style="color:#48b685">&#34;new_theme&#34;</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>      },
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    ]
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="执行">执行</h3>
 <p><strong>F1</strong> 选择 <strong>任务:运行任务</strong><br>
 点击 <strong>对应任务</strong> 执行</p>
 <p>新增的任务如下:</p>
@@ -493,9 +492,9 @@
     </div>
     <hr>
     <div>
-        <span>Power by: <a href="https://gohugo.io/">HUGO</a></span>
-        <br>
-        <span>©2022 aneCrow All Rights Reserved.</span>
+        <small><small><strong style="margin: -4px 0;">©2022 aneCrow All Rights Reserved.</strong></small></small>
+        <br/>
+        <span class="footnotes" style="padding-bottom: var(--gap-unit)">Power by: <a href="https://gohugo.io/">HUGO</a> | Support <strong>Light</strong>&<strong>Dark</strong> Style</span>
     </div>
 </footer>
 

@@ -229,8 +229,8 @@
 <code>hugo new site &lt;name&gt;</code></p>
 </blockquote>
 <p>起名随意, 比如: <code>new_site</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">./hugo new site new_site
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>./hugo new site new_site
+</span></span></code></pre></div><blockquote>
 <p><code>PS ~\hugo_sites&gt;</code> <code>.\hugo new site new_site</code></p>
 <blockquote>
 <p>在 <code>Windows</code> 中路径表示通常使用反斜杠 <code>\</code>, 左斜杠 <code>/</code> 大部分情况也可用</p>
@@ -260,8 +260,8 @@
 <p>通常直接使用现成的<strong>主题</strong>模板 <a href="https://themes.gohugo.io/">Hugo Themes</a><br>
 <strong>选择主题</strong>并遵照步骤<strong>安装</strong>至 <code>new_site/themes/</code> 文件夹内<br>
 并<strong>修改</strong> <code>new_site/config.toml</code> 站点配置文件, 新添一行填入对应<strong>主题名</strong>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#06b6ef">theme</span> = <span style="color:#48b685">&#39;&lt;theme_name&gt;&#39;</span>
-</code></pre></div><h3 id="运行看看效果">运行看看效果</h3>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#06b6ef">theme</span> = <span style="color:#48b685">&#39;&lt;theme_name&gt;&#39;</span>
+</span></span></code></pre></div><h3 id="运行看看效果">运行看看效果</h3>
 <p>指定了用以渲染的 <strong>Theme</strong> 之后就能运行小站了</p>
 <p>在项目文件夹 <code>new_site/</code> 中<strong>右键</strong><br>
 选择 <strong>在 Windows 终端 中打开</strong></p>
@@ -273,8 +273,8 @@
 <p>运行当前站点<br>
 <code>hugo server</code></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">../hugo server
-</code></pre></div><p>页面默认运行在 <code>1313端口</code> : <strong><a href="localhost:1313">打开主页</a></strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>../hugo server
+</span></span></code></pre></div><p>页面默认运行在 <code>1313端口</code> : <strong><a href="localhost:1313">打开主页</a></strong></p>
 <blockquote>
 <p>但由于还没有任何文章内容, 页面只有首页可用<br>
 <strong>终端中按下</strong> <code>ctrl C</code> 关闭运行</p>
@@ -289,8 +289,8 @@
 </blockquote>
 </blockquote>
 <p>比如我们要在类别 <code>post</code> 中创建一个名为 <code>new_post</code> 的文章</p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">../hugo new post/new_post.md
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>../hugo new post/new_post.md
+</span></span></code></pre></div><blockquote>
 <p>名称支持空格, 但更推荐使用下划线 <code>_</code> 代替空格<br>
 路径和文件名均 <strong>支持中文</strong></p>
 <p><code>new</code> 命令会以 <code>archetypes/</code> 下对应的模板进行内容生成<br>
@@ -298,15 +298,14 @@
 </blockquote>
 <h3 id="展示文章">展示文章</h3>
 <p><strong>打开</strong> <code>new_site/post/new_post.md</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
-title: &#34;New Post&#34;
-date: 2022-01-21T23:45:30+08:00
-draft: true
----
-
-<span style="color:#8d8687">&lt;!-- 在这里写正文 --&gt;</span>
-
-</code></pre></div><p>文件开头由一对 <code>---</code> 包围的内容为 <strong><a href="https://gohugo.io/content-management/front-matter/">Front Matter</a></strong><br>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;New Post&#34;
+</span></span><span style="display:flex;"><span>date: 2022-01-21T23:45:30+08:00
+</span></span><span style="display:flex;"><span>draft: true
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8d8687">&lt;!-- 在这里写正文 --&gt;</span>
+</span></span></code></pre></div><p>文件开头由一对 <code>---</code> 包围的内容为 <strong><a href="https://gohugo.io/content-management/front-matter/">Front Matter</a></strong><br>
 储存着一些 <em>Hugo</em> 可读取的<strong>元数据</strong>, 但不会被正文展示</p>
 <blockquote>
 <p>这些内容是可选的<br>
@@ -317,30 +316,29 @@ draft: true
 <code>../hugo server -D</code></p>
 </blockquote>
 <p>以 <strong><a href="https://www.markdownguide.org/">Markdown语法</a></strong> 写在 <code>Front Matter</code> 下边的则为<strong>正文部分</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
-title: &#34;New Post&#34;
-date: 2022-01-21T23:45:30+08:00
-draft: true
----
-
-正文随便写
-
-<span style="color:#5bc4bf;font-weight:bold">## (测试)二级标题
-</span><span style="color:#5bc4bf;font-weight:bold"></span>
-<span style="color:#815ba4">-</span> 列表
-<span style="color:#815ba4">-</span> 列表2
-  <span style="color:#815ba4">-</span> 深层列表
-
-<span style="color:#815ba4">1.</span> 有序列表
-<span style="color:#815ba4">1.</span> 数字是自动的
-<span style="color:#815ba4">
-</span><span style="color:#815ba4">&gt; </span><span style="font-style:italic">块引用
-</span><span style="font-style:italic"></span><span style="color:#815ba4">&gt;
-</span><span style="color:#815ba4"></span><span style="font-style:italic">&gt; - 块内还能插入列表
-</span><span style="font-style:italic"></span><span style="color:#815ba4">&gt;
-</span><span style="color:#815ba4"></span><span style="font-style:italic">&gt; &gt; 套嵌块引用内容
-</span><span style="font-style:italic"></span>
-</code></pre></div><p>以上内容会被渲染为:</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;New Post&#34;
+</span></span><span style="display:flex;"><span>date: 2022-01-21T23:45:30+08:00
+</span></span><span style="display:flex;"><span>draft: true
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>正文随便写
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf;font-weight:bold">## (测试)二级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#5bc4bf;font-weight:bold"></span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">-</span> 列表
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">-</span> 列表2
+</span></span><span style="display:flex;"><span>  <span style="color:#815ba4">-</span> 深层列表
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">1.</span> 有序列表
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">1.</span> 数字是自动的
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">
+</span></span></span><span style="display:flex;"><span><span style="color:#815ba4">&gt; </span><span style="font-style:italic">块引用
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span><span style="color:#815ba4">&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#815ba4"></span><span style="font-style:italic">&gt; - 块内还能插入列表
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span><span style="color:#815ba4">&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#815ba4"></span><span style="font-style:italic">&gt; &gt; 套嵌块引用内容
+</span></span></span></code></pre></div><p>以上内容会被渲染为:</p>
 <blockquote>
 <p>正文随便写</p>
 <h2 id="测试二级标题">(测试)二级标题</h2>
@@ -408,9 +406,9 @@ draft: true
     </div>
     <hr>
     <div>
-        <span>Power by: <a href="https://gohugo.io/">HUGO</a></span>
-        <br>
-        <span>©2022 aneCrow All Rights Reserved.</span>
+        <small><small><strong style="margin: -4px 0;">©2022 aneCrow All Rights Reserved.</strong></small></small>
+        <br/>
+        <span class="footnotes" style="padding-bottom: var(--gap-unit)">Power by: <a href="https://gohugo.io/">HUGO</a> | Support <strong>Light</strong>&<strong>Dark</strong> Style</span>
     </div>
 </footer>
 

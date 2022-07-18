@@ -213,28 +213,28 @@
 <p>在 <code>baseof.html</code> 定义中这部分由 <code>partials/head.html</code> 实现</p>
 </blockquote>
 <p><code>head.html</code> <strong>添加</strong>引用, 全局应用同样的页面版式</p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">head</span>&gt;
-    &lt;<span style="color:#5bc4bf">title</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">title</span>&gt;
-<span style="display:block;width:100%;background-color:#cfd1c5">    &lt;<span style="color:#5bc4bf">link</span> <span style="color:#06b6ef">rel</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;stylesheet&#34;</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Site.BaseURL</span> <span style="color:#8d8687">}}</span><span style="color:#48b685">css/layout.css&#34;</span>&gt;
-</span>&lt;/<span style="color:#5bc4bf">head</span>&gt;
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#5bc4bf">title</span>&gt;<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Title</span> <span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">title</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    &lt;<span style="color:#5bc4bf">link</span> <span style="color:#06b6ef">rel</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;stylesheet&#34;</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.Site.BaseURL</span> <span style="color:#8d8687">}}</span><span style="color:#48b685">css/layout.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#5bc4bf">head</span>&gt;
+</span></span></code></pre></div><blockquote>
 <p>语句 <code>{{ .Site.BaseURL }}</code> 在部署时会被替换为小站的根目录, 如 <code>http://localhost:1313/</code><br>
 而 <code>static</code> 内的资源会原封不动地挂载在根目录下</p>
 </blockquote>
 <p>设置 <code>flex系统</code> 之前对根元素做一下初始化, <strong>编辑</strong> <code>layout.css</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#5bc4bf">html</span><span style="color:#5bc4bf">,</span>
-<span style="color:#5bc4bf">body</span> {
-    <span style="color:#815ba4">display</span>: <span style="color:#815ba4">inline-block</span>;
-    <span style="color:#815ba4">width</span>: <span style="color:#f99b15">100</span><span style="color:#fec418">%</span>;
-    <span style="color:#815ba4">height</span>: <span style="color:#f99b15">100</span><span style="color:#fec418">%</span>;
-    <span style="color:#815ba4">margin</span>: <span style="color:#f99b15">0</span>;
-    <span style="color:#815ba4">padding</span>: <span style="color:#f99b15">0</span>;
-}
-
-<span style="color:#5bc4bf">pre</span> {
-    <span style="color:#815ba4">overflow-x</span>: <span style="color:#815ba4">auto</span>;
-}
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#5bc4bf">html</span><span style="color:#5bc4bf">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">body</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">display</span>: <span style="color:#815ba4">inline-block</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">width</span>: <span style="color:#f99b15">100</span><span style="color:#fec418">%</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">height</span>: <span style="color:#f99b15">100</span><span style="color:#fec418">%</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">margin</span>: <span style="color:#f99b15">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">padding</span>: <span style="color:#f99b15">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">pre</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">overflow-x</span>: <span style="color:#815ba4">auto</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
 <li><code>html</code> <code>body</code>
 <ul>
 <li><code>display: inline-block</code>
@@ -269,16 +269,16 @@
 <p>响应式布局的第一步, 初始化根元素的宽高为整个窗口</p>
 </blockquote>
 <p>然后建立相关的 <code>flex</code> <strong>类选择器</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#fec418">flex-container</span> {
-    <span style="color:#815ba4">display</span>: <span style="color:#815ba4">flex</span>;
-    <span style="color:#815ba4">justify-content</span>: <span style="color:#815ba4">center</span>;
-}
-
-.<span style="color:#fec418">flex-container</span><span style="color:#5bc4bf">&gt;*</span> {
-    <span style="color:#815ba4">flex-grow</span>: <span style="color:#f99b15">1</span>;
-    <span style="color:#815ba4">min-width</span>: <span style="color:#f99b15">0</span>;
-}
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#fec418">flex-container</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">display</span>: <span style="color:#815ba4">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">justify-content</span>: <span style="color:#815ba4">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#fec418">flex-container</span><span style="color:#5bc4bf">&gt;*</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">flex-grow</span>: <span style="color:#f99b15">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">min-width</span>: <span style="color:#f99b15">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote>
 <p>对于 <code>flex容器</code> , 通过特殊的 <code>css选择器</code> 可以选择对应的 <code>flex子元素</code> 进行样式设置<br>
 只需要指定对应的容器, 就能免去手动指定 <code>flex-item</code> 的麻烦</p>
 </blockquote>
@@ -317,80 +317,80 @@
 <p>另外使用 <code>.flex-container&gt;*:not(:is(:first-child, :last-child))</code> 选择器可以只影响除了头和尾的中间子元素</p>
 </blockquote>
 <p>接着<strong>编辑</strong> <code>baseof.html</code> 建立根布局</p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8d8687">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#5bc4bf">html</span>&gt;
-<span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;head.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
-
-&lt;<span style="color:#5bc4bf">body</span>&gt;
-<span style="display:block;width:100%;background-color:#cfd1c5">    &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;flex-container&#34;</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;main-container&#34;</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;flex-container&#34;</span>&gt;
-</span>            &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;content&#34;</span>&gt;
-                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;header.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
-                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">block</span> <span style="color:#48b685">&#34;main&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
-                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;footer.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
-            &lt;/<span style="color:#5bc4bf">div</span>&gt;
-<span style="display:block;width:100%;background-color:#cfd1c5">        &lt;/<span style="color:#5bc4bf">div</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">    &lt;/<span style="color:#5bc4bf">div</span>&gt;
-</span>&lt;/<span style="color:#5bc4bf">body</span>&gt;
-
-&lt;/<span style="color:#5bc4bf">html</span>&gt;
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#8d8687">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">html</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;head.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">body</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;flex-container&#34;</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;main-container&#34;</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;flex-container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;content&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;header.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">block</span> <span style="color:#48b685">&#34;main&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;footer.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>    &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#5bc4bf">body</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#5bc4bf">html</span>&gt;
+</span></span></code></pre></div><blockquote>
 <p>两边的空元素 <code>&lt;div&gt;</code> <strong>不是必要的</strong><br>
 它们会在空间允许时展开, 空间有限时压缩为零宽度<br>
 以此获得一种动态 <code>margin</code> 的效果, 让自适应元素看起来更顺滑</p>
 </blockquote>
 <p>中间不为空的内容元素会无限制伸展而影响设计布局, 还需要对它指定最大尺寸 <code>max-width</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">#<span style="color:#fec418">main-container</span> {
-    <span style="color:#815ba4">max-width</span>: <span style="color:#f99b15">768</span><span style="color:#fec418">px</span>;
-}
-#<span style="color:#fec418">content</span> {
-    <span style="color:#815ba4">max-width</span>: <span style="color:#f99b15">640</span><span style="color:#fec418">px</span>;
-}
-</code></pre></div><p><code>main-container</code> 内部的 <code>content</code> 同样需要居中, 指定为 <code>flex-container</code> 容器类就行</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#<span style="color:#fec418">main-container</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">max-width</span>: <span style="color:#f99b15">768</span><span style="color:#fec418">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>#<span style="color:#fec418">content</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">max-width</span>: <span style="color:#f99b15">640</span><span style="color:#fec418">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>main-container</code> 内部的 <code>content</code> 同样需要居中, 指定为 <code>flex-container</code> 容器类就行</p>
 <h2 id="添加侧边导航栏">添加侧边导航栏</h2>
 <p>在 <code>main-container</code> 两边<strong>建立容器</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">body</span>&gt;
-    &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;flex-container&#34;</span>&gt;
-        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
-<span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;side-container&#34;</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">            <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;side_nav.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;/<span style="color:#5bc4bf">div</span>&gt;
-</span>        &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;main-container&#34;</span>&gt;
-            &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;content&#34;</span>&gt;
-                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;header.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
-                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">block</span> <span style="color:#48b685">&#34;main&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
-                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;footer.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
-            &lt;/<span style="color:#5bc4bf">div</span>&gt;
-        &lt;/<span style="color:#5bc4bf">div</span>&gt;
-<span style="display:block;width:100%;background-color:#cfd1c5">        &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;side-container&#34;</span>&gt;
-</span><span style="display:block;width:100%;background-color:#cfd1c5">            <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;side_toc.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
-</span><span style="display:block;width:100%;background-color:#cfd1c5">        &lt;/<span style="color:#5bc4bf">div</span>&gt;
-</span>        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
-    &lt;/<span style="color:#5bc4bf">div</span>&gt;
-&lt;/<span style="color:#5bc4bf">body</span>&gt;
-</code></pre></div><p>别忘了限制宽度</p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#fec418">side-container</span> {
-    <span style="color:#815ba4">max-width</span>: <span style="color:#f99b15">192</span><span style="color:#fec418">px</span>;
-}
-</code></pre></div><p>在 <code>layouts/partials/</code> 中<strong>新建文件</strong> <code>side_nav.html</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">nav</span>&gt;
-    &lt;<span style="color:#5bc4bf">h1</span>&gt;&lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span><span style="color:#06b6ef">.Site.BaseURL</span><span style="color:#8d8687">}}</span><span style="color:#48b685">&#34;</span>&gt;Home&lt;/<span style="color:#5bc4bf">a</span>&gt;&lt;/<span style="color:#5bc4bf">h1</span>&gt;
-    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">range</span> <span style="color:#06b6ef">.CurrentSection.Pages.Reverse</span> <span style="color:#8d8687">}}</span>
-    &lt;<span style="color:#5bc4bf">div</span>&gt;
-        &lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span><span style="color:#06b6ef">.Permalink</span><span style="color:#8d8687">}}</span><span style="color:#48b685">&#34;</span>&gt;<span style="color:#8d8687">{{</span><span style="color:#06b6ef">.Title</span><span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">a</span>&gt;
-    &lt;/<span style="color:#5bc4bf">div</span>&gt;
-    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
-&lt;/<span style="color:#5bc4bf">nav</span>&gt;
-</code></pre></div><p>使用 <code>range</code> 语句迭代 <code>.CurrentSection.Pages</code> 得到属于当前 <code>section</code> 的页面列表<br>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;flex-container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;side-container&#34;</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>            <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;side_nav.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;main-container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">id</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;content&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;header.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">block</span> <span style="color:#48b685">&#34;main&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;footer.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        &lt;<span style="color:#5bc4bf">div</span> <span style="color:#06b6ef">class</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;side-container&#34;</span>&gt;
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>            <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">partial</span> <span style="color:#48b685">&#34;side_toc.html&#34;</span> <span style="color:#06b6ef">.</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex; background-color:#cfd1c5"><span>        &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">div</span>&gt;&lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#5bc4bf">body</span>&gt;
+</span></span></code></pre></div><p>别忘了限制宽度</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#fec418">side-container</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">max-width</span>: <span style="color:#f99b15">192</span><span style="color:#fec418">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>在 <code>layouts/partials/</code> 中<strong>新建文件</strong> <code>side_nav.html</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">nav</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#5bc4bf">h1</span>&gt;&lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span><span style="color:#06b6ef">.Site.BaseURL</span><span style="color:#8d8687">}}</span><span style="color:#48b685">&#34;</span>&gt;Home&lt;/<span style="color:#5bc4bf">a</span>&gt;&lt;/<span style="color:#5bc4bf">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">range</span> <span style="color:#06b6ef">.CurrentSection.Pages.Reverse</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#5bc4bf">a</span> <span style="color:#06b6ef">href</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;</span><span style="color:#8d8687">{{</span><span style="color:#06b6ef">.Permalink</span><span style="color:#8d8687">}}</span><span style="color:#48b685">&#34;</span>&gt;<span style="color:#8d8687">{{</span><span style="color:#06b6ef">.Title</span><span style="color:#8d8687">}}</span>&lt;/<span style="color:#5bc4bf">a</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#5bc4bf">div</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#815ba4">end</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#5bc4bf">nav</span>&gt;
+</span></span></code></pre></div><p>使用 <code>range</code> 语句迭代 <code>.CurrentSection.Pages</code> 得到属于当前 <code>section</code> 的页面列表<br>
 由于 <code>.Pages</code> 返回的列表默认使用 <code>Date</code> 从新到旧排列
 加上反序关键词 <code>.CurrentSection.Pages.Reverse</code> 从旧到新进行迭代</p>
 <p>同样的, <strong>新建文件</strong> <code>side_toc.html</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template">&lt;<span style="color:#5bc4bf">aside</span>&gt;
-    <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.TableOfContents</span> <span style="color:#8d8687">}}</span>
-&lt;/<span style="color:#5bc4bf">aside</span>&gt;
-</code></pre></div><p>将会生成一个以正文内子标题为名的目录列表, 详情看 <a href="https://gohugo.io/content-management/toc/">Table of Contents</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#5bc4bf">aside</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">{{</span> <span style="color:#06b6ef">.TableOfContents</span> <span style="color:#8d8687">}}</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#5bc4bf">aside</span>&gt;
+</span></span></code></pre></div><p>将会生成一个以正文内子标题为名的目录列表, 详情看 <a href="https://gohugo.io/content-management/toc/">Table of Contents</a></p>
 <p>至此小站的总体布局算是有了雏形, 之后就是细化的工作了</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
@@ -435,9 +435,9 @@
     </div>
     <hr>
     <div>
-        <span>Power by: <a href="https://gohugo.io/">HUGO</a></span>
-        <br>
-        <span>©2022 aneCrow All Rights Reserved.</span>
+        <small><small><strong style="margin: -4px 0;">©2022 aneCrow All Rights Reserved.</strong></small></small>
+        <br/>
+        <span class="footnotes" style="padding-bottom: var(--gap-unit)">Power by: <a href="https://gohugo.io/">HUGO</a> | Support <strong>Light</strong>&<strong>Dark</strong> Style</span>
     </div>
 </footer>
 
