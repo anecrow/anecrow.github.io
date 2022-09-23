@@ -211,10 +211,10 @@
 
     <blockquote id="page-info">
         <span><code>Date</code>: 2022/07/17 16:21:17</span>
-        <span><code>Lastmod</code>: 2022/07/18 12:58:36</span>
+        <span><code>Lastmod</code>: 2022/07/19 19:02:36</span>
         <br>
         
-            <span><code>WordCount</code>: 581</span>
+            <span><code>WordCount</code>: 610</span>
             <span><code>ReadingTime</code>: 2min</span>
         
     </blockquote>
@@ -223,7 +223,7 @@
                     
     <article>
         <h2 id="新建关卡">新建关卡</h2>
-<p>新建关卡的操作与原生没有区别<br>
+<p>新建关卡资产的操作与原生没有区别<br>
 <strong>文件</strong> &gt; <strong>新建关卡</strong> &gt; <strong>Basic</strong></p>
 <p>通常将地图资源<strong>保存</strong>在 <code>/Maps</code> 文件夹中</p>
 <blockquote>
@@ -272,7 +272,7 @@ TODO: [站内文章: 游戏性](../experience)</p>
 <p>分别指定了关卡和游戏性资源</p>
 <blockquote>
 <p>当指定了 <code>Experience ID</code> 时<br>
-地图或项目默认游戏性将会被覆盖</p>
+地图或项目的 <code>Default Experience</code> 将会被覆盖</p>
 </blockquote>
 <p>其他参数影响可以参考 <code>Shooter</code> 中的示例关卡配置<br>
 <img src="Snipaste_2022-07-18_12-35-09.jpg" alt="配置"></p>
@@ -286,13 +286,17 @@ TODO: [站内文章: 游戏性](../experience)</p>
 <li><a href="../../resouce_manage/asset_scan/#%E6%B8%B8%E6%88%8F%E6%80%A7%E9%85%8D%E7%BD%AE">站内文章: 游戏性配置</a></li>
 <li><a href="../../resouce_manage/asset_scan/#%E5%85%B3%E5%8D%A1%E8%B5%84%E6%BA%90">站内文章: 关卡资源</a></li>
 </ul>
-<p>三合一数组快捷参数</p>
+<p>三合一数组快捷参数<br>
+复制后粘贴至参数 <code>Primary Asset Types to Scan</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>((PrimaryAssetType<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;LyraUserFacingExperienceDefinition&#34;</span>,AssetBaseClass<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;/Script/LyraGame.LyraUserFacingExperienceDefinition&#34;</span>,Directories<span style="color:#5bc4bf">=</span>((Path<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;/System/Playlists&#34;</span>)),Rules<span style="color:#5bc4bf">=</span>(CookRule<span style="color:#5bc4bf">=</span>AlwaysCook)),(PrimaryAssetType<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;LyraExperienceDefinition&#34;</span>,AssetBaseClass<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;/Script/LyraGame.LyraExperienceDefinition&#34;</span>,bHasBlueprintClasses<span style="color:#5bc4bf">=</span>True,Directories<span style="color:#5bc4bf">=</span>((Path<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;/System/Experiences&#34;</span>)),Rules<span style="color:#5bc4bf">=</span>(CookRule<span style="color:#5bc4bf">=</span>AlwaysCook)),(PrimaryAssetType<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;Map&#34;</span>,AssetBaseClass<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;/Script/Engine.World&#34;</span>,Directories<span style="color:#5bc4bf">=</span>((Path<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;/Maps&#34;</span>))))
 </span></span></code></pre></div></blockquote>
 <p>添加关卡配置扫描之后, 就能在入口关卡看到<br>
 <img src="Snipaste_2022-07-18_12-19-41.jpg" alt="关卡"></p>
 <p>同时添加游戏性配置和关卡资源扫描之后, 就能使用对应路径下的自定义资产<br>
 <img src="Snipaste_2022-07-18_12-24-26.jpg" alt="资产"></p>
+<blockquote>
+<p>未指定扫描的资产不会出现在选项中</p>
+</blockquote>
     </article>
 
                 </article>

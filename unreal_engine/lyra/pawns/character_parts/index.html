@@ -211,10 +211,10 @@
 
     <blockquote id="page-info">
         <span><code>Date</code>: 2022/07/18 13:40:11</span>
-        <span><code>Lastmod</code>: 2022/07/18 17:07:08</span>
+        <span><code>Lastmod</code>: 2022/07/18 20:49:20</span>
         <br>
         
-            <span><code>WordCount</code>: 793</span>
+            <span><code>WordCount</code>: 875</span>
             <span><code>ReadingTime</code>: 2min</span>
         
     </blockquote>
@@ -227,19 +227,19 @@
 但 <em>组件</em> 容易与功能组件 <code>Component</code> 混淆</p>
 </blockquote>
 <p><em>Lyra框架</em> 称这个为 <code>Cosmetics System</code> 化妆/妆点系统<br>
-将模型配饰 帽子/背包 甚至是角色模型本身视作一个 <code>Character Part</code></p>
+将 帽子/背包 甚至是 角色模型 本身视作一个 <code>Character Part</code></p>
 <blockquote>
 <p>Lyra框架目前并没有把 <code>Cosmetics System</code> 固化为一种组件或实际的逻辑系统<br>
 仅仅是目前对于 <code>Charater Part</code> 的操作逻辑的一种统称</p>
 </blockquote>
 <h2 id="角色模型">角色模型</h2>
 <p>开发中最常见的需求就是更改角色模型<br>
-有可能是切换衣着, 甚至是切换角色</p>
+有可能是切换衣着/装备/饰品, 甚至是切换角色</p>
 <p>在 <em>Lyra框架</em> 中允许我们仅仅切换角色外观而不需要重制一个新 <em>Pawn</em></p>
 <h3 id="新建蓝图">新建蓝图</h3>
 <blockquote>
 <p>虽然叫 <code>Part Actor</code><br>
-但其实只要是 <code>Actor</code> 类都是可用的(包括任何子孙类)</p>
+但其实只要是 <code>Actor</code> 类都是可用的(包括任何后代类)</p>
 <blockquote>
 <p>演示项目 <code>Shooter</code> 中使用的是 <code>LyraTaggedActor</code> 类</p>
 </blockquote>
@@ -250,8 +250,10 @@
 <h3 id="配置角色模型与动画">配置角色模型与动画</h3>
 <blockquote>
 <p>在添加角色之前需要准备一套已制作好 <code>骨骼</code> <code>骨骼网格体</code> <code>IK绑定</code> 资产的角色<br>
-以下图方便用的是原生内容包中的角色资产, 注意导入资产可能会影响 <em>Lyra框架</em> 内容<br>
-其他来源的角色资产都可以通过同样的操作配置使用</p>
+以下图方便用的是原生内容包中的角色资产, 注意导入资产可能会影响 <em>Lyra框架</em></p>
+<blockquote>
+<p>其他来源的角色资产都可以通过同样的操作配置使用</p>
+</blockquote>
 </blockquote>
 <p>以下<strong>仅作演示</strong></p>
 <p>这里直接添加第三人称内容包, 使用里边的原生 <code>Mannequins</code> 角色<br>
@@ -260,24 +262,36 @@
 <blockquote>
 <p><code>SKM_Manny骨骼网格体</code> 位置:<br>
 <code>Content/Characters/Mannequins/Meshes/SKM_Manny</code></p>
+<p>注意: <strong>使用网格体替换 <code>Part Actor</code> 默认场景组件时, <code>变换</code> 组件将失去作用</strong></p>
 </blockquote>
-<p>有了骨骼网格体, 还需要指定动画蓝图</p>
+<h4 id="新建动画蓝图">新建动画蓝图</h4>
+<p>有了骨骼网格体, 需要指定 <code>动画蓝图</code></p>
+<p>对骨骼网格体资产 <code>SKM_Manny</code> <strong>右键</strong> &gt; <strong>创建</strong> &gt; <strong>动画蓝图</strong></p>
 <p>由于我们需要让它使用 <em>Lyra框架</em> 中的动画<br>
 需要建立一个包含重定向的动画蓝图</p>
-<p><strong>右键</strong> <code>SKM_Manny骨骼网格体</code> &gt; <strong>创建</strong> &gt; <strong>动画蓝图</strong></p>
-<p>还有一个重定向器<br>
-这里可以直接<strong>复制</strong> <em>Lyra框架</em> 现成的</p>
+<h4 id="设置ik重定向器">设置IK重定向器</h4>
+<p>还需要一个 <code>IK重定向器</code><br>
+这里可以直接<strong>复制</strong> <em>Lyra框架</em> 现成的资产 <code>RTG_Mannequin</code></p>
 <blockquote>
 <p><code>RTG_Mannequin</code> 位置:<br>
 <code>Content/Characters/Heroes/Mannequin/Rig/RTG_Mannequin</code></p>
+<blockquote>
+<p>此处是 <code>lyra</code> 的资产</p>
+</blockquote>
 </blockquote>
 <p><strong>打开</strong>复制出来的 <code>RTG_Mannequin</code><br>
-<strong>修改</strong> <code>目标IKRig资产</code> 指定为第三人称内容包中的</p>
+<strong>修改</strong>参数 <strong>绑定</strong> &gt; <code>目标IKRig资产</code> 指定为第三人称内容包中的 <code>RTG_Mannequin</code></p>
 <blockquote>
 <p><code>IK_Mannequin</code> 位置:<br>
 <code>Content/Characters/Mannequins/Rigs/IK_Mannequin</code></p>
+<blockquote>
+<p>此处是 <code>ThirdPerson</code> 的资产</p>
 </blockquote>
-<p>准备好这两个资源后<br>
+</blockquote>
+<p><img src="Snipaste_2022-07-18_20-45-53.jpg" alt=" "><br>
+正确设置后应该是这样的</p>
+<h4 id="设置动画蓝图">设置动画蓝图</h4>
+<p>接着就可以设置动画蓝图<br>
 <strong>打开</strong>新建的动画蓝图 &gt; <strong>创建节点</strong> <code>Retarget Pose From Mesh</code><br>
 同时<strong>指定</strong>节点中的 <code>IK重定向器 资产</code> 为刚才复制的 <code>RTG_Mannequin</code><br>
 记得<strong>编译</strong></p>
