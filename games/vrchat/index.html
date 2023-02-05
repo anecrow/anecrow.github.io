@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>垃圾音频装置</title>
+    <title>VRChat</title>
     <link rel="stylesheet" href="https://blog.anecrow.work/css/layout.css">
     <link rel="stylesheet" href="https://blog.anecrow.work/css/github-markdown.css">
     <link rel="stylesheet" href="https://blog.anecrow.work/css/style.css">
@@ -73,18 +73,18 @@
                 
             
                 
-                    <code class="nav-item nav-subitem nav-current">
-                        垃圾音频装置
-                    </code>
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/amplifier/">
+                        <code class="nav-item nav-subitem">
+                            垃圾音频装置
+                        </code>
+                    </a>
                 
             
         
             
-                <a href="https://blog.anecrow.work/games/vrchat/">
-                    <span class="nav-item">
-                        VRChat
-                    </span>
-                </a>
+                <span class="nav-item nav-current">
+                    VRChat
+                </span>
             
             
         
@@ -95,11 +95,9 @@
             <div id="content">
                 
 <header>
-    <h1>垃圾音频装置</h1>
+    <h1>VRChat</h1>
     <nav class="breadcrumbnav">
     
-    
-        
     
         
     
@@ -129,69 +127,99 @@
     
 
     
-        <span>
-            <a href="https://blog.anecrow.work/games/shenzhen_io/">
-                <code>Shenzhen I/O</code>
-            </a>
-        </span>
-        <span>></span>
-    
-
-    
-
-    
-        <code>垃圾音频装置</code>
+        <code>VRChat</code>
     
 
 </nav>
 
 
     <blockquote id="page-info">
-        <span><code>Date</code>: 2022/03/07 03:13:12</span>
-        <span><code>Lastmod</code>: 2022/03/07 03:54:43</span>
+        <span><code>Date</code>: 2022/10/20 15:54:03</span>
+        <span><code>Lastmod</code>: 2022/11/07 04:56:06</span>
         <br>
         
-            <span><code>WordCount</code>: 151</span>
-            <span><code>ReadingTime</code>: 1min</span>
+            <span><code>Pages</code>: 0</span>
+            <span><code>Sections</code>: 0</span>
         
     </blockquote>
 </header>
                 <article>
                     
     <article>
-        <p>调谐最优化引擎</p>
-<h2 id="资讯">资讯</h2>
-<p><img src="Snipaste_2022-03-07_03-15-55.jpg" alt="verification tab"></p>
+        <p>一些VRC相关的技巧</p>
+<h2 id="游玩">游玩</h2>
+<p>如 <a href="https://docs.vrchat.com/docs/getting-started">官方文档: Getting Started</a> 所说<br>
+只是进行游玩的话非常简单, 不多赘述</p>
+<h2 id="创作">创作</h2>
+<p>制作并上传内容之前, 还需要做一些准备:</p>
 <ul>
-<li><em>音频输入</em>是连接音频源的简单输入。</li>
-<li><em>音频输出</em>是连接音频接收器的简单输出。</li>
-<li><em>最优化</em>是连接开关的简单输入。</li>
-<li>应将<em>音频输入</em>信号复制到<em>音频输出</em>，并在<em>最优化</em>开关开启时应用调谐最优化算法。</li>
-<li>在手册“补充信息”部分有一张“调谐最优化算法”广告，找到并阅读该部分内容。</li>
-</ul>
-<h2 id="解法">解法</h2>
-<h3 id="01">01</h3>
-<p><img src="Snipaste_2022-03-07_03-31-05.jpg" alt="01"></p>
+<li>Unity
 <ul>
-<li><code>产品成本</code>: <strong>4</strong>*</li>
-<li><code>电量消耗</code>: <strong>310</strong></li>
-<li><code>代码行数</code>: <strong>6</strong>*</li>
+<li><a href="https://docs.vrchat.com/docs/current-unity-version">指定版本</a>: 2019.4.31f1
+<ul>
+<li><a href="unityhub://2019.4.31f1c1/df4e9532e9e0">Unity: 使用Hub下载</a></li>
 </ul>
+</li>
+</ul>
+</li>
+<li>VRC SDK3
+<blockquote>
+<p>SDK2 已不再推荐使用</p>
+</blockquote>
+<ul>
+<li>Avartar 角色
+<ul>
+<li><a href="https://vrchat.com/download/sdk3-avatars">Download SDK3 - Avatars</a></li>
+</ul>
+</li>
+<li>World 场景
+<ul>
+<li><a href="https://vrchat.com/download/sdk3-worlds">Download SDK3 - Worlds</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>VRC账户
+<blockquote>
+<p>使用独立邮箱注册账户(Steam账户不可以)<br>
+可选绑定Steam账户</p>
+</blockquote>
+<ul>
+<li><a href="https://docs.vrchat.com/docs/vrchat-safety-and-trust-system#trust-rank">Trust Rank</a>: <code>New User</code>
+<blockquote>
+<p>意味着纯新账户是不能使用创作功能的<br>
+包括 <code>上传</code>和<code>测试</code></p>
+<blockquote>
+<p>提升等级的具体方式并未明说<br>
+但多与人互动添加好友逛不同地图等方法有一定积极作用(单纯挂机用处有限)</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="配置开发环境">配置开发环境</h3>
+<p>显然 SDK 分为了 <code>Avatars</code> 和 <code>Worlds</code><br>
+意味着 VRC 针对两者的开发环境做出了区分</p>
+<p>将两个SDK载入同一个项目中会<strong>导致错误</strong></p>
+<p>SDK 以 <code>.unitypackage</code> 文件形式打包<br>
+在项目中打开该文件将会弹出对应导入窗口</p>
+<blockquote>
+<p>更多配置开发环境细节参阅 <a href="https://docs.vrchat.com/docs/setting-up-the-sdk">官方文档: Setting up the SDK</a></p>
+</blockquote>
     </article>
+    <hr>
+    <aside>
+        <ol>
+            
+        </ol>
+    </aside>
 
                 </article>
                 <footer>
     <div class="flex-container">
         <div>
             
-    
-        <a href="https://blog.anecrow.work/games/shenzhen_io/scorekeeper/">
-            <div>
-                <h2>&lt;&lt; Prev</h2>
-                <span>海量男爵</span>
-            </div>
-        </a>
-        <p><p>饮酒游戏积分器</p></p>
     
 
         </div>
@@ -217,10 +245,10 @@
             <aside>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#资讯">资讯</a></li>
-    <li><a href="#解法">解法</a>
+    <li><a href="#游玩">游玩</a></li>
+    <li><a href="#创作">创作</a>
       <ul>
-        <li><a href="#01">01</a></li>
+        <li><a href="#配置开发环境">配置开发环境</a></li>
       </ul>
     </li>
   </ul>
