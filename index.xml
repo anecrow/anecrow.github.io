@@ -6,7 +6,25 @@
     <description>Recent content on aneCrow&#39;s 杂货铺</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 20 Oct 2022 15:54:03 +0800</lastBuildDate><atom:link href="https://blog.anecrow.work/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Feb 2023 17:33:18 +0800</lastBuildDate><atom:link href="https://blog.anecrow.work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>恒星日转换</title>
+      <link>https://blog.anecrow.work/games/ksp/sidereal_day/</link>
+      <pubDate>Sun, 05 Feb 2023 17:33:18 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/games/ksp/sidereal_day/</guid>
+      <description>&lt;p&gt;太阳日和恒星日的精确转换&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>共振转移轨道</title>
+      <link>https://blog.anecrow.work/games/ksp/resonance/</link>
+      <pubDate>Wed, 01 Feb 2023 00:19:39 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/games/ksp/resonance/</guid>
+      <description>&lt;p&gt;利用轨道共振在圆轨道等距部署卫星的原理&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>LAMBDA 回调</title>
       <link>https://blog.anecrow.work/windows/excel365/lambda_callback/</link>

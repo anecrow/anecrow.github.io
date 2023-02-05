@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>共振转移轨道</title>
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/layout.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/github-markdown.css">
+    <link rel="stylesheet" href="https://blog.anecrow.work/css/style.css">
+</head>
+
+<body class="markdown-body">
+    <div class="flex-container">
+        <div class="side-container">
+            
+
+    
+
+
+<nav id="side-nav">
+    <a href="https://blog.anecrow.work/">
+        <h1>Home</h1>
+    </a>
+    <a href="https://blog.anecrow.work/games/">
+        <h3>Games</h3>
+    </a>
+    
+        
+            
+                <a href="https://blog.anecrow.work/games/shenzhen_io/">
+                    <span class="nav-item">
+                        Shenzhen I/O
+                    </span>
+                </a>
+            
+            
+                
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/security-camera/">
+                        <code class="nav-item nav-subitem">
+                            (模拟)安全摄像头
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/delay-module/">
+                        <code class="nav-item nav-subitem">
+                            工厂模型替换件
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/pulse-generator/">
+                        <code class="nav-item nav-subitem">
+                            脉冲发生器
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/animated-sign/">
+                        <code class="nav-item nav-subitem">
+                            发光标识
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/scorekeeper/">
+                        <code class="nav-item nav-subitem">
+                            海量男爵
+                        </code>
+                    </a>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/amplifier/">
+                        <code class="nav-item nav-subitem">
+                            垃圾音频装置
+                        </code>
+                    </a>
+                
+            
+        
+            
+                <a href="https://blog.anecrow.work/games/vrchat/">
+                    <span class="nav-item">
+                        VRChat
+                    </span>
+                </a>
+            
+            
+        
+            
+                <a href="https://blog.anecrow.work/games/ksp/">
+                    <span class="nav-item">
+                        Kerbal Space Program
+                    </span>
+                </a>
+            
+            
+                
+                    <code class="nav-item nav-subitem nav-current">
+                        共振转移轨道
+                    </code>
+                
+            
+                
+                    <a href="https://blog.anecrow.work/games/ksp/sidereal_day/">
+                        <code class="nav-item nav-subitem">
+                            恒星日转换
+                        </code>
+                    </a>
+                
+            
+        
+    
+</nav>
+        </div>
+        <div id="main-container" class="flex-container">
+            <div id="content">
+                
+<header>
+    <h1>共振转移轨道</h1>
+    <nav class="breadcrumbnav">
+    
+    
+        
+    
+        
+    
+        
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/">
+                <code>Home</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/games/">
+                <code>Games</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <span>
+            <a href="https://blog.anecrow.work/games/ksp/">
+                <code>Kerbal Space Program</code>
+            </a>
+        </span>
+        <span>></span>
+    
+
+    
+
+    
+        <code>共振转移轨道</code>
+    
+
+</nav>
+
+
+    <blockquote id="page-info">
+        <span><code>Date</code>: 2023/02/01 00:19:39</span>
+        <span><code>Lastmod</code>: 2023/02/05 23:53:21</span>
+        <br>
+        
+            <span><code>WordCount</code>: 1942</span>
+            <span><code>ReadingTime</code>: 4min</span>
+        
+    </blockquote>
+</header>
+                <article>
+                    
+    <article>
+        <p>利用轨道共振在圆轨道等距部署卫星的原理</p>
+<h2 id="计算表">计算表</h2>
+<p>可直接使用的在线计算表</p>
+<blockquote>
+<p><a href="https://meyerweb.com/eric/ksp/resonant-orbits/">Resonant Orbit Calculator</a></p>
+</blockquote>
+<h3 id="速查公式">速查公式</h3>
+<p>输入参数</p>
+<p><img src="F_A1%E8%BE%93%E5%85%A5%E5%8F%82%E6%95%B0.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    &amp;R &amp;&amp; 赤道半径<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;<span style="color:#815ba4">\mu</span> &amp;&amp; 标准重力参数<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;h_r &amp;&amp; 目标轨道高度/相切点高度<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><p>部署方式</p>
+<p><img src="F_A2%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    &amp;n &amp;&amp; 部署数量(间隔份数)<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;x &amp;&amp; 每几圈部署一次<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;y &amp;&amp; 每次部署间隔
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><p>中间常数</p>
+<p><img src="F_A3%E4%B8%AD%E9%97%B4%E5%B8%B8%E6%95%B0.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    &amp;r = h_r + R &amp;&amp; 目标轨道半径<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;k = <span style="color:#815ba4">\frac</span>{<span style="color:#815ba4">\mu</span>}{4<span style="color:#815ba4">\pi</span>^2} &amp;&amp; 开普勒常数<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;<span style="color:#815ba4">\eta</span> = <span style="color:#815ba4">\frac</span>{T_a}{T_r} = <span style="color:#815ba4">\frac</span>{y}{xn}
+</span></span><span style="display:flex;"><span>    &amp;&amp;周期比例常数<span style="color:#815ba4">\left\{\begin</span>{array}{l}
+</span></span><span style="display:flex;"><span>        n &gt; 1 &amp; 大于1才有意义<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        x,y,n <span style="color:#815ba4">\in</span> <span style="color:#815ba4">\mathbb</span>{N}^* &amp; 正整数<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        (x,y,n) = 1 &amp; 互质<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\end</span>{array}<span style="color:#815ba4">\right</span>.
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><p>结果</p>
+<p><img src="F_A4%E7%BB%93%E6%9E%9C.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    T_r &amp;= <span style="color:#815ba4">\sqrt</span>{<span style="color:#815ba4">\frac</span>{r^3}{k}} &amp;&amp; 目标轨道周期<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    T_a &amp;= T_r <span style="color:#815ba4">\eta</span> &amp;&amp; 部署轨道周期<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    h_{a1} &amp;= h_r &amp;&amp; 相切点高度<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    h_{a2} &amp;= r(2<span style="color:#815ba4">\eta</span>^<span style="color:#815ba4">\frac</span>{2}{3}  - 1) - R &amp;&amp; 对向点高度<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    v_r &amp;= <span style="color:#815ba4">\sqrt</span>{<span style="color:#815ba4">\frac</span>{<span style="color:#815ba4">\mu</span>}{r}}  &amp;&amp; 目标轨道速度<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    v_a &amp;= v_r <span style="color:#815ba4">\sqrt</span>{(2 - <span style="color:#815ba4">\frac</span>{1}{<span style="color:#815ba4">\eta</span>^<span style="color:#815ba4">\frac</span>{2}{3} })}  &amp;&amp; 部署轨道相切速度<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\Delta</span> v &amp;= <span style="color:#815ba4">\left</span>| v_r - v_a <span style="color:#815ba4">\right</span>| &amp;&amp; 速度变化量
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><p>额外</p>
+<p><img src="F_A5%E9%A2%9D%E5%A4%96.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    s_{LOS} &amp;= 2(h_r + R) <span style="color:#815ba4">\sin</span> <span style="color:#815ba4">\frac</span>{<span style="color:#815ba4">\pi</span>}{n} &amp;&amp; 相邻位直线距离<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    h_{LOS} &amp;= (h_r + R)<span style="color:#815ba4">\cos</span> <span style="color:#815ba4">\frac</span>{<span style="color:#815ba4">\pi</span>}{n} - R &amp;&amp; 可目视LOS高度<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;<span style="color:#815ba4">\Downarrow</span> <span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    h_r &amp;= <span style="color:#815ba4">\frac</span>{s_{LOS}}{2<span style="color:#815ba4">\sin</span> <span style="color:#815ba4">\frac</span>{<span style="color:#815ba4">\pi</span>}{n}} - R<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    h_r &amp;= <span style="color:#815ba4">\frac</span>{h_{LOS} + R}{<span style="color:#815ba4">\cos</span> <span style="color:#815ba4">\frac</span>{<span style="color:#815ba4">\pi</span>}{n}} - R
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><h2 id="公式推导">公式推导</h2>
+<h3 id="通用常数">通用常数</h3>
+<blockquote>
+<p>一些公理性质的定义和常数</p>
+</blockquote>
+<p>通常使用 <code>相对高度</code> 而不是 <code>轨道半径</code> 来描述 <code>轨道高度</code></p>
+<p><img src="F_%E8%BD%A8%E9%81%93%E9%AB%98%E5%BA%A6.svg" alt="轨道高度"></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    &amp; R &amp;&amp; 赤道半径|海拔高度<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    h &amp;= r-R &amp;&amp; 轨道高度<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><p><img src="F_%E5%9F%BA%E7%A1%80%E5%B8%B8%E9%87%8F.svg" alt="基础常量"></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\mu</span> &amp;= GM &amp;&amp; 标准重力参数<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    k &amp;= <span style="color:#815ba4">\frac</span>{<span style="color:#815ba4">\mu</span>}{4<span style="color:#815ba4">\pi</span>^2} &amp;&amp; 开普勒常数<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><h4 id="开普勒第三定律">开普勒第三定律</h4>
+<p><code>半长轴的立方</code> 与 <code>周期的平方</code> 比值为 <strong>常数</strong></p>
+<p><img src="F_%E5%BC%80%E6%99%AE%E5%8B%92%E7%AC%AC%E4%B8%89%E5%AE%9A%E5%BE%8B.svg" alt="开普勒第三定律"></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    k &amp;= <span style="color:#815ba4">\frac</span>{a^3}{T^2} &amp;&amp; 开普勒第三定律<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    T &amp;= <span style="color:#815ba4">\sqrt</span>{<span style="color:#815ba4">\frac</span>{a^3}{k}} &amp;&amp; 周期<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    a &amp;= <span style="color:#815ba4">\sqrt</span><span style="color:#06b6ef">[3]</span>{kT^2} &amp;&amp; 半长轴<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><p>同时可以衍生得到对于 <em>同一中心天体</em> 而言 <em>不同环绕轨道</em> 的 <strong>比例关系</strong></p>
+<p><img src="F_%E5%BC%80%E6%99%AE%E5%8B%92%E7%AC%AC%E4%B8%89%E5%AE%9A%E5%BE%8B2.svg" alt="开普勒第三定律"></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\frac</span>{T_1}{T_2} &amp;= (<span style="color:#815ba4">\frac</span>{a_1}{a_2})^{<span style="color:#815ba4">\frac</span>{3}{2}} &amp;&amp; 周期比<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\frac</span>{a_1}{a_2} &amp;= (<span style="color:#815ba4">\frac</span>{T_1}{T_2})^{<span style="color:#815ba4">\frac</span>{2}{3}} &amp;&amp; 周期比<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><h3 id="目标轨道-正圆轨道">目标轨道-正圆轨道</h3>
+<p>正圆轨道是椭圆轨道的简化</p>
+<blockquote>
+<p><a href="https://sat.huijiwiki.com/wiki/%E5%9C%86%E8%BD%A8%E9%81%93">卫星百科 : 圆轨道</a></p>
+</blockquote>
+<p>正圆轨道参数:</p>
+<p><img src="F_%E6%AD%A3%E5%9C%86%E8%BD%A8%E9%81%93%E5%8F%82%E6%95%B0.svg" alt="正圆轨道参数"></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    v &amp;= <span style="color:#815ba4">\sqrt</span>{<span style="color:#815ba4">\frac</span>{<span style="color:#815ba4">\mu</span>}{r}} &amp;&amp; 速度<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    T &amp;= <span style="color:#815ba4">\sqrt</span>{<span style="color:#815ba4">\frac</span>{r^3}{k}} &amp;&amp; 周期<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><p>正圆轨道速度处处<strong>相等</strong><br>
+<em>等分圆</em> 即可 <em>等分轨道周期</em> 并构成 <code>内接正多边形</code></p>
+<p><img src="G_%E5%86%85%E6%8E%A5%E6%AD%A3%E5%A4%9A%E8%BE%B9%E5%BD%A2.svg" alt=" "></p>
+<p>正多边形 <em>顶点间弧度</em> 为 <code>轨道相位差</code></p>
+<p><img src="F_%E7%9B%B8%E4%BD%8D%E5%B7%AE.svg" alt="相位差"></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\theta</span> &amp;= <span style="color:#815ba4">\frac</span>{2<span style="color:#815ba4">\pi</span>}{n} &amp;&amp; 相位差<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    T_{r_<span style="color:#815ba4">\theta</span>} &amp;= <span style="color:#815ba4">\frac</span>{T_r}{n} &amp;&amp; 周期间隔<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}<span style="color:#815ba4">\\</span>
+</span></span></code></pre></div><h3 id="最小los轨道">最小LOS轨道</h3>
+<blockquote>
+<p><code>LOS</code> =&gt; <code>Line of Sight</code>/<code>视距通信</code></p>
+</blockquote>
+<p>视距通信需要两点连线无遮挡<br>
+两点连线的中点距离圆心最近</p>
+<p>该点到圆心距离为当前 <em>部署方式</em> 下的 <code>容忍半径</code></p>
+<p><img src="G_LOS.svg" alt=" "></p>
+<p><img src="F_LOS.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\theta</span>&#39; &amp;= <span style="color:#815ba4">\frac</span>{<span style="color:#815ba4">\theta</span>}{2} = <span style="color:#815ba4">\frac</span>{<span style="color:#815ba4">\pi</span>}{n}  &amp;&amp; 半相位差<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    s_{LOS} &amp;= r <span style="color:#815ba4">\sin</span> <span style="color:#815ba4">\theta</span>&#39; &amp;&amp; 半目视距离<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    r_{LOS} &amp;= r <span style="color:#815ba4">\cos</span> <span style="color:#815ba4">\theta</span>&#39; <span style="color:#815ba4">\{\ge</span> R赤道半径<span style="color:#815ba4">\}</span> &amp;&amp; 容忍半径<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    r^2 &amp;= r_{LOS}^2 + s_{LOS}^2 &amp;&amp; 长度关系<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><blockquote>
+<p>赤道半径大于容忍半径时所有部署点都处于遮挡状态而失效</p>
+<blockquote>
+<p>游戏宽容设计: <em>某个深度以内的地表就像透明的一样</em><br>
+允许玩家存在较大的施工误差</p>
+</blockquote>
+</blockquote>
+<p><code>容忍半径</code> 与 <code>目标半径</code> 之比为 <strong>常数</strong><br>
+以此可以简单反求 <code>目标半径</code></p>
+<p><img src="F_LOS%E5%B8%B8%E6%95%B0.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\varphi</span> &amp;= <span style="color:#815ba4">\cos</span> <span style="color:#815ba4">\theta</span>&#39; = <span style="color:#815ba4">\cos</span> <span style="color:#815ba4">\frac</span>{<span style="color:#815ba4">\pi</span>}{n}<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    r &amp;= <span style="color:#815ba4">\frac</span>{r_{LOS}}{<span style="color:#815ba4">\varphi</span>}<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><p>显然 <code>容忍半径</code> 最小只能是 <code>赤道半径</code><br>
+此时目标轨道称为 <strong>最小LOS轨道</strong></p>
+<p><img src="F_%E6%9C%80%E5%B0%8FLOS%E8%BD%A8%E9%81%93%E5%8D%8A%E5%BE%84.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>r_{min} = <span style="color:#815ba4">\frac</span>{R}{<span style="color:#815ba4">\varphi</span>}
+</span></span></code></pre></div><p>扣除 <code>赤道半径</code> 即为 <strong>最小LOS轨道高度</strong></p>
+<p><img src="F_%E6%9C%80%E5%B0%8FLOS%E8%BD%A8%E9%81%93%E9%AB%98%E5%BA%A6.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>h_{min} = R(<span style="color:#815ba4">\frac</span>{1}{<span style="color:#815ba4">\varphi</span>} - 1)
+</span></span></code></pre></div><h3 id="部署轨道-椭圆轨道">部署轨道-椭圆轨道</h3>
+<p>椭圆是天体轨道中最常见的</p>
+<blockquote>
+<p><a href="https://sat.huijiwiki.com/wiki/%E6%A4%AD%E5%9C%86%E8%BD%A8%E9%81%93">卫星百科 : 椭圆轨道</a></p>
+</blockquote>
+<p>椭圆轨道参数:</p>
+<p><img src="F_%E6%A4%AD%E5%9C%86%E8%BD%A8%E9%81%93%E5%8F%82%E6%95%B0.svg" alt="椭圆轨道参数"></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    v_t &amp;= <span style="color:#815ba4">\sqrt</span>{<span style="color:#815ba4">\mu</span> (<span style="color:#815ba4">\frac</span>{2}{r_t} - <span style="color:#815ba4">\frac</span>{1}{a})} &amp;&amp; 速度<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    T &amp;= <span style="color:#815ba4">\sqrt</span>{<span style="color:#815ba4">\frac</span>{a^3}{k}} &amp;&amp; 周期<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><p>构造一个椭圆长轴顶点与正圆相切并且其中一个焦点为正圆圆心</p>
+<p><img src="G_%E5%86%85%E5%88%87%E6%A4%AD%E5%9C%86.svg" alt=" "></p>
+<p>假设两个轨道各有一点同时从切点处同向出发<br>
+令椭圆轨道的质点在运行一周回到切点的时候<br>
+这时正圆轨道上的质点还未完成一周<br>
+<strong>求椭圆轨道半长轴</strong></p>
+<p>首先得到它们的 <code>周期关系</code><br>
+比值为 <strong>常数</strong></p>
+<p><img src="F_%E5%91%A8%E6%9C%9F%E5%85%B3%E7%B3%BB.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\left\{\begin</span>{align}
+</span></span><span style="display:flex;"><span>    T_a &amp;= T_{A^-}<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    T_r &amp;= T_{A^-} + T_{r_<span style="color:#815ba4">\theta</span>}
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}<span style="color:#815ba4">\right</span>.
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\Rightarrow</span> <span style="color:#815ba4">\frac</span>{T_a}{T_r} = <span style="color:#815ba4">\frac</span>{n-1}{n} = <span style="color:#815ba4">\eta</span>
+</span></span></code></pre></div><p>可用 <code>开普勒第三定律</code> 展开后求得 <code>椭圆轨道半长轴</code></p>
+<p><img src="F_%E6%A4%AD%E5%9C%86%E8%BD%A8%E9%81%93%E5%8D%8A%E9%95%BF%E8%BD%B4.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\eta</span> &amp;= <span style="color:#815ba4">\frac</span>{T_a}{T_r} = (<span style="color:#815ba4">\frac</span>{a}{r})^<span style="color:#815ba4">\frac</span>{3}{2}<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\frac</span>{a}{r} &amp;= <span style="color:#815ba4">\eta</span>^<span style="color:#815ba4">\frac</span>{3}{2}<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    a &amp;= r<span style="color:#815ba4">\eta</span>^<span style="color:#815ba4">\frac</span>{3}{2}
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><p>那么就可以得到 <em>长轴顶点</em> 的 <code>距离</code> 和 <code>切点速度</code></p>
+<p><img src="F_%E9%95%BF%E8%BD%B4%E8%B7%9D%E7%A6%BB%E5%92%8C%E9%80%9F%E5%BA%A6.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{array}{rml}
+</span></span><span style="display:flex;"><span>    &amp;r_a =<span style="color:#815ba4">\left\{\begin</span>{array}{l}
+</span></span><span style="display:flex;"><span>        r<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        2a - r<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\end</span>{array}<span style="color:#815ba4">\right</span>.<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;v_a = <span style="color:#815ba4">\sqrt</span>{<span style="color:#815ba4">\mu</span> (<span style="color:#815ba4">\frac</span>{2}{r} - <span style="color:#815ba4">\frac</span>{1}{a})}
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{array}
+</span></span></code></pre></div><p>并求出切点处的 <code>Δv</code></p>
+<p><img src="F_DeltaV.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\Delta</span> v &amp;= v_r - v_a<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;= <span style="color:#815ba4">\sqrt</span>{<span style="color:#815ba4">\frac</span>{<span style="color:#815ba4">\mu</span>}{r}} - <span style="color:#815ba4">\sqrt</span>{<span style="color:#815ba4">\mu</span> (<span style="color:#815ba4">\frac</span>{2}{r} - <span style="color:#815ba4">\frac</span>{1}{a})}
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><h4 id="外切轨道">外切轨道</h4>
+<p>还有另一种类似的情况</p>
+<p>椭圆轨道的质点回到切点的时候<br>
+正圆轨道的质点也完成了一周并且额外行进了一个分布间隔</p>
+<p>我们可以称它为 <code>滞后部署轨道</code></p>
+<blockquote>
+<p>相对的上一个情况则为 <code>超前部署轨道</code></p>
+</blockquote>
+<p><img src="G_%E5%A4%96%E5%88%87%E6%A4%AD%E5%9C%86.svg" alt=" "></p>
+<p>只需要修改一下周期比中的正负号</p>
+<p><img src="F_%E5%91%A8%E6%9C%9F%E5%85%B3%E7%B3%BB2.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\eta</span> = <span style="color:#815ba4">\frac</span>{n+1}{n}
+</span></span></code></pre></div><p>可以发现切点距离依然是正圆半径<br>
+<em>长轴顶点</em> 的 <code>距离</code> 和 <code>切点速度</code> 公式相同</p>
+<h3 id="参数推广">参数推广</h3>
+<p>显然部署轨道参数由 <code>周期关系</code> 控制, 重新整理算式</p>
+<p><em>正圆轨道均分n份后</em><br>
+<em>相切的正圆轨道行进了若干份均分间隔, 同时椭圆轨道行进若干圈</em>
+可以得到 <strong>通用</strong> 的 <code>周期比例常数</code></p>
+<p><img src="F_%E6%95%B4%E7%90%86%E5%91%A8%E6%9C%9F%E5%85%B3%E7%B3%BB%E5%B8%B8%E6%95%B0.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>    &amp;<span style="color:#815ba4">\left\{\begin</span>{array}{rl}
+</span></span><span style="display:flex;"><span>        t_A &amp;=&amp; x T_a<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        t_A &amp;=&amp; y T_{r_<span style="color:#815ba4">\theta</span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\end</span>{array}<span style="color:#815ba4">\right</span>.
+</span></span><span style="display:flex;"><span>    从切点运行到A点的时间<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;<span style="color:#815ba4">\begin</span>{array}{rl}
+</span></span><span style="display:flex;"><span>        x T_a &amp;=&amp; y <span style="color:#815ba4">\frac</span>{T_r}{n}<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">\frac</span>{T_a}{T_r} &amp;=&amp; <span style="color:#815ba4">\frac</span>{y}{xn} = <span style="color:#815ba4">\eta</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\end</span>{array}
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}
+</span></span></code></pre></div><p>注意: <strong>分式不是最简时, 部署结果与预期不符</strong></p>
+<p>比如这两种情况</p>
+<p>原定部署6份, 每2圈部署一个, 部署间隔2份
+最后上只部署了3份</p>
+<p>同时发现两式的值相等<br>
+也就是说这两个部署方案用的是同一个椭圆转移轨道</p>
+<p><img src="F_%E4%B8%A4%E7%A7%8D%E6%83%85%E5%86%B5.svg" alt=" "></p>
+<p>可以简单得到几个特征结论</p>
+<ul>
+<li>分式的值决定了转移轨道的参数</li>
+<li>同一个值通过拆分分母为 <code>x</code> 和 <code>n</code> 获得不同的部署效果</li>
+<li><code>y</code> 和 <code>xn</code> 互质时, <code>n</code> 为最终部署数量</li>
+</ul>
+<p><img src="F_%E5%91%A8%E6%9C%9F%E6%AF%94%E4%BE%8B%E5%8F%82%E6%95%B0.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\left\{\begin</span>{align}
+</span></span><span style="display:flex;"><span>    &amp;n &gt; 1 &amp;&amp; 部署数量大于1才有意义<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;x,y,n <span style="color:#815ba4">\in</span> <span style="color:#815ba4">\mathbb</span>{N}^* &amp;&amp; 系数都是正整数<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;(x,y,n) = 1 &amp;&amp; 系数互质<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}<span style="color:#815ba4">\right</span>.
+</span></span></code></pre></div><h3 id="应用公式">应用公式</h3>
+<p>实际应用场景中首先需要 <code>目标轨道高度或周期</code> 以确定 <code>目标轨道半径</code></p>
+<p><img src="F_01%E7%9B%AE%E6%A0%87%E8%BD%A8%E9%81%93%E9%AB%98%E5%BA%A6%E6%88%96%E5%91%A8%E6%9C%9F.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\left\{\begin</span>{align}
+</span></span><span style="display:flex;"><span>    h_r &amp;= r - R<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    T_r &amp;= <span style="color:#815ba4">\sqrt</span>{<span style="color:#815ba4">\frac</span>{r^3}{k}}
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}<span style="color:#815ba4">\right</span>.
+</span></span></code></pre></div><p>根据 <code>部署方式</code> 确定关键的 <code>周期比例常数</code><br>
+也可以反过来说这里的 <strong>系数描述了部署方式</strong></p>
+<p><em>当部署轨道完成 <strong>x圈</strong> 时, 目标轨道的上一个部署点行进了 <strong>y份间隔</strong>, 最后部署<strong>n个卫星</strong></em></p>
+<p><img src="F_02%E5%91%A8%E6%9C%9F%E6%AF%94%E4%BE%8B%E5%B8%B8%E6%95%B0.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\eta</span> = <span style="color:#815ba4">\frac</span>{T_a}{T_r} = <span style="color:#815ba4">\frac</span>{y}{xn}
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\left\{\begin</span>{align}
+</span></span><span style="display:flex;"><span>    &amp;n &gt; 1 &amp;&amp; 部署数量大于1才有意义<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;x,y,n <span style="color:#815ba4">\in</span> <span style="color:#815ba4">\mathbb</span>{N}^* &amp;&amp; 系数都是正整数<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    &amp;(x,y,n) = 1 &amp;&amp; 系数互质<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{align}<span style="color:#815ba4">\right</span>.
+</span></span></code></pre></div><p>得到 <code>部署轨道周期</code> 和 <code>长轴顶点高度</code></p>
+<p><img src="F_03%E5%91%A8%E6%9C%9F%E5%92%8C%E8%B7%9D%E7%A6%BB.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{array}{l}
+</span></span><span style="display:flex;"><span>    T_a = T_r <span style="color:#815ba4">\eta\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\left\{\begin</span>{align}
+</span></span><span style="display:flex;"><span>        h_{a1} &amp;= r - R &amp;&amp;相切点<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        h_{a2} &amp;= r(2<span style="color:#815ba4">\eta</span>^<span style="color:#815ba4">\frac</span>{2}{3} - 1) - R &amp;&amp;对向点
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\end</span>{align}<span style="color:#815ba4">\right</span>.
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{array}
+</span></span></code></pre></div><p>最后得到圆轨所需速度差</p>
+<p><img src="F_04DeltaV.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\Delta</span> v = <span style="color:#815ba4">\sqrt</span>{<span style="color:#815ba4">\frac</span>{<span style="color:#815ba4">\mu</span>}{r}}(1 - <span style="color:#815ba4">\sqrt</span>{2 - <span style="color:#815ba4">\frac</span>{1}{<span style="color:#815ba4">\eta</span>^<span style="color:#815ba4">\frac</span>{2}{3} }})
+</span></span></code></pre></div>
+    </article>
+
+                </article>
+                <footer>
+    <div class="flex-container">
+        <div>
+            
+    
+
+        </div>
+        <div></div>
+        <div>
+            
+    
+        <a href="https://blog.anecrow.work/games/ksp/sidereal_day/">
+            <div>
+                <h2>Next &gt;&gt;</h2>
+                <span>恒星日转换</span>
+            </div>
+        </a>
+        <p><p>太阳日和恒星日的精确转换</p></p>
+    
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <small><small><strong style="margin: -4px 0;">©2023 aneCrow All Rights Reserved.</strong></small></small>
+        <br/>
+        <span class="footnotes" style="padding-bottom: var(--gap-unit)">Power by: <a href="https://gohugo.io/">HUGO</a> | Support <strong>Light</strong>&<strong>Dark</strong> Style</span>
+    </div>
+</footer>
+
+
+            </div>
+        </div>
+        <div class="side-container">
+            <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#计算表">计算表</a>
+      <ul>
+        <li><a href="#速查公式">速查公式</a></li>
+      </ul>
+    </li>
+    <li><a href="#公式推导">公式推导</a>
+      <ul>
+        <li><a href="#通用常数">通用常数</a></li>
+        <li><a href="#目标轨道-正圆轨道">目标轨道-正圆轨道</a></li>
+        <li><a href="#最小los轨道">最小LOS轨道</a></li>
+        <li><a href="#部署轨道-椭圆轨道">部署轨道-椭圆轨道</a></li>
+        <li><a href="#参数推广">参数推广</a></li>
+        <li><a href="#应用公式">应用公式</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+        </div>
+        <div></div>
+    </div>
+</body>
+
+</html>

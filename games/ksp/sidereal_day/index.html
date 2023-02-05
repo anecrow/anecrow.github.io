@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>垃圾音频装置</title>
+    <title>恒星日转换</title>
     <link rel="stylesheet" href="https://blog.anecrow.work/css/layout.css">
     <link rel="stylesheet" href="https://blog.anecrow.work/css/github-markdown.css">
     <link rel="stylesheet" href="https://blog.anecrow.work/css/style.css">
@@ -73,9 +73,11 @@
                 
             
                 
-                    <code class="nav-item nav-subitem nav-current">
-                        垃圾音频装置
-                    </code>
+                    <a href="https://blog.anecrow.work/games/shenzhen_io/amplifier/">
+                        <code class="nav-item nav-subitem">
+                            垃圾音频装置
+                        </code>
+                    </a>
                 
             
         
@@ -105,11 +107,9 @@
                 
             
                 
-                    <a href="https://blog.anecrow.work/games/ksp/sidereal_day/">
-                        <code class="nav-item nav-subitem">
-                            恒星日转换
-                        </code>
-                    </a>
+                    <code class="nav-item nav-subitem nav-current">
+                        恒星日转换
+                    </code>
                 
             
         
@@ -120,7 +120,7 @@
             <div id="content">
                 
 <header>
-    <h1>垃圾音频装置</h1>
+    <h1>恒星日转换</h1>
     <nav class="breadcrumbnav">
     
     
@@ -155,8 +155,8 @@
 
     
         <span>
-            <a href="https://blog.anecrow.work/games/shenzhen_io/">
-                <code>Shenzhen I/O</code>
+            <a href="https://blog.anecrow.work/games/ksp/">
+                <code>Kerbal Space Program</code>
             </a>
         </span>
         <span>></span>
@@ -165,18 +165,18 @@
     
 
     
-        <code>垃圾音频装置</code>
+        <code>恒星日转换</code>
     
 
 </nav>
 
 
     <blockquote id="page-info">
-        <span><code>Date</code>: 2022/03/07 03:13:12</span>
-        <span><code>Lastmod</code>: 2022/03/07 03:54:43</span>
+        <span><code>Date</code>: 2023/02/05 17:33:18</span>
+        <span><code>Lastmod</code>: 2023/02/06 00:39:57</span>
         <br>
         
-            <span><code>WordCount</code>: 151</span>
+            <span><code>WordCount</code>: 303</span>
             <span><code>ReadingTime</code>: 1min</span>
         
     </blockquote>
@@ -184,24 +184,48 @@
                 <article>
                     
     <article>
-        <p>调谐最优化引擎</p>
-<h2 id="资讯">资讯</h2>
-<p><img src="Snipaste_2022-03-07_03-15-55.jpg" alt="verification tab"></p>
-<ul>
-<li><em>音频输入</em>是连接音频源的简单输入。</li>
-<li><em>音频输出</em>是连接音频接收器的简单输出。</li>
-<li><em>最优化</em>是连接开关的简单输入。</li>
-<li>应将<em>音频输入</em>信号复制到<em>音频输出</em>，并在<em>最优化</em>开关开启时应用调谐最优化算法。</li>
-<li>在手册“补充信息”部分有一张“调谐最优化算法”广告，找到并阅读该部分内容。</li>
-</ul>
-<h2 id="解法">解法</h2>
-<h3 id="01">01</h3>
-<p><img src="Snipaste_2022-03-07_03-31-05.jpg" alt="01"></p>
-<ul>
-<li><code>产品成本</code>: <strong>4</strong>*</li>
-<li><code>电量消耗</code>: <strong>310</strong></li>
-<li><code>代码行数</code>: <strong>6</strong>*</li>
-</ul>
+        <p>太阳日和恒星日的精确转换</p>
+<p>太阳日作为基本时间定义, 是直观意义上的一日标准<br>
+<code>太阳日</code> 具体说就是 <em>太阳直射点随着自转再次到达同一个直射点的周期</em> 为 <code>一天</code></p>
+<p>却不能直接用于描述当前天体自转运动<br>
+此时除了 <code>地球自转</code> 还包含了 <code>地球公转</code> 的复合运动</p>
+<p>所以有了以遥远平行光作为参考的 <code>恒星日</code></p>
+<blockquote>
+<p><strong>恒星日就是地球自转周期</strong></p>
+</blockquote>
+<p>通过示意图可以直观看出它们的关系</p>
+<blockquote>
+<p>为了使计算方便, 行星轨道假设为正圆</p>
+<blockquote>
+<p><code>KSP</code> 中 <code>Kerbin</code> 和 <code>Mun</code> 公转轨道也是正圆<br>
+它们甚至共面, 毕竟是所有玩家的起点</p>
+</blockquote>
+</blockquote>
+<p><img src="G_01.svg" alt=" "></p>
+<p><img src="F_01.svg" alt=" "></p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#815ba4">\begin</span>{array}{l}
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\begin</span>{array}{l}
+</span></span><span style="display:flex;"><span>        r &amp;赤道半径<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        T_A &amp;公转周期<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        T_B &amp;自转周期/恒星日<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        T_C &amp;太阳日<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\end</span>{array}<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\begin</span>{align}
+</span></span><span style="display:flex;"><span>        v &amp;= <span style="color:#815ba4">\left\{\begin</span>{array}{l}
+</span></span><span style="display:flex;"><span>            &amp;<span style="color:#815ba4">\frac</span>{2 <span style="color:#815ba4">\pi</span> r}{T_B}<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>            &amp;<span style="color:#815ba4">\frac</span>{2 <span style="color:#815ba4">\pi</span> r(1+<span style="color:#815ba4">\frac</span>{T_C}{T_A})}{T_C}<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">\end</span>{array}<span style="color:#815ba4">\right</span>.<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        &amp;<span style="color:#815ba4">\Downarrow</span> <span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        T_A &amp;= <span style="color:#815ba4">\frac</span>{T_B T_C}{T_B+T_C}<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        T_B &amp;= <span style="color:#815ba4">\frac</span>{T_A T_C}{T_A+T_C}<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>        T_C &amp;= <span style="color:#815ba4">\frac</span>{T_A T_B}{T_A+T_B}<span style="color:#815ba4">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">\end</span>{align}
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">\end</span>{array}
+</span></span></code></pre></div><p>三者关系相似得出奇</p>
+<blockquote>
+<p>不知道中间还有什么隐含的联系</p>
+</blockquote>
     </article>
 
                 </article>
@@ -210,13 +234,13 @@
         <div>
             
     
-        <a href="https://blog.anecrow.work/games/shenzhen_io/scorekeeper/">
+        <a href="https://blog.anecrow.work/games/ksp/resonance/">
             <div>
                 <h2>&lt;&lt; Prev</h2>
-                <span>海量男爵</span>
+                <span>共振转移轨道</span>
             </div>
         </a>
-        <p><p>饮酒游戏积分器</p></p>
+        <p><p>利用轨道共振在圆轨道等距部署卫星的原理</p></p>
     
 
         </div>
@@ -240,16 +264,7 @@
         </div>
         <div class="side-container">
             <aside>
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#资讯">资讯</a></li>
-    <li><a href="#解法">解法</a>
-      <ul>
-        <li><a href="#01">01</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+    <nav id="TableOfContents"></nav>
 </aside>
         </div>
         <div></div>

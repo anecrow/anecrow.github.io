@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kerbal Space Program on aneCrow&#39;s 杂货铺</title>
+    <link>https://blog.anecrow.work/games/ksp/</link>
+    <description>Recent content in Kerbal Space Program on aneCrow&#39;s 杂货铺</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 31 Jan 2023 21:23:31 +0800</lastBuildDate><atom:link href="https://blog.anecrow.work/games/ksp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>恒星日转换</title>
+      <link>https://blog.anecrow.work/games/ksp/sidereal_day/</link>
+      <pubDate>Sun, 05 Feb 2023 17:33:18 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/games/ksp/sidereal_day/</guid>
+      <description>&lt;p&gt;太阳日和恒星日的精确转换&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>共振转移轨道</title>
+      <link>https://blog.anecrow.work/games/ksp/resonance/</link>
+      <pubDate>Wed, 01 Feb 2023 00:19:39 +0800</pubDate>
+      
+      <guid>https://blog.anecrow.work/games/ksp/resonance/</guid>
+      <description>&lt;p&gt;利用轨道共振在圆轨道等距部署卫星的原理&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
